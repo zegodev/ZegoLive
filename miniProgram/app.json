@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/liveroom/roomlist/roomlist",
+    "pages/liveroom/room/room",
+    "pages/playstream/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0D70FF",
+    "navigationBarTitleText": "ZEGO",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 60000
+  },
+  "debug": false
+}

@@ -1,0 +1,66 @@
+.mainUI {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+.tips {
+  color: #3c3c3c;
+  font-size: 12px;
+  text-align: center;
+  padding: 22rpx 0 22rpx;
+}
+.guide-box {
+  text-align: center;
+}
+.guide {
+  display: inline-block;
+  width: 30vw;
+  height: 30vw;
+  background-color: rgba(13, 112, 255, 0.8);
+  text-align: center;
+  margin: 1.5px;
+  vertical-align: top;
+}
+.guide-nomore {
+  display: inline-block;
+  width: 30vw;
+  height: 30vw;
+  text-align: center;
+  margin: 1.5px;
+  vertical-align: top;
+}
+.guide-nomore-bk {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.guide_icon {
+  display: block;
+  width: 36px; 
+  height: 36px; 
+  margin:20px auto 0;
+}
+.guide_label {
+  display: block;
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "PingFang SC";
+}
+.guide_nomore_label {
+  margin-top: 30px;
+  color: rgba(256, 256, 256, 0.3);
+  font-size: 14px;
+}
+.logo-box {
+  position: absolute;
+  width: 100vw;
+  bottom: 36rpx;
+  text-align: center;
+}
+.logo {
+  width: 160rpx;
+  height: 44rpx;
+}
+

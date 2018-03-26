@@ -1,0 +1,12 @@
+/**index.wxss**/
+@import "../common/lib/weui.wxss";
+
+button{
+  margin-top:  50rpx;
+  margin-bottom: 50rpx;
+  width: 50%;
+}
+
+.negative {
+  background-color: #808080
+}

@@ -1,0 +1,55 @@
+@import "../../common/index.wxss";
+
+.container-box {
+  background-color: #ffffff;
+  height: 100vh;
+}
+.list-box {
+  background-color: #0d70ff;
+  color: #fff;
+  width: 90vw;
+  margin: 3vw;
+  padding: 2vw;
+}
+.extext {
+  font-size: 15px;
+  color: #999;
+  padding: 2vw 5vw;
+}
+.no-room {
+  padding-top: 30vh;
+  text-align: center;
+}
+
+.bottom-btn {
+  position: fixed;
+  width: 26vw;
+  right: 5vw;
+  bottom: 3vh;
+}
+
+.bottom-input {
+  padding:0.9vh 1vw;
+  position: fixed;
+  width: 60vw;
+  left: 5vw;
+  bottom: 3vh;
+  background-color: rgba(204, 204, 204, 0.5);
+  height: 4vh;
+  border-radius: 4px;
+  color: #3c3c3c;
+}
+
+.bottom-btn button {
+   background-color: rgba(13, 112, 255, 0.8);
+   line-height: 2.3em;
+}
+
+.navigator-text {
+  font-size: 18px;
+}
+
+.create-button {
+  font-size: 16px;
+  color: white;
+}

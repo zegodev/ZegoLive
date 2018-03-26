@@ -1,0 +1,43 @@
+<!--page/play/index.wxml-->
+
+<view style="width:100%; height:100%;">
+  <view style="width:100%; height:300px">  
+    <live-player 
+      style="width:100%;height:100%"
+      mode="live" 
+      id="play-livePlayer" 
+      bindstatechange="onLiveStateChange" 
+      binderror="onLiveError"
+      min-cache="1"
+      max-cache="3"
+      src="{{ playUrl }}">
+    </live-player>
+  </view>
+
+  <view style="width:100%;">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input
+          style="width:100%"
+          class="weui-input" 
+          value="{{playUrl}}" 
+          placeholder="请输入拉流 URL（仅支持 RTMP/FLV 格式）" 
+          bindinput="bindKeyInput">
+        </input>
+      </view>
+    </view>
+    <button 
+      disabled= "{{ buttonDisable }}"
+      type="default" 
+      bindtap="onSwitchPlayState">
+      {{ buttonName }}
+    </button>
+    <!-- <button 
+      type="default" 
+      bindtap="onCleanInputText">
+      清空 URL
+    </button> -->
+  </view>
+
+
+</view> 

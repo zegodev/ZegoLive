@@ -1,0 +1,105 @@
+.container-box {
+  background-color: #333;
+  height: 100vh;
+}
+
+.img-box {
+  flex:1;
+  position: relative;
+  display:inline-block;
+  height: calc(100vh - 134.66vw);
+  width: 20vw;
+  vertical-align: middle;
+}
+
+.img-box image {
+  position: absolute;
+  max-width: calc(100vh - 138vw);
+  max-height: calc(100vh - 138vw);
+  width: 5vh;
+  height: 5vh;
+  top: calc(50vh - 75.33vw); 
+  left: calc(12.3vw - 4vh);
+}
+
+.img-box text {
+  position: absolute;
+  width: 10vh;
+  height: 5vh;
+  top: calc(56vh - 75.33vw); 
+  left: calc(8.3vw - 4vh);
+  font-size: 12px;
+}
+
+.operate {
+  display: flex;
+  position: fixed;
+  bottom: 0.5vh; 
+  text-align: center;
+}
+
+.player-box {
+	position: relative; 
+	display: inline-block; 
+	overflow: hidden;
+	text-align: center;
+  margin-bottom: 2vw;
+  vertical-align: top;
+}
+.player-box:nth-child(2),.player-box:nth-child(4) {
+   margin-left: 2vw; 
+} 
+.poster {
+	position: absolute;  
+  width: 100%;
+	height: 100%; 
+	background-repeat: no-repeat;
+	background-position:center;
+	background-color: #000000;
+}
+live-player {
+  width: 100%;
+	height: 100%; 
+}
+.character {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 12px;
+  color: #999;
+  width: 100%;
+  height: 10vw;
+  line-height: 10vw;
+  text-align: left;
+}
+.loading {
+  position: absolute;
+  width: 100%;  
+  height: 100%; 
+}
+.loading cover-image {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+}
+
+.pusher-container {
+   display: inline-block;  
+}
+.pusher-box {
+	position: relative; 
+	display: inline-block; 
+	overflow: hidden;
+  width: 100%;
+	height: 100%; 
+	text-align: center;
+  margin-bottom: 2vw;
+  vertical-align: top;
+}
+
+live-pusher {
+  width: 100%;
+	height: 100%; 
+}

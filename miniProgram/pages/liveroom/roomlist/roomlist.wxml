@@ -1,0 +1,28 @@
+<view class='container-box'>
+  <view class='extext'></view>
+  <view class='extext no-room' wx-if="{{!roomList.length}}">
+    <view>房间列表为空，请创建房间</view>
+  </view>
+
+  <view class="index-bd">
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <block wx:for-items="{{roomList}}" wx:key="item.room_id">
+          <navigator url="../room/room?roomId={{item.room_id}}&roomName={{item.room_name}}&loginType=audience" class="navigator">
+            <view class="navigator-text">房间ID: {{item.room_id}}</view>
+            <view class="navigator-arrow"></view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view>
+  <view class='bottom-input'> 
+    <input value="{{inputValue}}" bindinput="bindKeyInput" placeholder="请输入房间ID" placeholder-style='color: #b3b3b3; font-size: 14px;'/>
+  </view>
+  <view class='bottom-btn'>
+    <button class='create-button' bindtap="onCreateRoom" hover-class="none">创建房间</button>
+  </view> 
+</view>
