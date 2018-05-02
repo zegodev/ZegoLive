@@ -1,0 +1,80 @@
+<view style="width:100%;">
+  <label class="hint">自定义拉流(仅支持 rtmp/flv)</label>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <input
+        style="width:100%"
+        class="weui-input" 
+        value="{{playUrl}}" 
+        placeholder="输入拉流 URL" 
+        bindinput="bindKeyPlayInput"
+        placeholder-style='color: #b3b3b3; font-size: 14px;'>
+      </input>
+    </view>
+  </view>
+  <label class="hint">自定义推流(仅支持 rtmp/flv)</label>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <input
+        style="width:100%"
+        class="weui-input" 
+        value="{{pushUrl}}" 
+        placeholder="输入推流 URL" 
+        bindinput="bindKeyPushInput"
+        placeholder-style='color: #b3b3b3; font-size: 14px;'>
+      </input>
+    </view>
+  </view>
+</view>
+<view class="buttonContainer">
+  <button 
+    class="liveControl"
+    type="primary"
+    disabled= "{{isPlayButtonDisable}}"
+    bindtap="onSwitchPlayState">
+    {{playButton}}
+  </button>
+  <button 
+    class="liveControl"
+    type="primary"
+    disabled= "{{isPushButtonDisable}}"
+    bindtap="onSwitchPushState">
+    {{pushButton}}
+  </button>
+  <button 
+    class="logControl"
+    type="default"
+    bindtap="onDebug">
+    日志
+  </button>
+</view>
+
+
+<view class="videoContainer">
+  <view class="video" style="width:50%; height:66.67vw">  
+    <live-player 
+      style="width:100%;height:100%"
+      mode="live" 
+      id="livePlayer" 
+      bindstatechange="onPlayStateChange" 
+      binderror="onPlayeError"
+      min-cache="1"
+      max-cache="3"
+      debug="{{debug}}"
+      src="{{playUrl}}">
+    </live-player>
+  </view>
+
+  <view class="video" style="width:50%; height:66.67vw">  
+    <live-pusher
+      style="width:100%;height:100%"
+      mode="live" 
+      id="livePusher" 
+      bindstatechange="onPushStateChange" 
+      binderror="onPushError"
+      url="{{pushUrl}}"
+      debug="{{debug}}"
+      beauty="6">
+    </live-pusher>
+  </view>
+</view>

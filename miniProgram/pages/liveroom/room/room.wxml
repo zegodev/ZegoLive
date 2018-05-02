@@ -1,42 +1,73 @@
-<view class='pusher-container' wx:if="{{pushUrl}}" style="width: {{styles.width}};height: {{styles.height}}">
+<view class="{{containerBaseAdapt}}">
+  <view class="{{containerAdapt}}" wx:if="{{pushUrl}}">
     <view class="pusher-box"> 
-      <view class='poster'></view>   
-        <live-pusher
-          wx:if="{{pushUrl}}"
-          id="video-livePusher"
-          mode="RTC"
-          url="{{pushUrl}}"
-          min-bitrate="{{pushConfig.minBitrate}}"
-          max-bitrate="{{pushConfig.maxBitrate}}"
-          aspect="{{pushConfig.aspect}}"
-          beauty="{{pushConfig.isBeauty}}"
-          muted="{{pushConfig.isMute}}"
-          background-mute="true"
-          debug="{{pushConfig.showLog}}"
-          bindstatechange="onPushStateChange"
-          bindnetstatus="onPushNetStateChange">
-          <cover-view class='character' style='padding: 0 5px;'>{{isPublishing ? "我(" + publishStreamID + ")": ""}}</cover-view>
-        </live-pusher>
+      <live-pusher
+        id="video-livePusher"
+        mode="{{pushConfig.mode}}"
+        url="{{pushUrl}}"
+        min-bitrate="{{pushConfig.minBitrate}}"
+        max-bitrate="{{pushConfig.maxBitrate}}"
+        aspect="{{pushConfig.aspect}}"
+        beauty="{{pushConfig.isBeauty}}"
+        muted="{{pushConfig.isMute}}"
+        background-mute="true"
+        debug="{{pushConfig.showLog}}"
+        bindstatechange="onPushStateChange"
+        bindnetstatus="onPushNetStateChange"
+        waiting-image="https://storage.zego.im/downloads/pause_publish.png">
+        <cover-view class='character' style='padding: 0 5px;'>{{isPublishing ? "我(" + publishStreamID + ")": ""}}</cover-view>
+        <cover-view class='poster' wx:if="{{!isPublishing}}">
+          <cover-image style="width: 100%; height: 100%;" src="../../../resource/loading.png" mode="aspectFit"></cover-image>   
+        </cover-view>
+      </live-pusher>
     </view> 
+  </view>
+
+  <view class="{{containerAdapt}}" wx:if="{{playStreamList.length}}" wx:for="{{playStreamList}}" wx:key="{{item.streamID}}"> 
+    <view class="player-box"> 
+      <view class='poster' wx:if="{{item.playingState === 'initial'}}">
+        <image style="width: 100%; height: 100%;" src="../../../resource/loading.png" mode="aspectFit"></image>   
+      </view>
+      <live-player
+        autoplay
+        wx:if="{{item.playUrl}}"
+        id="{{item.streamID}}"
+        mode="{{playConfig.mode}}"
+        object-fit="fillCrop"
+        min-cache="0.1"
+        max-cache="0.3"
+        src="{{item.playUrl}}"
+        debug="{{pushConfig.showLog}}"
+        bindstatechange="onPlayStateChange"
+        bindnetstatus="onPlayNetStateChange"
+        binderror="error">
+        <cover-view class='character' wx:if="{{item.playingState === 'succeeded'}}" style='padding: 0 5px;'>{{item.streamID}}</cover-view>
+        <cover-view class='poster' wx:if="{{item.playingState === 'failed'}}">
+          <cover-image style="width: 100%; height: 100%;" src="../../../resource/loading_fail.png" mode="aspectFit"></cover-image>   
+        </cover-view>
+      </live-player>
+    </view>
+  </view>
 </view>
 
-<view class="player-box" style="width: {{styles.width}};height: {{styles.height}}" wx:for="{{playStreamList}}" wx:key="{{item.streamID}}"> 
-  <view class='poster'></view>   
-  <live-player
-    autoplay
-    wx:if="{{item.playUrl}}"
-    id="{{item.streamID}}"
-    mode="RTC"
-    object-fit="fillCrop"
-    min-cache="0.1"
-    max-cache="0.3"
-    src="{{item.playUrl}}"
-    debug="{{pushConfig.showLog}}"
-    bindstatechange="onPlayStateChange"
-    bindnetstatus="onPlayNetStateChange"
-    binderror="error">
-    <cover-view class='character' style='padding: 0 5px;'>{{item.streamID}}</cover-view>
-  </live-player>
+<scroll-view 
+  class='{{messageAdapt}}'
+  style='display:block'
+  scroll-into-view='{{scrollToView}}'
+  scroll-y='true'>
+  <view class='message-detail' wx:for="{{messageList}}" id="{{item.id}}">
+    <view><span style="color: #0d70ff;">{{item.time}} {{item.name}}: </span>{{item.content}}</view>
+  </view>
+</scroll-view>
+<image src='../../../resource/{{isMessageHide ? "showMessage" : "hideMessage"}}.png' class='message-show-image' bindtap="onShowMessage"></image>
+
+<view>
+  <view class='message-input'> 
+    <input value="{{inputMessage}}" bindinput="bindMessageInput" placeholder="我要说点什么" placeholder-style='color: #b3b3b3; font-size: 14px;' confirm-type='send' bindconfirm="onComment" style='height: 8vh;'/>
+  </view>
+<!--   <view class='message-btn' wx:if="{{isCommentShow}}">
+    <button class='comment-button' bindtap="onComment" hover-class="none">评论</button>
+  </view>  -->
 </view>
 
 <view class="operate">

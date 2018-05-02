@@ -1,6 +1,6 @@
 <view class='container-box'>
-  <view class='extext'></view>
-  <view class='extext no-room' wx-if="{{!roomList.length}}">
+  <view class='text-has-room' wx-if="{{roomList.length}}">点击房间，进入互动直播间</view>
+  <view class='text-no-room' wx-if="{{!roomList.length}}">
     <view>房间列表为空，请创建房间</view>
   </view>
 
@@ -20,7 +20,7 @@
 
 <view>
   <view class='bottom-input'> 
-    <input value="{{inputValue}}" bindinput="bindKeyInput" placeholder="请输入房间ID" placeholder-style='color: #b3b3b3; font-size: 14px;'/>
+    <input value="{{inputValue}}" bindinput="bindKeyInput" placeholder="请输入房间 ID" placeholder-style='color: #b3b3b3; font-size: 14px;'/>
   </view>
   <view class='bottom-btn'>
     <button class='create-button' bindtap="onCreateRoom" hover-class="none">创建房间</button>

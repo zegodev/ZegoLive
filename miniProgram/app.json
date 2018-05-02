@@ -3,7 +3,7 @@
     "pages/main/main",
     "pages/liveroom/roomlist/roomlist",
     "pages/liveroom/room/room",
-    "pages/playstream/index",
+    "pages/customlive/index",
     "pages/logs/logs"
   ],
   "window":{

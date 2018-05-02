@@ -1,3 +1,5 @@
+var requestRoomListUrl = "https://liveroom3104114736-api.zego.im/demo/roomlist?appid=3104114736";
+
 Page({
 
 	/**
@@ -19,12 +21,12 @@ Page({
       title: '获取房间列表'
     })
     wx.request({
-      url: "https://liveroom3104114736-api.zego.im/demo/roomlist?appid=3104114736",
+      url: requestRoomListUrl,
       method: "GET",
       success: function (res) {
         self.stopRefresh();
         console.log(">>>[liveroom-roomList] fetchRoomList, result is: ");
-        if (res.statusCode == 200) {
+        if (res.statusCode === 200) {
           console.log(res.data);
           self.setData({
             roomList: res.data.data.room_list
@@ -72,9 +74,10 @@ Page({
 
   // 创建房间（即主播首次登录房间）
   onCreateRoom: function () {
-    console.log('>>>[liveroom-roomList] onCreateRoom, roomID is: ' + this.data.roomID);
+    var self = this;
+    console.log('>>>[liveroom-roomList] onCreateRoom, roomID is: ' + self.data.roomID);
 
-    if (this.data.roomID.length == 0) {
+    if (self.data.roomID.length === 0) {
       wx.showToast({
         title: '创建失败，房间 ID 不可为空',
         icon: 'none',
@@ -83,7 +86,7 @@ Page({
       return;
     }
 
-    if (this.data.roomID.match(/^[ ]+$/)) {
+    if (self.data.roomID.match(/^[ ]+$/)) {
       wx.showToast({
         title: '创建失败，房间 ID 不可为空格',
         icon: 'none',
@@ -92,14 +95,45 @@ Page({
       return;
     }
 
-    this.setData({
+    self.setData({
       loginType:'anchor'
     });
 
-    var url = '../room/room?roomId=' + this.data.roomID + '&roomName=' + this.data.roomID + '&loginType=' + this.data.loginType;
-    wx.navigateTo({
-      url: url,
-    });
+    wx.request({
+      url: requestRoomListUrl,
+      method: "GET",
+      success: function (res) {
+        console.log(">>>[liveroom-roomList] fetchRoomList before create room, result is: ");
+        if (res.statusCode === 200) {
+          var roomList = res.data.data.room_list;
+          self.setData({
+            roomList: roomList
+          })
+
+          for (var index in roomList) {
+            if (roomList[index].room_id === self.data.roomID) {
+              wx.showToast({
+                title: '创建失败，相同 ID 房间已存在，请重新创建',
+                icon: 'none',
+                duration: 3000
+              });
+              return;
+            }
+          }
+
+          var url = '../room/room?roomId=' + self.data.roomID + '&roomName=' + self.data.roomID + '&loginType=' + self.data.loginType;
+          wx.navigateTo({
+            url: url,
+          });
+        } else {
+          wx.showToast({
+            title: '创建失败，请稍后重试',
+            icon: 'none',
+            duration: 2000
+          });
+        }
+      }
+    })
   },
 
   /**
