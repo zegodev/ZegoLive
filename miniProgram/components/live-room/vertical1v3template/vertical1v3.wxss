@@ -1,0 +1,29 @@
+.v-full {
+    width: 100vw;
+    height: 123.07vw;
+
+}
+
+.v-main-video {
+    width:69.23vw;
+    height:123.07vw;
+    display: inline-block;
+}
+.v-main-video-full{
+    width:100vw;
+    height:123.07vw;
+    display: inline-block;
+}
+
+.v-sub-video-list {
+    width:30.65vw;
+    height: 123.07vw;
+    display: inline-block;
+    vertical-align: top
+}
+
+.v-sub-video {
+    width:30.65vw;
+    height: calc(123.07vw/3);
+    display: block;
+}
