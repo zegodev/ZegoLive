@@ -1,4 +1,4 @@
-# ZegoLive
+# ZegoLive 小程序
 ZegoLive is a software solution for the Interactive Live on miniProgram development platform.
 
 # How To Get Started
