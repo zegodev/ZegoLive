@@ -7,9 +7,9 @@
   <view class="index-bd">
     <view class="kind-list">
       <view class="kind-list-item">
-        <block wx:for-items="{{roomList}}" wx:key="item.room_id">
+        <block wx:for-items="{{roomList}}" wx:key="item.room_name">
           <navigator url="../room/room?roomId={{item.room_id}}&roomName={{item.room_name}}&loginType=audience" class="navigator">
-            <view class="navigator-text">房间ID: {{item.room_id}}</view>
+            <view class="navigator-text">{{item.room_name === "no name" || item.room_name.length == 0 ? item.room_id + "（房间 ID）" : item.room_name}}</view>
             <view class="navigator-arrow"></view>
           </navigator>
         </block>

@@ -24,16 +24,14 @@
   </view>
 
   <view class="{{containerAdapt}}" wx:if="{{playStreamList.length}}" wx:for="{{playStreamList}}" wx:key="{{item.streamID}}"> 
-    <view class="player-box"> 
-      <view class='poster' wx:if="{{item.playingState === 'initial'}}">
-        <image style="width: 100%; height: 100%;" src="../../../resource/loading.png" mode="aspectFit"></image>   
-      </view>
+    <view class="player-box">
+
       <live-player
         autoplay
         wx:if="{{item.playUrl}}"
         id="{{item.streamID}}"
         mode="{{playConfig.mode}}"
-        object-fit="fillCrop"
+        object-fit="contain"
         min-cache="0.1"
         max-cache="0.3"
         src="{{item.playUrl}}"
@@ -41,9 +39,13 @@
         bindstatechange="onPlayStateChange"
         bindnetstatus="onPlayNetStateChange"
         binderror="error">
+
+        <cover-view class='poster' wx:if="{{item.playingState === 'initial'}}">
+                    <cover-image style="width: 100%; height: 100%;" src="../../../resource/loading.png" mode="aspectFit"></cover-image>
+         </cover-view>
         <cover-view class='character' wx:if="{{item.playingState === 'succeeded'}}" style='padding: 0 5px;'>{{item.streamID}}</cover-view>
-        <cover-view class='poster' wx:if="{{item.playingState === 'failed'}}">
-          <cover-image style="width: 100%; height: 100%;" src="../../../resource/loading_fail.png" mode="aspectFit"></cover-image>   
+        <cover-view class='poster' wx:elif="{{item.playingState === 'failed'}}">
+          <cover-image style="width: 100%; height: 100%;" src="../../../resource/loading_fail.png" mode="aspectFit"></cover-image>
         </cover-view>
       </live-player>
     </view>

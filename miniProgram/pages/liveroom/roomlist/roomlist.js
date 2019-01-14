@@ -1,4 +1,7 @@
-var requestRoomListUrl = "https://liveroom3104114736-api.zego.im/demo/roomlist?appid=3104114736";
+// var appid = 1739272706;
+// var requestRoomListUrl = "https://liveroom" + appid + "-api.zego.im/demo/roomlist?appid=" + appid;
+
+var requestRoomListUrl = getApp().globalData.roomListURL;
 
 Page({
 

@@ -6,8 +6,9 @@ Page({
   data: {
     canShow: 0,
     entryInfos: [
-      { icon: "../../resource/interactionLive.png", title: "互动直播", navigateTo: "../liveroom/roomlist/roomlist" },
+      { icon: "../../resource/interactionLive.png", title: "互动视频", navigateTo: "../liveroom/roomlist/roomlist" },
       { icon: "../../resource/playRtmp.png", title: "自定义推拉流", navigateTo: "../customlive/index" },
+      { icon: "../../resource/setting.png", title: "自定义设置", navigateTo: "../setting/index" },
     ]
   },
 

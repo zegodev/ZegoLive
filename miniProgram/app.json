@@ -4,7 +4,8 @@
     "pages/liveroom/roomlist/roomlist",
     "pages/liveroom/room/room",
     "pages/customlive/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/setting/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
