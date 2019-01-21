@@ -1,0 +1,102 @@
+<!--pages/tool/live/index.wxml-->
+<block wx:if="{{type == 1}}">
+    <live-pusher
+            id="pusher"
+            mode="live"
+            url="{{url}}"
+            min-bitrate=""
+            max-bitrate=""
+            beauty="{{beauty}}"
+            enable-camera="{{!pureaudio}}"
+            muted="{{muted}}"
+            aspect="9:16"
+            waiting-image="https://storage.zego.im/downloads/pause_publish.png"
+            debug="{{debug}}"
+            bindstatechange="onMainPushState"
+            bindnetstatus="onMainPushStatus"
+            binderror="onMainPushError"
+    >
+
+        <cover-view class="operate">
+            <cover-view class='img-box'>
+                <cover-image class='img-view' src='/components/Resources/camera.png'
+                             bindtap="switchCamera"></cover-image>
+            </cover-view>
+            <cover-view class='img-box'>
+                <cover-image class='img-view'
+                             src='/components/Resources/{{beauty > 0? "beauty" : "beauty-dis"}}.png'
+                             bindtap="toggleBeauty"></cover-image>
+            </cover-view>
+
+            <cover-view class='img-box'>
+                <cover-image class='img-view' src='/components/Resources/{{muted ? "mic-dis" : "mic"}}.png'
+                             bindtap="toggleMuted"></cover-image>
+            </cover-view>
+
+
+            <cover-view class='img-box'>
+                <cover-image class='img-view' src='/components/Resources/{{debug? "log" : "log2"}}.png'
+                             bindtap="toggleDebug"></cover-image>
+            </cover-view>
+
+        </cover-view>
+
+    </live-pusher>
+
+</block>
+<block wx:elif="{{type == 2}}">
+    <live-player
+            autoplay
+            id="player"
+            muted="{{muted}}"
+            mode="rtc"
+            min-cache="0.3"
+            max-cache="0.5"
+            object-fit="contain"
+            src="{{url}}"
+            debug="{{debug}}"
+            orientation="{{orientation}}"
+            bindstatechange="onMainPlayState"
+            bindnetstatus="onMainPlayStatus"
+            binderror="onMainPlayError">
+
+
+        <cover-view class='poster' wx:if="{{playingState === 'initial'}}">
+            <cover-image src="/components/Resources/loading.png"></cover-image>
+        </cover-view>
+
+
+        <cover-view class='poster' wx:elif="{{playingState === 'failed'}}">
+            <cover-image src="/components/Resources/loading_fail.png"
+                         mode="aspectFit"></cover-image>
+        </cover-view>
+
+
+        <cover-view class="operate">
+
+            <cover-view class='img-box'>
+                <cover-image class='img-view'
+                             src='/components/Resources/{{orientation=="vertical"? "landscape" : "portrait"}}.png'
+                             bindtap="toggleOrientation"></cover-image>
+            </cover-view>
+
+            <cover-view class='img-box'>
+                <cover-image class='img-view' src='/Resources/{{muted ? "mic-dis" : "mic"}}.png'
+                             bindtap="toggleMuted"></cover-image>
+            </cover-view>
+
+            <cover-view class='img-box'>
+                <cover-image class='img-view'
+                             src='/components/Resources/{{fullScreen? "smallscreen" : "fullscreen"}}.png'
+                             bindtap="toggleFullScreen"></cover-image>
+            </cover-view>
+
+            <cover-view class='img-box' wx:if="{{debug}}">
+                <cover-image class='img-view' src='/components/Resources/{{_debug? "log" : "log2"}}.png'
+                             bindtap="toggleDebug"></cover-image>
+            </cover-view>
+
+        </cover-view>
+
+    </live-player>
+</block>

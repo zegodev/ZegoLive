@@ -1,0 +1,16 @@
+<zego-nav></zego-nav>
+
+<view class="url">
+    <textarea placeholder="地址(rtmp/flv)" value="{{streamUrl}}" bindinput="input"> </textarea>
+</view>
+
+<view class="handler">
+    <view class="buttonGroup-top">
+        <button class="leftTop" bindtap="live" data-type="1">推流</button>
+        <button class="rightTop" bindtap="live" data-type="2">拉流</button>
+    </view>
+    <view class="buttonGroup-bottom">
+        <button class="leftBottom" bindtap="scanQR">扫描</button>
+        <button class="rightBottom" bindtap="copy"> 复制URL</button>
+    </view>
+</view>

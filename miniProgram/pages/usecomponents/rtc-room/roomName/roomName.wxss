@@ -1,0 +1,43 @@
+/* pages/components/rtc-room/roomName/roomName.wxss */
+
+.roomName {
+    display: flex;
+    height: 40vh;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.roomName input{
+    width: 70vw;
+    height: 9.4vw;
+    /*border-radius: 4px;*/
+    text-align: center;
+    color: #3c3c3c;
+    border-bottom:1px solid rgba(13, 112, 255, 0.5);
+}
+
+.roomType {
+    display: flex;
+    height: 30vh;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.roomType view{
+    width: 40vw;
+    height: 85%;
+    text-align: center;
+}
+.roomButton {
+    display: flex;
+    height: 19vh;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.roomButton button {
+    width: 97vw;
+    background-color: rgba(13, 112, 255, 0.8);
+    border-radius: 0px;
+}

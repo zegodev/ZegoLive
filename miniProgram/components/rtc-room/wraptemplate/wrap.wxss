@@ -1,0 +1,23 @@
+.wrap-main-video-full {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrap-sub-video {
+    position: fixed;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color:rgba(0,0,0,0);
+    top:0;
+
+}
+
+.wrap-sub-video view{
+    width: 33vw;
+    height: 44vw;
+}
+

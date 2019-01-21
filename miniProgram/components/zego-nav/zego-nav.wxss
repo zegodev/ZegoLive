@@ -1,0 +1,21 @@
+/* components/zego-navigator/zegonavigator.wxss */
+.navaigator{
+    height:10vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 40rpx;
+    color:#afafaf ;
+}
+
+.narrow-left {
+    width: 5vw;
+    height: 5vw;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    position: fixed;
+    top: 5vh;
+    left: 4vw;
+
+}

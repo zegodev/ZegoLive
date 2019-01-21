@@ -2,15 +2,16 @@
 	"description": "项目配置文件。",
 	"setting": {
 		"urlCheck": false,
-		"es6": false,
+		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "wx2b8909dae7727f25",
-	"projectname": "ZegoLive",
+	"projectname": "github-xcx",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -21,13 +22,25 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "share",
+					"pathName": "pages/liveroom/room/room",
+					"query": "roomID=choui&loginType=audience",
+					"scene": "1007"
+				}
+			]
 		}
 	}
 }

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rtc-room": "/components/rtc-room/rtc-room",
+    "zego-nav":"/components/zego-nav/zego-nav"
+  }
+}

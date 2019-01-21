@@ -1,9 +1,5 @@
-@import "../../common/index.wxss";
 
-.container-box {
-  background-color: #ffffff;
-  height: 100vh;
-}
+
 .list-box {
   background-color: #0d70ff;
   color: #fff;
@@ -13,51 +9,66 @@
 }
 
 .text-no-room {
-  font-size: 15px;
-  color: #999;
-  padding: 2vw 5vw;
-  padding-top: 30vh;
+  font-size: 17px;
+  color: #afafaf;
   text-align: center;
 }
 
 .text-has-room {
   font-size: 12px;
-  color: #999;
+  color: #afafaf;
   text-align: center;
-  padding: 4vw 5vw;
 }
+
+
+.room-list{
+    margin:2vh 5vh;
+
+}
+
+.room-list-item{
+    height:8vh;
+    background-color:rgba(13, 112, 255, 0.7);
+    font-size:15px;
+    color:#fff;
+    padding:25rpx 40rpx;
+    margin-top: 2vh;
+}
+
+.room-list-item view{
+    height: 50%;
+}
+
+.bottom-input {
+    padding:0 1vw;
+    position: fixed;
+    width: 50vw;
+    left: 5vh;
+    bottom: 3vh;
+    height: 9.4vw;
+    /*border-radius: 4px;*/
+    color: #3c3c3c;
+    border-bottom:1px solid rgba(13, 112, 255, 0.5);
+
+}
+
 
 .bottom-btn {
   position: fixed;
   width: 26vw;
-  right: 5vw;
+  right: 5vh;
   bottom: 3vh;
 }
 
-.bottom-input {
-  padding:0 1vw;
-  position: fixed;
-  width: 60vw;
-  left: 5vw;
-  bottom: 3vh;
-  background-color: rgba(204, 204, 204, 0.5);
-  height: 9.4vw;
-  border-radius: 4px;
-  color: #3c3c3c;
-}
 
-.bottom-input input {
-  height: 9.4vw;
-}
 
 .bottom-btn button {
    background-color: rgba(13, 112, 255, 0.8);
    line-height: 2.3em;
+    border-radius:0;
+
 }
 
-.navigator-text {
-  font-size: 16px;
-}
 
 .create-button {
   font-size: 16px;

@@ -1,0 +1,75 @@
+<template name="wrap">
+    <!-- 主播-->
+    <view class="wrap-main-video-full">
+        <live-pusher wx:if="{{mainPusherInfo.url}}"
+                     id="{{mainPusherInfo.stream_id}}"
+                     mode="{{mainPusherInfo.mode}}"
+                     url="{{mainPusherInfo.url}}"
+                     min-bitrate="{{minBitrate}}"
+                     max-bitrate="{{maxBitrate}}"
+                     beauty="{{beauty}}"
+                     enable-camera="{{!pureaudio}}"
+                     muted="{{muted}}"
+                     aspect="9:16"
+                     waiting-image="https://storage.zego.im/downloads/pause_publish.png"
+                     background-mute="{{true}}"
+                     debug="{{debug}}"
+                     bindstatechange="onMainPushState"
+                     bindnetstatus="onMainPushStatus"
+                     binderror="onMainPushError">
+            <cover-view class='character' style='padding: 0 5px;'>我（{{userName}}）</cover-view>
+            <cover-view class="operate">
+                <cover-view class='img-box'>
+                    <cover-image class='img-view' src='../Resources/camera.png'
+                                 bindtap="switchCamera"></cover-image>
+                    <!-- <cover-view class='text-view'>翻转</cover-view> -->
+                </cover-view>
+                <cover-view class='img-box'>
+                    <cover-image class='img-view'
+                                 src='../Resources/{{beauty > 0? "beauty" : "beauty-dis"}}.png'
+                                 bindtap="toggleBeauty"></cover-image>
+                    <!-- <cover-view class='text-view'>美颜</cover-view> -->
+                </cover-view>
+
+                <cover-view class='img-box'>
+                    <cover-image class='img-view' src='/components/Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png' bindtap="toggleCamera"></cover-image>
+                    <!--<cover-view class='text-view'>摄像头</cover-view>-->
+                </cover-view>
+
+                <cover-view class='img-box'>
+                    <cover-image class='img-view' src='../Resources/{{muted ? "mic-dis" : "mic"}}.png'
+                                 bindtap="toggleMuted"></cover-image>
+                    <!--<cover-view class='text-view'>声音</cover-view>-->
+                </cover-view>
+
+
+                <cover-view class='img-box' wx:if="{{debug}}">
+                    <cover-image class='img-view' src='../Resources/{{_debug? "log" : "log2"}}.png'
+                                 bindtap="toggleDebug"></cover-image>
+                    <!-- <cover-view class='text-view'>日志</cover-view> -->
+                </cover-view>
+            </cover-view>
+        </live-pusher>
+    </view>
+
+    <!--观看其他子主播-->
+    <!--wx:if="{{mainPusherInfo.state == 2}}"   这里控制先推流成功，再渲染拉流；使得拉流组件覆盖在推流组件上方-->
+    <view class="wrap-sub-video" wx:if="{{mainPusherInfo.state == 2}}">
+        <view wx:for="{{streamList}}" wx:key="{{index}}">
+            <live-player wx:if="{{item.url}}"
+                         autoplay id="{{item.stream_id}}"
+                         mode="RTC"
+                         min-cache="{{item.minCache}}"
+                         max-cache="{{item.maxCache}}"
+                         object-fit="{{item.objectFit}}"
+                         src="{{item.url}}"
+                         data-playingState="{{item.playingState }}"
+                         debug="{{debug}}"
+                         bindstatechange="onMainPlayState"
+                         bindnetstatus="onMainPlayStatus"
+                         binderror="onMainPlayError">
+            </live-player>
+        </view>
+    </view>
+
+</template>

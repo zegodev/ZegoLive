@@ -2,22 +2,129 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74ee8296-0220-4fd1-a2be-6680abbcc174" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/miniProgram/js/jZego-wx-1.0.6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/js/jZego-wx-1.1.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/setting/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/setting/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/setting/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/setting/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/resource/setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/HD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/QR_code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/SD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/adjust.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/audio_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/beauty-dis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/beauty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/camera-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/camera-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/camera-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/disable-camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/doubleroom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/edu_mini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/fill.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/fullscreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/hd_tips.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/landscape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/linkmic-press.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/linkmic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/liveroom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/loading.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/loading_fail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/loading_image0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/log.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/log2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/mic-dis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/mic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/multiroom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/portrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/pureAudio_press.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/pureaudio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/push.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/push_qr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/qr_tips.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/rtplay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/smallscreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/sound-dis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/sound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/super.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/suspend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/tips.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/video.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/video_press.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/Resources/vodplay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/1v1template/1v1.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/1v1template/1v1.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/1v3template/1v3.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/1v3template/1v3.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/live-room.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/live-room.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/live-room.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/live-room.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/vertical1v3template/vertical1v3.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/live-room/vertical1v3template/vertical1v3.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/1v1template/1v1.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/1v1template/1v1.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/live/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/live/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/live/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/live/index.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/live/live.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/roomName/roomName.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/roomName/roomName.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/roomName/roomName.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/roomName/roomName.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/utils/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miniProgram/utils/stringUtil.wxs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/app.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/js/jZego-wx-1.1.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/js/jZego-wx-1.1.1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.json" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.json" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProgram/pages/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/main/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/main/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/main/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/main/main.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/main/main.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/main/main.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/main/main.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/utils/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,33 +137,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jZego-wx-1.0.6.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/js/jZego-wx-1.0.6.js">
+    <leaf>
+      <file leaf-file-name="jZego-wx-1.0.3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/js/jZego-wx-1.0.3.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="270">
+                <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="room.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1314">
-              <caret line="167" column="7" lean-forward="true" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/project.config.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -72,9 +168,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js" />
         <option value="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -88,8 +184,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="156" />
-    <option name="y" value="23" />
+    <option name="x" value="47" />
+    <option name="y" value="57" />
     <option name="width" value="1284" />
     <option name="height" value="794" />
   </component>
@@ -98,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,44 +201,11 @@
               <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="liveroom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="liveroom" type="462c0819:PsiDirectoryNode" />
-              <item name="room" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="liveroom" type="462c0819:PsiDirectoryNode" />
-              <item name="roomlist" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -160,8 +222,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/miniProgram/js" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/miniProgram" />
+      <recent name="$PROJECT_DIR$/miniProgram/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -189,15 +252,24 @@
       <workItem from="1546498653643" duration="1058000" />
       <workItem from="1547004755418" duration="679000" />
       <workItem from="1547449243310" duration="781000" />
-      <workItem from="1547453322820" duration="558000" />
+      <workItem from="1547453322820" duration="1355000" />
+      <workItem from="1548061070415" duration="1134000" />
     </task>
+    <task id="LOCAL-00001" summary="同步代码到正式小程序">
+      <created>1547454210211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547454210211</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3076000" />
+    <option name="totallyTimeSpent" value="5007000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="156" y="92" width="1284" height="794" extended-state="0" />
+    <frame x="47" y="57" width="1284" height="794" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940617" />
@@ -221,246 +293,24 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../Zego-webrtc/types/MediaRecoder.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="同步代码到正式小程序" />
+    <option name="LAST_COMMIT_MESSAGE" value="同步代码到正式小程序" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="167" column="13" lean-forward="true" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
-          <folding>
-            <element signature="e#165#532#0" />
-            <element signature="e#558#650#0" />
-            <element signature="e#669#834#0" />
-            <element signature="e#712#830#0" />
-            <element signature="n#!!block;n#format#0" />
-            <element signature="e#1327#1345#0" />
-            <element signature="e#1361#3105#0" />
-            <element signature="e#2104#2455#0" />
-            <element signature="e#2473#2498#0" />
-            <element signature="e#3110#3135#0" />
-            <element signature="e#3433#3471#0" />
-            <element signature="e#3512#3548#0" />
-            <element signature="e#3558#3587#0" />
-            <element signature="e#3610#4482#0" />
-            <element signature="e#3736#3916#0" />
-            <element signature="e#3983#4478#0" />
-            <element signature="e#4219#4303#0" />
-            <element signature="e#4370#4463#0" />
-            <element signature="e#4487#4520#0" />
-            <element signature="e#5769#5823#0" />
-            <element signature="e#5926#6209#0" />
-            <element signature="e#6103#6142#0" />
-            <element signature="e#6148#6203#0" />
-            <element signature="e#6273#6337#0" />
-            <element signature="e#6403#6464#0" />
-            <element signature="e#6570#6641#0" />
-            <element signature="e#6786#7201#0" />
-            <element signature="e#6987#7106#0" />
-            <element signature="e#7112#7195#0" />
-            <element signature="e#7305#7381#0" />
-            <element signature="e#7388#7417#0" />
-            <element signature="e#7511#8429#0" />
-            <element signature="e#7661#8049#0" />
-            <element signature="e#7752#8041#0" />
-            <element signature="e#7822#8031#0" />
-            <element signature="e#8078#8341#0" />
-            <element signature="e#8169#8333#0" />
-            <element signature="e#8239#8323#0" />
-            <element signature="e#8362#8421#0" />
-            <element signature="e#8519#9786#0" />
-            <element signature="e#8743#9338#0" />
-            <element signature="e#8866#9330#0" />
-            <element signature="e#8936#9320#0" />
-            <element signature="e#9071#9308#0" />
-            <element signature="e#9344#9779#0" />
-            <element signature="e#9676#9769#0" />
-            <element signature="e#9877#9988#0" />
-            <element signature="e#9885#9945#0" />
-            <element signature="e#9995#10017#0" />
-            <element signature="e#10135#11112#0" />
-            <element signature="e#10346#10661#0" />
-            <element signature="e#10394#10531#0" />
-            <element signature="e#10474#10519#0" />
-            <element signature="e#10537#10653#0" />
-            <element signature="e#10562#10642#0" />
-            <element signature="e#10684#11106#0" />
-            <element signature="e#10707#10749#0" />
-            <element signature="e#10774#11096#0" />
-            <element signature="e#10897#11086#0" />
-            <element signature="e#10975#11074#0" />
-            <element signature="e#11200#11413#0" />
-            <element signature="e#11334#11405#0" />
-            <element signature="e#11515#12776#0" />
-            <element signature="e#11803#12768#0" />
-            <element signature="e#11883#12760#0" />
-            <element signature="e#11912#12488#0" />
-            <element signature="e#12220#12389#0" />
-            <element signature="e#12249#12373#0" />
-            <element signature="e#12494#12750#0" />
-            <element signature="e#12884#13048#0" />
-            <element signature="e#13105#13782#0" />
-            <element signature="e#13280#13776#0" />
-            <element signature="e#13346#13768#0" />
-            <element signature="e#13391#13739#0" />
-            <element signature="e#13524#13727#0" />
-            <element signature="e#13606#13713#0" />
-            <element signature="e#13793#13822#0" />
-            <element signature="e#13845#14260#0" />
-            <element signature="e#13971#14256#0" />
-            <element signature="e#14265#14294#0" />
-            <element signature="e#14319#15209#0" />
-            <element signature="e#14477#14737#0" />
-            <element signature="e#14756#14789#0" />
-            <element signature="e#14893#15162#0" />
-            <element signature="e#15022#15110#0" />
-            <element signature="e#15214#15242#0" />
-            <element signature="e#15272#15278#0" />
-            <element signature="e#15283#15307#0" />
-            <element signature="e#15341#15552#0" />
-            <element signature="e#15454#15548#0" />
-            <element signature="e#15600#17268#0" />
-            <element signature="e#15686#15772#0" />
-            <element signature="e#15836#16068#0" />
-            <element signature="e#15952#16062#0" />
-            <element signature="e#16224#16472#0" />
-            <element signature="e#16290#16466#0" />
-            <element signature="e#16537#16793#0" />
-            <element signature="e#16812#16867#0" />
-            <element signature="e#16879#17262#0" />
-            <element signature="e#16982#17218#0" />
-            <element signature="e#17005#17051#0" />
-            <element signature="e#17063#17208#0" />
-            <element signature="e#17088#17196#0" />
-            <element signature="e#17300#17878#0" />
-            <element signature="e#17407#17493#0" />
-            <element signature="e#17512#17620#0" />
-            <element signature="e#17634#17872#0" />
-            <element signature="e#17768#17805#0" />
-            <element signature="e#17959#19119#0" />
-            <element signature="e#18068#18381#0" />
-            <element signature="e#18181#18276#0" />
-            <element signature="e#18204#18266#0" />
-            <element signature="e#18282#18375#0" />
-            <element signature="e#18305#18365#0" />
-            <element signature="e#18387#19115#0" />
-            <element signature="e#18425#18605#0" />
-            <element signature="e#18532#18595#0" />
-            <element signature="e#18611#19109#0" />
-            <element signature="e#18663#18878#0" />
-            <element signature="e#18787#18866#0" />
-            <element signature="e#18884#19101#0" />
-            <element signature="e#19009#19089#0" />
-            <element signature="e#19160#20013#0" />
-            <element signature="e#19192#19383#0" />
-            <element signature="e#19394#19440#0" />
-            <element signature="e#19476#19644#0" />
-            <element signature="e#19576#19636#0" />
-            <element signature="e#19650#20009#0" />
-            <element signature="e#19778#19887#0" />
-            <element signature="e#19801#19877#0" />
-            <element signature="e#19893#20003#0" />
-            <element signature="e#19916#19993#0" />
-            <element signature="e#20061#20763#0" />
-            <element signature="e#20119#20757#0" />
-            <element signature="e#20203#20280#0" />
-            <element signature="e#20296#20342#0" />
-            <element signature="e#20374#20616#0" />
-            <element signature="e#20501#20530#0" />
-            <element signature="e#20643#20751#0" />
-            <element signature="e#20806#22372#0" />
-            <element signature="e#21082#21929#0" />
-            <element signature="e#21319#21588#0" />
-            <element signature="e#21686#21923#0" />
-            <element signature="e#21709#21755#0" />
-            <element signature="e#21768#21913#0" />
-            <element signature="e#21793#21901#0" />
-            <element signature="e#21946#22366#0" />
-            <element signature="e#22034#22360#0" />
-            <element signature="e#22121#22350#0" />
-            <element signature="e#22234#22340#0" />
-            <element signature="e#22280#22328#0" />
-            <element signature="e#22423#23057#0" />
-            <element signature="e#22480#22581#0" />
-            <element signature="e#22779#23053#0" />
-            <element signature="e#23107#24875#0" />
-            <element signature="e#23164#23265#0" />
-            <element signature="e#23366#24146#0" />
-            <element signature="e#23617#24140#0" />
-            <element signature="e#23675#24132#0" />
-            <element signature="e#23969#24063#0" />
-            <element signature="e#24165#24211#0" />
-            <element signature="e#24224#24869#0" />
-            <element signature="e#24330#24637#0" />
-            <element signature="e#24353#24400#0" />
-            <element signature="e#24413#24627#0" />
-            <element signature="e#24464#24617#0" />
-            <element signature="e#24491#24603#0" />
-            <element signature="e#24756#24825#0" />
-            <element signature="e#24912#24942#0" />
-            <element signature="e#24973#25003#0" />
-            <element signature="e#25053#25456#0" />
-            <element signature="e#25310#25365#0" />
-            <element signature="e#25400#25452#0" />
-            <element signature="e#25571#25937#0" />
-            <element signature="e#25621#25933#0" />
-            <element signature="e#25773#25927#0" />
-            <element signature="e#25840#25903#0" />
-            <element signature="e#25987#26195#0" />
-            <element signature="e#26250#26342#0" />
-            <element signature="e#26397#26495#0" />
-            <element signature="e#26539#26948#0" />
-            <element signature="e#26636#26714#0" />
-            <element signature="e#26732#26823#0" />
-            <element signature="e#26860#26942#0" />
-            <element signature="e#27002#29708#0" />
-            <element signature="e#27120#27141#0" />
-            <element signature="e#27243#27333#0" />
-            <element signature="e#27399#27488#0" />
-            <element signature="e#27556#27640#0" />
-            <element signature="e#27697#28281#0" />
-            <element signature="e#27775#27858#0" />
-            <element signature="e#27953#27974#0" />
-            <element signature="e#28052#28111#0" />
-            <element signature="e#28124#28215#0" />
-            <element signature="e#28384#28419#0" />
-            <element signature="e#28479#28558#0" />
-            <element signature="e#28576#28668#0" />
-            <element signature="e#28705#29702#0" />
-            <element signature="e#28835#29019#0" />
-            <element signature="e#28858#28942#0" />
-            <element signature="e#28966#29010#0" />
-            <element signature="e#29025#29696#0" />
-            <element signature="e#29107#29209#0" />
-            <element signature="e#29132#29180#0" />
-            <element signature="e#29232#29324#0" />
-            <element signature="e#29761#30012#0" />
-            <element signature="e#29908#29955#0" />
-            <element signature="e#29961#30008#0" />
-            <element signature="e#30085#30307#0" />
-            <element signature="e#30144#30303#0" />
-            <element signature="e#30193#30297#0" />
-            <element signature="e#30350#30577#0" />
-            <element signature="e#30443#30490#0" />
-            <element signature="e#30605#30760#0" />
-            <element signature="e#30707#30754#0" />
-            <element signature="e#30789#30925#0" />
-            <element signature="e#30872#30919#0" />
-            <element signature="e#30951#31089#0" />
-            <element signature="e#31036#31083#0" />
-            <element signature="e#31125#31440#0" />
-            <element signature="e#31468#32269#0" />
-            <element signature="e#31798#31920#0" />
-            <element signature="e#32048#32114#0" />
-            <element signature="e#32172#32263#0" />
-            <element signature="e#32301#32810#0" />
-            <element signature="e#32429#32522#0" />
-            <element signature="e#32528#32620#0" />
-            <element signature="e#32639#32736#0" />
-            <element signature="e#32824#32888#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -482,237 +332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="e#165#532#0" />
-            <element signature="e#558#650#0" />
-            <element signature="e#669#834#0" />
-            <element signature="e#712#830#0" />
-            <element signature="n#!!block;n#format#0" />
-            <element signature="e#1327#1345#0" />
-            <element signature="e#1361#3105#0" />
-            <element signature="e#2104#2455#0" />
-            <element signature="e#2473#2498#0" />
-            <element signature="e#3110#3135#0" />
-            <element signature="e#3433#3471#0" />
-            <element signature="e#3512#3548#0" />
-            <element signature="e#3558#3587#0" />
-            <element signature="e#3610#4482#0" />
-            <element signature="e#3736#3916#0" />
-            <element signature="e#3983#4478#0" />
-            <element signature="e#4219#4303#0" />
-            <element signature="e#4370#4463#0" />
-            <element signature="e#4487#4520#0" />
-            <element signature="e#5769#5823#0" />
-            <element signature="e#5926#6209#0" />
-            <element signature="e#6103#6142#0" />
-            <element signature="e#6148#6203#0" />
-            <element signature="e#6273#6337#0" />
-            <element signature="e#6403#6464#0" />
-            <element signature="e#6570#6641#0" />
-            <element signature="e#6786#7201#0" />
-            <element signature="e#6987#7106#0" />
-            <element signature="e#7112#7195#0" />
-            <element signature="e#7305#7381#0" />
-            <element signature="e#7388#7417#0" />
-            <element signature="e#7511#8429#0" />
-            <element signature="e#7661#8049#0" />
-            <element signature="e#7752#8041#0" />
-            <element signature="e#7822#8031#0" />
-            <element signature="e#8078#8341#0" />
-            <element signature="e#8169#8333#0" />
-            <element signature="e#8239#8323#0" />
-            <element signature="e#8362#8421#0" />
-            <element signature="e#8519#9786#0" />
-            <element signature="e#8743#9338#0" />
-            <element signature="e#8866#9330#0" />
-            <element signature="e#8936#9320#0" />
-            <element signature="e#9071#9308#0" />
-            <element signature="e#9344#9779#0" />
-            <element signature="e#9676#9769#0" />
-            <element signature="e#9877#9988#0" />
-            <element signature="e#9885#9945#0" />
-            <element signature="e#9995#10017#0" />
-            <element signature="e#10135#11112#0" />
-            <element signature="e#10346#10661#0" />
-            <element signature="e#10394#10531#0" />
-            <element signature="e#10474#10519#0" />
-            <element signature="e#10537#10653#0" />
-            <element signature="e#10562#10642#0" />
-            <element signature="e#10684#11106#0" />
-            <element signature="e#10707#10749#0" />
-            <element signature="e#10774#11096#0" />
-            <element signature="e#10897#11086#0" />
-            <element signature="e#10975#11074#0" />
-            <element signature="e#11200#11413#0" />
-            <element signature="e#11334#11405#0" />
-            <element signature="e#11515#12776#0" />
-            <element signature="e#11803#12768#0" />
-            <element signature="e#11883#12760#0" />
-            <element signature="e#11912#12488#0" />
-            <element signature="e#12220#12389#0" />
-            <element signature="e#12249#12373#0" />
-            <element signature="e#12494#12750#0" />
-            <element signature="e#12884#13048#0" />
-            <element signature="e#13105#13782#0" />
-            <element signature="e#13280#13776#0" />
-            <element signature="e#13346#13768#0" />
-            <element signature="e#13391#13739#0" />
-            <element signature="e#13524#13727#0" />
-            <element signature="e#13606#13713#0" />
-            <element signature="e#13793#13822#0" />
-            <element signature="e#13845#14260#0" />
-            <element signature="e#13971#14256#0" />
-            <element signature="e#14265#14294#0" />
-            <element signature="e#14319#15209#0" />
-            <element signature="e#14477#14737#0" />
-            <element signature="e#14756#14789#0" />
-            <element signature="e#14893#15162#0" />
-            <element signature="e#15022#15110#0" />
-            <element signature="e#15214#15242#0" />
-            <element signature="e#15272#15278#0" />
-            <element signature="e#15283#15307#0" />
-            <element signature="e#15341#15552#0" />
-            <element signature="e#15454#15548#0" />
-            <element signature="e#15600#17268#0" />
-            <element signature="e#15686#15772#0" />
-            <element signature="e#15836#16068#0" />
-            <element signature="e#15952#16062#0" />
-            <element signature="e#16224#16472#0" />
-            <element signature="e#16290#16466#0" />
-            <element signature="e#16537#16793#0" />
-            <element signature="e#16812#16867#0" />
-            <element signature="e#16879#17262#0" />
-            <element signature="e#16982#17218#0" />
-            <element signature="e#17005#17051#0" />
-            <element signature="e#17063#17208#0" />
-            <element signature="e#17088#17196#0" />
-            <element signature="e#17300#17878#0" />
-            <element signature="e#17407#17493#0" />
-            <element signature="e#17512#17620#0" />
-            <element signature="e#17634#17872#0" />
-            <element signature="e#17768#17805#0" />
-            <element signature="e#17959#19119#0" />
-            <element signature="e#18068#18381#0" />
-            <element signature="e#18181#18276#0" />
-            <element signature="e#18204#18266#0" />
-            <element signature="e#18282#18375#0" />
-            <element signature="e#18305#18365#0" />
-            <element signature="e#18387#19115#0" />
-            <element signature="e#18425#18605#0" />
-            <element signature="e#18532#18595#0" />
-            <element signature="e#18611#19109#0" />
-            <element signature="e#18663#18878#0" />
-            <element signature="e#18787#18866#0" />
-            <element signature="e#18884#19101#0" />
-            <element signature="e#19009#19089#0" />
-            <element signature="e#19160#20013#0" />
-            <element signature="e#19192#19383#0" />
-            <element signature="e#19394#19440#0" />
-            <element signature="e#19476#19644#0" />
-            <element signature="e#19576#19636#0" />
-            <element signature="e#19650#20009#0" />
-            <element signature="e#19778#19887#0" />
-            <element signature="e#19801#19877#0" />
-            <element signature="e#19893#20003#0" />
-            <element signature="e#19916#19993#0" />
-            <element signature="e#20061#20763#0" />
-            <element signature="e#20119#20757#0" />
-            <element signature="e#20203#20280#0" />
-            <element signature="e#20296#20342#0" />
-            <element signature="e#20374#20616#0" />
-            <element signature="e#20501#20530#0" />
-            <element signature="e#20643#20751#0" />
-            <element signature="e#20806#22372#0" />
-            <element signature="e#21082#21929#0" />
-            <element signature="e#21319#21588#0" />
-            <element signature="e#21686#21923#0" />
-            <element signature="e#21709#21755#0" />
-            <element signature="e#21768#21913#0" />
-            <element signature="e#21793#21901#0" />
-            <element signature="e#21946#22366#0" />
-            <element signature="e#22034#22360#0" />
-            <element signature="e#22121#22350#0" />
-            <element signature="e#22234#22340#0" />
-            <element signature="e#22280#22328#0" />
-            <element signature="e#22423#23057#0" />
-            <element signature="e#22480#22581#0" />
-            <element signature="e#22779#23053#0" />
-            <element signature="e#23107#24875#0" />
-            <element signature="e#23164#23265#0" />
-            <element signature="e#23366#24146#0" />
-            <element signature="e#23617#24140#0" />
-            <element signature="e#23675#24132#0" />
-            <element signature="e#23969#24063#0" />
-            <element signature="e#24165#24211#0" />
-            <element signature="e#24224#24869#0" />
-            <element signature="e#24330#24637#0" />
-            <element signature="e#24353#24400#0" />
-            <element signature="e#24413#24627#0" />
-            <element signature="e#24464#24617#0" />
-            <element signature="e#24491#24603#0" />
-            <element signature="e#24756#24825#0" />
-            <element signature="e#24912#24942#0" />
-            <element signature="e#24973#25003#0" />
-            <element signature="e#25053#25456#0" />
-            <element signature="e#25310#25365#0" />
-            <element signature="e#25400#25452#0" />
-            <element signature="e#25571#25937#0" />
-            <element signature="e#25621#25933#0" />
-            <element signature="e#25773#25927#0" />
-            <element signature="e#25840#25903#0" />
-            <element signature="e#25987#26195#0" />
-            <element signature="e#26250#26342#0" />
-            <element signature="e#26397#26495#0" />
-            <element signature="e#26539#26948#0" />
-            <element signature="e#26636#26714#0" />
-            <element signature="e#26732#26823#0" />
-            <element signature="e#26860#26942#0" />
-            <element signature="e#27002#29708#0" />
-            <element signature="e#27120#27141#0" />
-            <element signature="e#27243#27333#0" />
-            <element signature="e#27399#27488#0" />
-            <element signature="e#27556#27640#0" />
-            <element signature="e#27697#28281#0" />
-            <element signature="e#27775#27858#0" />
-            <element signature="e#27953#27974#0" />
-            <element signature="e#28052#28111#0" />
-            <element signature="e#28124#28215#0" />
-            <element signature="e#28384#28419#0" />
-            <element signature="e#28479#28558#0" />
-            <element signature="e#28576#28668#0" />
-            <element signature="e#28705#29702#0" />
-            <element signature="e#28835#29019#0" />
-            <element signature="e#28858#28942#0" />
-            <element signature="e#28966#29010#0" />
-            <element signature="e#29025#29696#0" />
-            <element signature="e#29107#29209#0" />
-            <element signature="e#29132#29180#0" />
-            <element signature="e#29232#29324#0" />
-            <element signature="e#29761#30012#0" />
-            <element signature="e#29908#29955#0" />
-            <element signature="e#29961#30008#0" />
-            <element signature="e#30085#30307#0" />
-            <element signature="e#30144#30303#0" />
-            <element signature="e#30193#30297#0" />
-            <element signature="e#30350#30577#0" />
-            <element signature="e#30443#30490#0" />
-            <element signature="e#30605#30760#0" />
-            <element signature="e#30707#30754#0" />
-            <element signature="e#30789#30925#0" />
-            <element signature="e#30872#30919#0" />
-            <element signature="e#30951#31089#0" />
-            <element signature="e#31036#31083#0" />
-            <element signature="e#31125#31440#0" />
-            <element signature="e#31468#32269#0" />
-            <element signature="e#31798#31920#0" />
-            <element signature="e#32048#32114#0" />
-            <element signature="e#32172#32263#0" />
-            <element signature="e#32301#32810#0" />
-            <element signature="e#32429#32522#0" />
-            <element signature="e#32528#32620#0" />
-            <element signature="e#32639#32736#0" />
-            <element signature="e#32824#32888#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,16 +339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="43" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="14" selection-start-column="14" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -764,12 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/js/jZego-wx-1.0.6.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/project.config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -781,6 +384,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
           <caret line="167" column="7" lean-forward="true" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/js/jZego-wx-1.0.3.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

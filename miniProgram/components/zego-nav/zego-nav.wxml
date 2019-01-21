@@ -1,0 +1,8 @@
+<!--components/zego-navigator/zegonavigator.wxml-->
+<view class="navaigator">
+    <view class="narrow-left" bindtap="back">
+    </view>
+    <slot>
+
+    </slot>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "自定义推拉流",
+  "usingComponents": {
+    "zego-nav":"/components/zego-nav/zego-nav"
+  }
+
+}

@@ -1,0 +1,28 @@
+/* pages/setting/index.wxss */
+.settings{
+    height: 74vh;
+    color:gray;
+}
+.items{
+    margin-top:5vw;
+
+}
+.items input{
+    background-color:#fff;
+    height:10vw;
+    margin:2vw 0vw;
+}
+.items label{
+     font-size: 40rpx;
+}
+
+.submit{
+    height: 20vh;
+}
+
+.submit button{
+    background-color: rgba(13, 112, 255, 0.8);
+    border-radius:0;
+    width:98vw;
+    margin:2vh 0vh;
+}

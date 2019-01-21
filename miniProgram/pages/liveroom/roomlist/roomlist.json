@@ -1,4 +1,7 @@
 {
   "enablePullDownRefresh": true,
-  "navigationBarTitleText": "互动直播"
+  "backgroundColor": "#e0edf9",
+  "usingComponents": {
+     "zego-nav":"/components/zego-nav/zego-nav"
+  }
 }

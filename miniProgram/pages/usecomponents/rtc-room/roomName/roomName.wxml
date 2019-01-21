@@ -1,0 +1,34 @@
+<zego-nav> </zego-nav>
+
+
+<view class="roomName">
+    <input value="{{inputValue}}" bindinput="bindKeyInput" placeholder="请输入房间 ID"
+           placeholder-style='color: #b3b3b3; font-size: 14px;text-align:center'/>
+</view>
+
+<view class="roomType">
+
+    <view>
+        <radio-group bindchange="radioChange">
+            <label class="radio">
+                <radio value="1" checked="{{roomType == 1}}"/>
+                嵌套布局
+            </label>
+        </radio-group>
+    </view>
+    <view>
+        <radio-group bindchange="radioChange">
+            <label class="radio">
+                <radio value="2" checked="{{roomType == 2}}"/>
+                网格布局
+            </label>
+        </radio-group>
+    </view>
+
+</view>
+
+<view class="roomButton">
+    <button class='create-button' bindtap="onCreateRoom" hover-class="none" type="primary">进入房间</button>
+</view>
+
+

@@ -1,0 +1,81 @@
+/* containerBaseAdapt */
+
+.navaigator{
+    height:10vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 40rpx;
+    color:#afafaf ;
+}
+
+.containerBase {
+    display:flex;
+    flex-wrap:wrap-reverse;
+    justify-content:center;
+    align-items:center;
+    height:133.33vw;
+    width:100vw;
+    flex-direction:row-reverse;
+}
+
+
+
+.messageView {
+    width: 100vw;
+    height: 14vh;
+}
+
+.message-detail {
+    margin: 3px 10px;
+    white-space: pre-wrap;
+    font-size: 13.5px;
+}
+
+.message-detail span{
+    color: #0d70ff;
+}
+
+.operate {
+    display: flex;
+    position: fixed;
+    bottom: 0vh;
+    text-align: center;
+    border-top: 1rpx solid rgba(200, 205, 210, 0.5);
+}
+
+.img-box {
+    display:flex;
+    flex-direction:column;
+    height:8vh;
+    width:33.3vw;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.img-box image {
+    width: 3vh;
+    height: 3vh;
+}
+
+.img-box text {
+    width: 11vh;
+    height: 4vh;
+    font-size: 11px;
+    line-height:5vh;
+}
+
+.message-input {
+    width: 100vw;
+}
+
+.message-input input {
+    width: 90vw;
+    height: 8vh;
+    border-radius: 4px;
+    border-bottom: 1px solid rgba(13, 112, 255, 0.5);
+    margin: 1vh 4vw;
+
+}
+

@@ -1,0 +1,36 @@
+<!--pages/setting/index.wxml-->
+<zego-nav></zego-nav>
+
+<view class="settings">
+
+    <view class="items">
+        <label>appID(liveroom):</label>
+        <input bindinput="inputChange" value="{{_liveAppID}}" data-name="liveAppID"/>
+    </view>
+
+    <!--<view class="items">-->
+        <!--<label>appID(rtcroom):</label>-->
+        <!--<input bindinput="inputChange"  value="{{_rtcAppID}}" data-name="rtcAppID"/>-->
+    <!--</view>-->
+
+    <view class="items">
+        <label>tokenURL:</label>
+        <input bindinput="inputChange"  value="{{_tokenURL}}" data-name="tokenURL"/>
+    </view>
+
+    <view class="items">
+        <label>serverURL:</label>
+        <input bindinput="inputChange"  value="{{_wsServerURL}}" data-name="wsServerURL"/>
+    </view>
+
+    <view class="items">
+        <label>roomListURL:</label>
+        <input bindinput="inputChange"  value="{{_roomListURL}}" data-name="roomListURL"/>
+    </view>
+
+</view>
+
+<view class="submit">
+    <button bindtap="submit">确定</button>
+    <button bindtap="reset">回复默认</button>
+</view>

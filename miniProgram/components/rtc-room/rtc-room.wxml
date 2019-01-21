@@ -1,0 +1,12 @@
+<block wx:if="{{template == '1v1'||template == '2v2'}}">
+    <import src='./1v1template/1v1.wxml'/>
+    <template is="{{template}}"
+              data="{{debug, liveReq, isCaster, mainPusherInfo, beauty, muted, pureaudio, userName, streamList, linkPusherInfo}}"/>
+</block>
+
+
+<block wx:if="{{template == 'wrap'}}">
+    <import src='./wraptemplate/wrap.wxml'/>
+    <template is="{{template}}"
+              data="{{debug, liveReq, isCaster, mainPusherInfo, beauty, muted, pureaudio, userName, streamList, linkPusherInfo}}"/>
+</block>

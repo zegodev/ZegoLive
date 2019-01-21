@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "live-room": "/components/live-room/live-room",
+    "zego-nav":"/components/zego-nav/zego-nav"
+  }
+}
