@@ -1,5 +1,5 @@
 // pages/components/rtc-room/room/room.js
-let {liveAppID: appID, tokenURL} = getApp().globalData;
+let {liveAppID: appID, tokenURL,wsServerURL} = getApp().globalData;
 let {getLoginToken} = require("../../../../utils/server.js");
 let {sharePage} = require("../../../../utils/util.js");
 
@@ -184,7 +184,7 @@ Page({
                 nickName: this.data.idName, // 必填，用户自定义昵称
                 remoteLogLevel: 0, // 日志上传级别，建议取值不小于 logLevel
                 logLevel: 0, // 日志级别，debug: 0, info: 1, warn: 2, error: 3, report: 99, disable: 100（数字越大，日志越少）
-                server: "wss://wsliveroom" + appID + "-api.zego.im:8282/ws",//,"wss://wssliveroom-demo.zego.im/ws", // 必填，服务器地址，由即构提供
+                server: wsServerURL,//,"wss://wssliveroom-demo.zego.im/ws", // 必填，服务器地址，由即构提供
                 logUrl: "https://wsslogger-demo.zego.im/httplog", // 选填，log 服务器地址，由即构提供
                 audienceCreateRoom: false, // 观众不允许创建房间
             });

@@ -79,6 +79,9 @@ let _methods = {
             success: ({result, scanType}) => {
                 if (scanType === "QR_CODE") {
                     let {appid, server, roomlist, cgi_token} = JSON.parse(result);
+                    if(appid){
+                        server = 'wss://wssliveroom'+appid+'-api.zego.im/ws';
+                    }
                     this.setData({
                         _liveAppID: appid ? appid : this.data._liveAppID,
                         _rtcAppID: appid ? appid : this.data._rtcAppID,
