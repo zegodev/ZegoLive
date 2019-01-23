@@ -1,10 +1,10 @@
 /* pages/setting/index.wxss */
 .settings{
-    height: 74vh;
+    height: 52vh;
     color:gray;
 }
 .items{
-    margin-top:5vw;
+    margin-top:2vw;
 
 }
 .items input{
@@ -25,4 +25,59 @@
     border-radius:0;
     width:98vw;
     margin:2vh 0vh;
+}
+
+.handler {
+    width: 100vw;
+    height: 60vw;
+    display: block;
+    position: relative;
+    text-align: center;
+
+}
+
+.buttonGroup-top button, .buttonGroup-bottom button {
+    width: 30vw;
+    height: 30vw;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(13, 112, 255, 0.8);
+    color: aliceblue;
+    display: inline-block;
+}
+
+.buttonGroup-top button:hover, .buttonGroup-bottom button:hover {
+    background-color: rgba(0, 97, 243, 0.8);
+}
+
+.buttonGroup-top button {
+    line-height: 40vw;
+}
+
+.buttonGroup-bottom button {
+    ine-height: 20vw;
+}
+
+.leftTop {
+    border-radius: 30vw 0 0 0;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.rightTop {
+    border-radius: 0 30vw 0 0;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.leftBottom {
+    border-radius: 0 0 0 30vw;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+.rightBottom {
+    border-radius: 0 0 30vw 0;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
 }

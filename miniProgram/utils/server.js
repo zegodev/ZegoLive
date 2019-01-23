@@ -1,12 +1,12 @@
-let { tokenURL} = getApp().globalData;
-
 function getLoginToken(userID, appid) {
+    let { tokenURL,cgi_token} = getApp().globalData;
     return new Promise((res, rej) => {
         wx.request({
             url: tokenURL, //仅为示例，并非真实的接口地址
             data: {
                 app_id: appid,
                 id_name: userID,
+                cgi_token
             },
             header: {
                 'content-type': 'text/plain'

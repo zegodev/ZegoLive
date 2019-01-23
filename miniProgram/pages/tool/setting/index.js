@@ -1,6 +1,6 @@
 // pages/setting/index.js
 let globalData = getApp().globalData;
-let {liveAppID, rtcAppID, tokenURL, roomListURL, wsServerURL} = globalData;
+let {liveAppID, rtcAppID, tokenURL, roomListURL, wsServerURL,cgi_token} = globalData;
 
 let _methods = {
     inputChange({detail, target}) {
@@ -42,19 +42,19 @@ let _methods = {
             this.data._rtcAppID !== rtcAppID ||
             this.data._tokenURL !== tokenURL ||
             this.data._roomListURL !== roomListURL ||
-            this.data._wsServerURL !== wsServerURL
+            this.data._wsServerURL !== wsServerURL ||
+            this.data._cgi_token != cgi_token
         ) {
             wx.showModal({
                 content: '确定要修改么？',
                 success: (res) => {
                     if (res.confirm) {
-
-                        globalData.liveAppID = this.data._liveAppID;
-                        globalData.rtcAppID = this.data._rtcAppID;
+                        globalData.liveAppID = this.data._liveAppID*1;
+                        globalData.rtcAppID = this.data._rtcAppID*1;
                         globalData.tokenURL = this.data._tokenURL;
                         globalData.roomListURL = this.data._roomListURL;
                         globalData.wsServerURL = this.data._wsServerURL;
-
+                        globalData.cgi_token = this.data._cgi_token;
                         wx.navigateBack();
                     }
                 }
@@ -73,6 +73,28 @@ let _methods = {
         globalData.logServerURL = "https://wsslogger-demo.zego.im/httplog";
 
         wx.navigateBack();
+    },
+    scanQR() {
+        wx.scanCode({
+            success: ({result, scanType}) => {
+                if (scanType === "QR_CODE") {
+                    let {appid, server, roomlist, cgi_token} = JSON.parse(result);
+                    this.setData({
+                        _liveAppID: appid ? appid : this.data._liveAppID,
+                        _rtcAppID: appid ? appid : this.data._rtcAppID,
+                        _wsServerURL: server ? server : this.data._wsServerURL,
+                        _roomListURL: roomlist ? roomlist : this.data._roomListURL,
+                        _cgi_token:cgi_token
+                    });
+
+                } else {
+                    console.error('扫描的不是二维码')
+                }
+            },
+            fail({errMsg}) {
+                console.error('扫描失败', errMsg);
+            }
+        })
     }
 };
 
@@ -86,7 +108,8 @@ Page({
         _rtcAppID: rtcAppID,
         _tokenURL: tokenURL,
         _roomListURL: roomListURL,
-        _wsServerURL: wsServerURL
+        _wsServerURL: wsServerURL,
+        _cgi_token:cgi_token
     },
 
     /**
