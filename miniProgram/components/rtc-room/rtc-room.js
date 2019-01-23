@@ -275,11 +275,11 @@ let rtcRoomHandler = {
         if (!zego) console.error('please invoke config first');
         return zego;
     },
-    updateMixStream(param) {
-        zego.updateMixStream(param);
+    updateMixStream(param,suc,err) {
+        zego.updateMixStream(param,suc,err);
     },
     stopMixStream(param) {
-        zego.stopMixStream(param);
+        zego.stopMixStream(param,suc,err);
     },
     startPlayingMixStream(mixStreamId) {
         zego.startPlayingMixStream(mixStreamId);

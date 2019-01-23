@@ -401,11 +401,11 @@ let liveRoomHandler = {
             }
         );
     },
-    updateMixStream(param) {
-        zego.updateMixStream(param);
+    updateMixStream(param,suc,err) {
+        zego.updateMixStream(param,suc,err);
     },
-    stopMixStream(param) {
-        zego.stopMixStream(param);
+    stopMixStream(param,suc,err) {
+        zego.stopMixStream(param,suc,err);
     },
     startPlayingMixStream(mixStreamId) {
         zego.startPlayingMixStream(mixStreamId);
