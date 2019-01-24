@@ -331,7 +331,7 @@ let _rtcRoomHandler = {
                 playingList.push(stream);
             }
         });
-    }
+    },
 };
 
 

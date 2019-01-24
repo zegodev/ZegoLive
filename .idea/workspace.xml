@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74ee8296-0220-4fd1-a2be-6680abbcc174" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,14 +24,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="120">
-                <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="wrap.wxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding>
+                <element signature="n#style#0;n#cover-view#0;n#live-pusher#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rtc-room.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="333" column="6" selection-start-line="333" selection-start-column="6" selection-end-line="333" selection-end-column="6" />
+              <folding>
+                <element signature="e#316#2719#0" />
+                <element signature="e#2745#4009#0" />
+                <element signature="e#2794#3470#0" />
+                <element signature="e#4065#4270#0" />
+                <element signature="e#4306#5032#0" />
+                <element signature="e#5045#5461#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zego-nav.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zego-nav.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rtc-room.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-175" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wrap.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zego-nav.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="5" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -38,6 +115,7 @@
       <find>tokenURL</find>
       <find>config</find>
       <find>updateMixStream</find>
+      <find>wsServerURL</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -48,16 +126,19 @@
       <list>
         <option value="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js" />
         <option value="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js" />
-        <option value="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxss" />
         <option value="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxml" />
         <option value="$PROJECT_DIR$/miniProgram/utils/server.js" />
-        <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" />
-        <option value="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" />
-        <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" />
         <option value="$PROJECT_DIR$/miniProgram/components/live-room/live-room.js" />
-        <option value="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.js" />
         <option value="$PROJECT_DIR$/miniProgram/app.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxss" />
+        <option value="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxss" />
+        <option value="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" />
+        <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" />
+        <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" />
+        <option value="$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.js" />
+        <option value="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxss" />
+        <option value="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxml" />
       </list>
     </option>
   </component>
@@ -71,10 +152,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="97" />
-    <option name="y" value="61" />
-    <option name="width" value="1309" />
-    <option name="height" value="749" />
+    <option name="x" value="141" />
+    <option name="y" value="48" />
+    <option name="width" value="1365" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -93,6 +174,55 @@
               <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
               <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
+              <item name="wraptemplate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="zego-nav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="liveroom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="liveroom" type="462c0819:PsiDirectoryNode" />
+              <item name="room" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -149,7 +279,8 @@
       <workItem from="1548138498504" duration="3796000" />
       <workItem from="1548210441012" duration="7632000" />
       <workItem from="1548240665551" duration="1508000" />
-      <workItem from="1548298166805" duration="1810000" />
+      <workItem from="1548298166805" duration="1897000" />
+      <workItem from="1548310580498" duration="3512000" />
     </task>
     <task id="LOCAL-00001" summary="同步代码到正式小程序">
       <created>1547454210211</created>
@@ -169,20 +300,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20693000" />
+    <option name="totallyTimeSpent" value="24292000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="97" y="61" width="1309" height="749" extended-state="0" />
+    <frame x="141" y="48" width="1365" height="780" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29891303" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28645834" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003959" side_tool="true" weight="0.41319942" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.57822084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" visible="true" weight="0.41411042" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" weight="0.41411042" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -216,6 +347,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/miniProgram/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -676,24 +821,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -708,20 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" selection-start-line="18" selection-end-line="72" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -746,24 +863,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
+    <entry file="file://$PROJECT_DIR$/miniProgram/components/live-room/live-room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="189" column="15" lean-forward="true" selection-start-line="189" selection-start-column="15" selection-end-line="189" selection-end-column="15" />
+        <state relative-caret-position="289">
+          <caret line="408" column="6" lean-forward="true" selection-start-line="408" selection-start-column="6" selection-end-line="408" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-142">
+            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/tool/setting/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="60" selection-start-line="60" selection-end-line="82" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        <state relative-caret-position="297">
+          <caret line="142" column="9" lean-forward="true" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
+          <folding>
+            <element signature="e#326#1108#0" />
+            <element signature="e#354#483#0" />
+            <element signature="e#401#458#0" />
+            <element signature="e#496#623#0" />
+            <element signature="e#542#598#0" />
+            <element signature="e#636#763#0" />
+            <element signature="e#682#738#0" />
+            <element signature="e#776#907#0" />
+            <element signature="e#823#882#0" />
+            <element signature="e#920#1053#0" />
+            <element signature="e#969#1028#0" />
+            <element signature="e#1066#1098#0" />
+            <element signature="e#2179#2624#0" />
+            <element signature="e#3612#3638#0" />
+            <element signature="e#3851#3884#0" />
+            <element signature="e#3931#3968#0" />
+            <element signature="e#4009#4042#0" />
+            <element signature="e#4552#4585#0" />
+            <element signature="e#4625#4658#0" />
+            <element signature="e#4685#4693#0" />
+            <element signature="e#4700#4739#0" />
+            <element signature="e#4775#4783#0" />
+            <element signature="e#4790#4822#0" />
+            <element signature="e#4854#4862#0" />
+            <element signature="e#4869#4897#0" />
+            <element signature="e#4933#4941#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="202" column="6" lean-forward="true" selection-start-line="202" selection-start-column="6" selection-end-line="202" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="182" column="45" lean-forward="true" selection-start-line="182" selection-start-column="45" selection-end-line="182" selection-end-column="45" />
+        <state relative-caret-position="428">
+          <caret line="296" column="54" selection-start-line="296" selection-start-column="54" selection-end-line="296" selection-end-column="54" />
           <folding>
             <element signature="e#259#2714#0" />
             <element signature="e#361#2708#0" />
@@ -794,20 +984,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/components/live-room/live-room.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="408" column="6" lean-forward="true" selection-start-line="408" selection-start-column="6" selection-end-line="408" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
             <element signature="e#300#318#0" />
-            <element signature="e#324#32812#0" />
             <element signature="e#336#2222#0" />
             <element signature="e#1144#1548#0" />
             <element signature="e#1570#1606#0" />
@@ -1002,33 +1184,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/rtc-room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="282" column="6" selection-start-line="282" selection-start-column="6" selection-end-line="282" selection-end-column="6" />
+        <state relative-caret-position="390">
+          <caret line="333" column="6" selection-start-line="333" selection-start-column="6" selection-end-line="333" selection-end-column="6" />
           <folding>
             <element signature="e#316#2719#0" />
             <element signature="e#2745#4009#0" />
             <element signature="e#2794#3470#0" />
+            <element signature="e#4065#4270#0" />
             <element signature="e#4306#5032#0" />
+            <element signature="e#5045#5461#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
+    <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="120">
-            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#cover-view#0;n#live-pusher#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

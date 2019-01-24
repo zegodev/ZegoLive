@@ -49,25 +49,25 @@
 }
 
 .leftTop {
-    border-radius: 30vw 0 0 0;
+    border-radius: 29vw 0 0 0;
     border-right: 2px solid #fff;
     border-bottom: 2px solid #fff;
 }
 
 .rightTop {
-    border-radius: 0 30vw 0 0;
+    border-radius: 0 29vw 0 0;
     border-left: 2px solid #fff;
     border-bottom: 2px solid #fff;
 }
 
 .leftBottom {
-    border-radius: 0 0 0 30vw;
+    border-radius: 0 0 0 29vw;
     border-right: 2px solid #fff;
     border-top: 2px solid #fff;
 }
 
 .rightBottom {
-    border-radius: 0 0 30vw 0;
+    border-radius: 0 0 29vw 0;
     border-left: 2px solid #fff;
     border-top: 2px solid #fff;
 }

@@ -199,6 +199,7 @@ Page({
         //刷新全局变量
         appID = getApp().globalData.liveAppID;
         tokenURL = getApp().globalData.tokenURL;
+        wsServerURL =  getApp().globalData.wsServerURL;
     },
 
     /**

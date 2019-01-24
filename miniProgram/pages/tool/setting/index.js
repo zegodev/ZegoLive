@@ -75,6 +75,7 @@ let _methods = {
         wx.navigateBack();
     },
     scanQR() {
+
         wx.scanCode({
             success: ({result, scanType}) => {
                 if (scanType === "QR_CODE") {
@@ -89,7 +90,7 @@ let _methods = {
                         _roomListURL: roomlist ? roomlist : this.data._roomListURL,
                         _cgi_token:cgi_token
                     });
-
+                    this.data.useQR = 1;
                 } else {
                     console.error('扫描的不是二维码')
                 }
@@ -112,7 +113,8 @@ Page({
         _tokenURL: tokenURL,
         _roomListURL: roomListURL,
         _wsServerURL: wsServerURL,
-        _cgi_token:cgi_token
+        _cgi_token:cgi_token,
+        useQR:0
     },
 
     /**
@@ -133,6 +135,13 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+
+        //扫二维码的时候不更新
+        if(this.data.useQR == 1){
+            this.data.useQR = 0;
+            return;
+        }
+
         liveAppID = getApp().globalData.liveAppID;
         rtcAppID = getApp().globalData.rtcAppID;
         tokenURL = getApp().globalData.tokenURL;

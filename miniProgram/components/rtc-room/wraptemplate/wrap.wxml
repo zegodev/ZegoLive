@@ -17,7 +17,9 @@
                      bindstatechange="onMainPushState"
                      bindnetstatus="onMainPushStatus"
                      binderror="onMainPushError">
+
             <cover-view class='character' style='padding: 0 5px;'>我（{{userName}}）</cover-view>
+
             <cover-view class="operate">
                 <cover-view class='img-box'>
                     <cover-image class='img-view' src='../Resources/camera.png'
@@ -32,7 +34,9 @@
                 </cover-view>
 
                 <cover-view class='img-box'>
-                    <cover-image class='img-view' src='/components/Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png' bindtap="toggleCamera"></cover-image>
+                    <cover-image class='img-view'
+                                 src='/components/Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png'
+                                 bindtap="toggleCamera"></cover-image>
                     <!--<cover-view class='text-view'>摄像头</cover-view>-->
                 </cover-view>
 
