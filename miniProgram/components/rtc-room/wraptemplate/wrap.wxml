@@ -22,13 +22,13 @@
 
             <cover-view class="operate">
                 <cover-view class='img-box'>
-                    <cover-image class='img-view' src='../Resources/camera.png'
+                    <cover-image class='img-view' src='/components/Resources/camera.png'
                                  bindtap="switchCamera"></cover-image>
                     <!-- <cover-view class='text-view'>翻转</cover-view> -->
                 </cover-view>
                 <cover-view class='img-box'>
                     <cover-image class='img-view'
-                                 src='../Resources/{{beauty > 0? "beauty" : "beauty-dis"}}.png'
+                                 src='/components/Resources/{{beauty > 0? "beauty" : "beauty-dis"}}.png'
                                  bindtap="toggleBeauty"></cover-image>
                     <!-- <cover-view class='text-view'>美颜</cover-view> -->
                 </cover-view>
@@ -41,14 +41,14 @@
                 </cover-view>
 
                 <cover-view class='img-box'>
-                    <cover-image class='img-view' src='../Resources/{{muted ? "mic-dis" : "mic"}}.png'
+                    <cover-image class='img-view' src='/components/Resources/{{muted ? "mic-dis" : "mic"}}.png'
                                  bindtap="toggleMuted"></cover-image>
                     <!--<cover-view class='text-view'>声音</cover-view>-->
                 </cover-view>
 
 
                 <cover-view class='img-box' wx:if="{{debug}}">
-                    <cover-image class='img-view' src='../Resources/{{_debug? "log" : "log2"}}.png'
+                    <cover-image class='img-view' src='/components/Resources/{{_debug? "log" : "log2"}}.png'
                                  bindtap="toggleDebug"></cover-image>
                     <!-- <cover-view class='text-view'>日志</cover-view> -->
                 </cover-view>
