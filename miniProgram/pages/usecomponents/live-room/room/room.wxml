@@ -40,12 +40,14 @@
         </view>
 
         <view class='img-box' bindtap="mixStream">
-            <image src='../../../../resource/switchCamera.png' ></image>
+            <image wx:if="{{role !== 'audience'}}" src='../../../../resource/{{mixStreamStart?"mixStream":"stopMixStream"}}.png' ></image>
+            <image wx:else src='../../../../resource/disableMixStream.png' ></image>
             <text>{{mixStreamStart?'停止混流':'开始混流'}}</text>
         </view>
 
         <view class='img-box' bindtap="playMixStream">
-            <image src='../../../../resource/switchCamera.png'></image>
+            <image wx:if="{{role !== 'audience'}}" src='../../../../resource/{{playMixStreamStart?"playMixStream":"stopPlayMixStream"}}.png'></image>
+            <image wx:else src='../../../../resource/disablePlayMixStream.png' ></image>
             <text>{{playMixStreamStart?'停止播放混流':'播放混流'}}</text>
         </view>
     </block>

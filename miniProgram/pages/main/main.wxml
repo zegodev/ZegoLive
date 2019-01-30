@@ -13,7 +13,7 @@
     </view>
 
     <view class="settings">
-        <button wx:if="{{canShow=='0'}}" open-type="openSetting" bindopensetting="callback">授权使用摄像头</button>
+        <button wx:if="{{canShow=='0'}}" open-type="openSetting" bindopensetting="settingCallback">授权使用摄像头</button>
     </view>
 
 </view>

@@ -20,6 +20,8 @@
 
             <cover-view class='character' style='padding: 0 5px;'>我（{{userName}}）</cover-view>
 
+            <zego-nav native="true"> </zego-nav>
+
             <cover-view class="operate">
                 <cover-view class='img-box'>
                     <cover-image class='img-view' src='/components/Resources/camera.png'

@@ -1,8 +1,15 @@
 <!--components/zego-navigator/zegonavigator.wxml-->
-<view class="navaigator">
+<view wx:if="{{!native}}" class="navaigator">
     <view class="narrow-left" bindtap="back">
     </view>
     <slot>
 
     </slot>
 </view>
+<cover-view wx:else  class="navaigator">
+    <cover-image class="narrow-left-native" src='/components/Resources/back.png' bindtap="back">
+    </cover-image>
+    <slot>
+
+    </slot>
+</cover-view>

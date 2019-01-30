@@ -74,7 +74,7 @@
 
 
                 <cover-view class='poster' wx:if="{{item.playingState === 'initial'}}">
-                    <cover-image style="width: 100%; height: 100%;" src="../Resources/loading.png"></cover-image>
+                    <cover-image style="width: 100%; height: 100%;" src="/components/Resources/loading.png"></cover-image>
                 </cover-view>
 
                 <block wx:elif="{{item.playingState === 'success'}}">
@@ -82,7 +82,7 @@
                 </block>
 
                 <cover-view class='poster' wx:elif="{{item.playingState === 'failed'}}">
-                    <cover-image style="width: 100%; height: 100%;" src="../Resources/loading_fail.png"
+                    <cover-image style="width: 100%; height: 100%;" src="/components/Resources/loading_fail.png"
                                  mode="aspectFit"></cover-image>
                 </cover-view>
 

@@ -3,7 +3,9 @@ Component({
     /**
      * 组件的属性列表
      */
-    properties: {},
+    properties: {
+         native: {type: Boolean, value: false},
+    },
 
     /**
      * 组件的初始数据

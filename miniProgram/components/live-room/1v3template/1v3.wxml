@@ -35,7 +35,7 @@
                     </cover-view>
 
                     <cover-view class='img-box'>
-                        <cover-image class='img-view' src='../Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png' bindtap="toggleCamera"></cover-image>
+                        <cover-image class='img-view' src='/components/Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png' bindtap="toggleCamera"></cover-image>
                         <!--<cover-view class='text-view'>摄像头</cover-view>-->
                     </cover-view>
 
@@ -72,7 +72,7 @@
 
 
                 <cover-view class='poster' wx:if="{{mainPusherInfo.playingState === 'initial'}}">
-                    <cover-image   src="../Resources/loading.png"></cover-image>
+                    <cover-image   src="/components/Resources/loading.png"></cover-image>
                 </cover-view>
 
                 <block wx:elif="{{mainPusherInfo.playingState === 'success'}}">
@@ -80,7 +80,7 @@
                 </block>
 
                 <cover-view class='poster' wx:elif="{{mainPusherInfo.playingState === 'failed'}}">
-                    <cover-image   src="../Resources/loading_fail.png"
+                    <cover-image   src="/components/Resources/loading_fail.png"
                                  mode="aspectFit"></cover-image>
                 </cover-view>
 
@@ -158,7 +158,7 @@
 
 
                     <cover-view class='poster' wx:if="{{item.playingState === 'initial'}}">
-                        <cover-image   src="../Resources/loading.png"></cover-image>
+                        <cover-image   src="/components/Resources/loading.png"></cover-image>
                     </cover-view>
 
                     <block wx:elif="{{item.playingState === 'success'}}">
@@ -170,7 +170,7 @@
                     </block>
 
                     <cover-view class='poster' wx:elif="{{item.playingState === 'failed'}}">
-                        <cover-image   src="../Resources/loading_fail.png"
+                        <cover-image   src="/components/Resources/loading_fail.png"
                                      mode="aspectFit"></cover-image>
                     </cover-view>
 

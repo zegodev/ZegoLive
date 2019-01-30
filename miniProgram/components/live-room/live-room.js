@@ -567,7 +567,7 @@ let sdkCallBackHandler = {
 
 
             //混流地址--》作为观众小视频播放
-            if (!founded && this.mainPusherInfo.stream_id !== streamId) {
+            if (!founded &&this.data.mainPusherInfo.stream_id !== streamId) {
                 streamList.push({
                     url,
                     isMixStream: true,

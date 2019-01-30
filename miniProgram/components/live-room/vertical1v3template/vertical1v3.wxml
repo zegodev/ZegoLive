@@ -23,30 +23,30 @@
                 <cover-view class='character' style='padding: 0 5px;'>我（{{ userName}}）</cover-view>
                 <cover-view class="operate">
                     <cover-view class='img-box'>
-                        <cover-image class='img-view' src='../Resources/camera.png'
+                        <cover-image class='img-view' src='/components/Resources/camera.png'
                                      bindtap="switchCamera"></cover-image>
                         <!-- <cover-view class='text-view'>翻转</cover-view> -->
                     </cover-view>
                     <cover-view class='img-box'>
                         <cover-image class='img-view'
-                                     src='../Resources/{{beauty > 0? "beauty" : "beauty-dis"}}.png'
+                                     src='/components/Resources/{{beauty > 0? "beauty" : "beauty-dis"}}.png'
                                      bindtap="toggleBeauty"></cover-image>
                         <!-- <cover-view class='text-view'>美颜</cover-view> -->
                     </cover-view>
 
                      <cover-view class='img-box'>
-                        <cover-image class='img-view' src='../Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png' bindtap="toggleCamera"></cover-image>
+                        <cover-image class='img-view' src='/components/Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png' bindtap="toggleCamera"></cover-image>
                          <!--<cover-view class='text-view'>摄像头</cover-view>-->
                     </cover-view>
 
                     <cover-view class='img-box'>
-                        <cover-image class='img-view' src='../Resources/{{muted ? "mic-dis" : "mic"}}.png' bindtap="toggleMuted"></cover-image>
+                        <cover-image class='img-view' src='/components/Resources/{{muted ? "mic-dis" : "mic"}}.png' bindtap="toggleMuted"></cover-image>
                         <!--<cover-view class='text-view'>声音</cover-view>-->
                     </cover-view>
 
 
                     <cover-view class='img-box' wx:if="{{debug}}">
-                        <cover-image class='img-view' src='../Resources/{{_debug? "log" : "log2"}}.png'
+                        <cover-image class='img-view' src='/components/Resources/{{_debug? "log" : "log2"}}.png'
                                      bindtap="toggleDebug"></cover-image>
                         <!-- <cover-view class='text-view'>日志</cover-view> -->
                     </cover-view>
@@ -71,7 +71,7 @@
 
 
                 <cover-view class='poster' wx:if="{{mainPusherInfo.playingState === 'initial'}}">
-                    <cover-image  src="/Resources/loading.png"></cover-image>
+                    <cover-image  src="/components/Resources/loading.png"></cover-image>
                 </cover-view>
 
                 <block wx:elif="{{mainPusherInfo.playingState === 'success'}}">
@@ -79,7 +79,7 @@
                 </block>
 
                 <cover-view class='poster' wx:elif="{{mainPusherInfo.playingState === 'failed'}}">
-                    <cover-image  src="/Resources/loading_fail.png"
+                    <cover-image  src="/components/Resources/loading_fail.png"
                                  mode="aspectFit"></cover-image>
                 </cover-view>
 
@@ -87,7 +87,7 @@
                 <cover-view class="operate">
 
                     <cover-view class='img-box'>
-                        <cover-image class='img-view' data-dd="{{liveReq}}" src='../Resources/{{liveReq==0?"linkmic":(liveReq==1?"linkmic-press":"linkmic-press")}}.png'
+                        <cover-image class='img-view' data-dd="{{liveReq}}" src='/components/Resources/{{liveReq==0?"linkmic":(liveReq==1?"linkmic-press":"linkmic-press")}}.png'
                                      bindtap="requestJionPusher"></cover-image>
                         <!-- <cover-view class='text-view'>连麦</cover-view> -->
                     </cover-view>
@@ -98,7 +98,7 @@
                     <!--</cover-view>-->
 
                     <cover-view class='img-box' wx:if="{{debug}}">
-                        <cover-image class='img-view' src='../Resources/{{_debug? "log" : "log2"}}.png'
+                        <cover-image class='img-view' src='/components/Resources/{{_debug? "log" : "log2"}}.png'
                                      bindtap="toggleDebug"></cover-image>
                         <!-- <cover-view class='text-view'>日志</cover-view> -->
                     </cover-view>
@@ -155,7 +155,7 @@
                              binderror="onMainPlayError">
 
                     <cover-view class='poster' wx:if="{{item.playingState === 'initial'}}">
-                        <cover-image  src="../Resources/loading.png"></cover-image>
+                        <cover-image  src="/components/Resources/loading.png"></cover-image>
                     </cover-view>
 
                     <block wx:elif="{{item.playingState === 'success'}}">
@@ -167,7 +167,7 @@
                     </block>
 
                     <cover-view class='poster' wx:elif="{{item.playingState === 'failed'}}">
-                        <cover-image  src="../Resources/loading_fail.png"
+                        <cover-image  src="/components/Resources/loading_fail.png"
                                      mode="aspectFit"></cover-image>
                     </cover-view>
 

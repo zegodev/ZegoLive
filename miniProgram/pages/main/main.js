@@ -21,7 +21,7 @@ Page({
                 navigateTo: "../usecomponents/live-room/roomlist/roomlist"
             },
             {
-                icon: "../../resource/endJoin.png",
+                icon: "../../resource/videotlak.png",
                 subtitle: '<rtc-room>',
                 title: "互动视频",
                 navigateTo: "../usecomponents/rtc-room/roomName/roomName"
@@ -94,20 +94,45 @@ Page({
      */
     onReady() {
         console.log("onReady");
+        this.authCheck();
+    },
 
+    authCheck() {
+        let self = this;
         wx.getSetting({
             success: ({authSetting}) => {
 
                 //推流必须要有这两权限
                 if (!authSetting['scope.camera'] || !authSetting['scope.record']) {
-                    wx.showModal({
-                        title: '提示',
-                        content: '使用该小程序需要先授权摄像头权限',
-                        showCancel: false,
+                    wx.authorize({
+                        scope: 'scope.camera',
+                        success() {
+                            self.setData({
+                                canShow: 1
+                            });
+                        },
+                        fail() {
+                            self.setData({
+                                canShow: 0
+                            });
+                        }
                     });
-                    this.setData({
-                        canShow: 0
+
+                    wx.authorize({
+                        scope: 'scope.record',
+                        success() {
+                            self.setData({
+                                canShow: 1
+                            });
+                        },
+                        fail() {
+                            self.setData({
+                                canShow: 0
+                            });
+                        }
                     });
+
+
                 } else if (!wx.createLivePlayerContext) {
                     wx.showModal({
                         title: '提示',
@@ -125,8 +150,6 @@ Page({
 
             }
         });
-
-
     },
 
     /**
@@ -175,5 +198,10 @@ Page({
     onShareAppMessage() {
         console.log("onShareAppMessage");
         return sharePage();
+    },
+
+    settingCallback({detail}) {
+         this.authCheck();
     }
-})
+
+});
