@@ -67,8 +67,12 @@ let _methods = {
         }
     },
     playMixStream() {
-        if (!this.canUseMixStream() || !this.data.mixStreamStart) return;
+        if (!this.canUseMixStream()) return;
 
+        //未开始混流，不能播放混流
+        if(!this.data.playMixStreamStart&&!this.data.mixStreamStart){
+            return;
+        }
         this.setData({
             playMixStreamStart: !this.data.playMixStreamStart,
         });

@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="74ee8296-0220-4fd1-a2be-6680abbcc174" name="Default" comment="客户环境模拟">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,36 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="room.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
+      <file leaf-file-name="room.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
-              <caret line="470" column="33" selection-start-line="470" selection-start-column="27" selection-end-line="470" selection-end-column="33" />
-              <folding>
-                <element signature="e#300#318#0" />
-                <element signature="e#336#2222#0" />
-                <element signature="e#1144#1548#0" />
-                <element signature="e#1570#1606#0" />
-                <element signature="e#2229#2262#0" />
-                <element signature="e#2664#2701#0" />
-                <element signature="e#2838#2999#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roomlist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-559" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roomlist.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="125">
+              <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -55,36 +30,82 @@
       <file leaf-file-name="room.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="285" column="38" lean-forward="true" selection-start-line="285" selection-start-column="38" selection-end-line="285" selection-end-column="38" />
+            <state relative-caret-position="250">
+              <caret line="162" column="9" selection-start-line="157" selection-start-column="7" selection-end-line="162" selection-end-column="9" />
               <folding>
                 <element signature="e#259#2714#0" />
+                <element signature="e#361#2708#0" />
+                <element signature="e#388#433#0" />
+                <element signature="e#446#516#0" />
+                <element signature="e#529#571#0" />
+                <element signature="e#584#651#0" />
+                <element signature="e#664#1330#0" />
+                <element signature="e#725#1291#0" />
+                <element signature="e#864#1273#0" />
+                <element signature="e#992#1096#0" />
+                <element signature="e#1140#1249#0" />
+                <element signature="e#1343#1415#0" />
+                <element signature="e#1428#1493#0" />
+                <element signature="e#1506#1572#0" />
+                <element signature="e#1585#2193#0" />
+                <element signature="e#2033#2154#0" />
+                <element signature="e#2206#2580#0" />
+                <element signature="e#2258#2541#0" />
+                <element signature="e#2302#2523#0" />
+                <element signature="e#2341#2499#0" />
+                <element signature="e#2594#2698#0" />
+                <element signature="e#2735#2829#0" />
+                <element signature="e#2758#2821#0" />
+                <element signature="e#2856#2912#0" />
+                <element signature="e#2931#3965#0" />
+                <element signature="e#3040#3240#0" />
+                <element signature="e#3392#3519#0" />
+                <element signature="e#3686#3770#0" />
+                <element signature="e#3829#3948#0" />
+                <element signature="e#3990#4153#0" />
+                <element signature="e#4035#4126#0" />
+                <element signature="e#4171#4499#0" />
+                <element signature="e#4240#4306#0" />
+                <element signature="e#4348#4419#0" />
+                <element signature="e#4425#4493#0" />
+                <element signature="e#4939#5717#0" />
+                <element signature="e#4966#5111#0" />
+                <element signature="e#4967#5110#0" />
+                <element signature="e#5158#5375#0" />
+                <element signature="e#5409#5552#0" />
+                <element signature="e#5574#5709#0" />
+                <element signature="e#5739#6033#0" />
+                <element signature="e#5783#5852#0" />
+                <element signature="e#5872#5936#0" />
+                <element signature="e#5957#6026#0" />
+                <element signature="e#6063#6143#0" />
+                <element signature="e#6172#6252#0" />
+                <element signature="e#6263#9210#0" />
+                <element signature="e#6270#6296#0" />
+                <element signature="e#6307#6739#0" />
+                <element signature="e#6746#6779#0" />
+                <element signature="e#6833#7322#0" />
+                <element signature="e#6947#7242#0" />
+                <element signature="e#7272#7314#0" />
+                <element signature="e#7329#7366#0" />
+                <element signature="e#7392#8317#0" />
+                <element signature="e#7478#8309#0" />
+                <element signature="e#7505#7543#0" />
+                <element signature="e#7654#8241#0" />
+                <element signature="e#8324#8357#0" />
+                <element signature="e#8382#8557#0" />
+                <element signature="e#8564#8597#0" />
+                <element signature="e#8622#8630#0" />
+                <element signature="e#8637#8670#0" />
+                <element signature="e#8697#8763#0" />
+                <element signature="e#8770#8809#0" />
+                <element signature="e#8845#8853#0" />
+                <element signature="e#8860#8892#0" />
+                <element signature="e#8924#8932#0" />
+                <element signature="e#8939#8967#0" />
+                <element signature="e#9003#9191#0" />
+                <element signature="e#9033#9116#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="room.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="175" column="62" lean-forward="true" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roomlist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-455" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roomlist.wxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
             </state>
           </provider>
         </entry>
@@ -147,9 +168,9 @@
         <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.wxml" />
         <option value="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js" />
         <option value="$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml" />
+        <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml" />
         <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" />
         <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" />
-        <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml" />
       </list>
     </option>
   </component>
@@ -163,8 +184,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="37" />
-    <option name="y" value="88" />
+    <option name="x" value="44" />
+    <option name="y" value="52" />
     <option name="width" value="1332" />
     <option name="height" value="784" />
   </component>
@@ -173,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,10 +285,20 @@
               <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
               <item name="room" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
+              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
+              <item name="roomName" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,7 +358,8 @@
       <workItem from="1548310580498" duration="4147000" />
       <workItem from="1548317304390" duration="1388000" />
       <workItem from="1548645886656" duration="9735000" />
-      <workItem from="1548902494004" duration="1395000" />
+      <workItem from="1548902494004" duration="1701000" />
+      <workItem from="1548921938791" duration="515000" />
     </task>
     <task id="LOCAL-00001" summary="同步代码到正式小程序">
       <created>1547454210211</created>
@@ -348,10 +379,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37445000" />
+    <option name="totallyTimeSpent" value="38266000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="88" width="1332" height="784" extended-state="0" />
+    <frame x="44" y="52" width="1332" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.259344" />
@@ -395,6 +426,130 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6240">
+          <caret line="470" column="33" selection-start-line="470" selection-start-column="27" selection-end-line="470" selection-end-column="33" />
+          <folding>
+            <element signature="e#300#318#0" />
+            <element signature="e#336#2222#0" />
+            <element signature="e#1144#1548#0" />
+            <element signature="e#1570#1606#0" />
+            <element signature="e#2229#2262#0" />
+            <element signature="e#2664#2701#0" />
+            <element signature="e#2838#2999#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3030">
+          <caret line="285" column="38" lean-forward="true" selection-start-line="285" selection-start-column="38" selection-end-line="285" selection-end-column="38" />
+          <folding>
+            <element signature="e#259#2714#0" />
+            <element signature="e#361#2708#0" />
+            <element signature="e#388#433#0" />
+            <element signature="e#446#516#0" />
+            <element signature="e#529#571#0" />
+            <element signature="e#584#651#0" />
+            <element signature="e#664#1330#0" />
+            <element signature="e#725#1291#0" />
+            <element signature="e#864#1273#0" />
+            <element signature="e#992#1096#0" />
+            <element signature="e#1140#1249#0" />
+            <element signature="e#1343#1415#0" />
+            <element signature="e#1428#1493#0" />
+            <element signature="e#1506#1572#0" />
+            <element signature="e#1585#2193#0" />
+            <element signature="e#2033#2154#0" />
+            <element signature="e#2206#2580#0" />
+            <element signature="e#2258#2541#0" />
+            <element signature="e#2302#2523#0" />
+            <element signature="e#2341#2499#0" />
+            <element signature="e#2594#2698#0" />
+            <element signature="e#2735#2829#0" />
+            <element signature="e#2758#2821#0" />
+            <element signature="e#2856#2912#0" />
+            <element signature="e#2931#3965#0" />
+            <element signature="e#3040#3240#0" />
+            <element signature="e#3392#3519#0" />
+            <element signature="e#3686#3770#0" />
+            <element signature="e#3829#3948#0" />
+            <element signature="e#3990#4153#0" />
+            <element signature="e#4035#4126#0" />
+            <element signature="e#4171#4499#0" />
+            <element signature="e#4240#4306#0" />
+            <element signature="e#4348#4419#0" />
+            <element signature="e#4425#4493#0" />
+            <element signature="e#4939#5717#0" />
+            <element signature="e#4966#5111#0" />
+            <element signature="e#4967#5110#0" />
+            <element signature="e#5158#5375#0" />
+            <element signature="e#5409#5552#0" />
+            <element signature="e#5574#5709#0" />
+            <element signature="e#5739#6033#0" />
+            <element signature="e#5783#5852#0" />
+            <element signature="e#5872#5936#0" />
+            <element signature="e#5957#6026#0" />
+            <element signature="e#6063#6143#0" />
+            <element signature="e#6172#6252#0" />
+            <element signature="e#6263#9210#0" />
+            <element signature="e#6270#6296#0" />
+            <element signature="e#6307#6739#0" />
+            <element signature="e#6746#6779#0" />
+            <element signature="e#6833#7322#0" />
+            <element signature="e#6947#7242#0" />
+            <element signature="e#7272#7314#0" />
+            <element signature="e#7329#7366#0" />
+            <element signature="e#7392#8317#0" />
+            <element signature="e#7478#8309#0" />
+            <element signature="e#7505#7543#0" />
+            <element signature="e#7654#8241#0" />
+            <element signature="e#8324#8357#0" />
+            <element signature="e#8382#8557#0" />
+            <element signature="e#8564#8597#0" />
+            <element signature="e#8622#8630#0" />
+            <element signature="e#8637#8670#0" />
+            <element signature="e#8697#8763#0" />
+            <element signature="e#8770#8809#0" />
+            <element signature="e#8845#8853#0" />
+            <element signature="e#8860#8892#0" />
+            <element signature="e#8924#8932#0" />
+            <element signature="e#8939#8967#0" />
+            <element signature="e#9003#9191#0" />
+            <element signature="e#9033#9116#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="175" column="62" lean-forward="true" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/components/zego-nav/zego-nav.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -599,7 +754,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
+        <state relative-caret-position="6240">
           <caret line="470" column="33" selection-start-line="470" selection-start-column="27" selection-end-line="470" selection-end-column="33" />
           <folding>
             <element signature="e#300#318#0" />
@@ -614,43 +769,110 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-559" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/roomlist/roomlist.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="270">
           <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="285" column="38" lean-forward="true" selection-start-line="285" selection-start-column="38" selection-end-line="285" selection-end-column="38" />
+        <state relative-caret-position="250">
+          <caret line="162" column="9" selection-start-line="157" selection-start-column="7" selection-end-line="162" selection-end-column="9" />
           <folding>
             <element signature="e#259#2714#0" />
+            <element signature="e#361#2708#0" />
+            <element signature="e#388#433#0" />
+            <element signature="e#446#516#0" />
+            <element signature="e#529#571#0" />
+            <element signature="e#584#651#0" />
+            <element signature="e#664#1330#0" />
+            <element signature="e#725#1291#0" />
+            <element signature="e#864#1273#0" />
+            <element signature="e#992#1096#0" />
+            <element signature="e#1140#1249#0" />
+            <element signature="e#1343#1415#0" />
+            <element signature="e#1428#1493#0" />
+            <element signature="e#1506#1572#0" />
+            <element signature="e#1585#2193#0" />
+            <element signature="e#2033#2154#0" />
+            <element signature="e#2206#2580#0" />
+            <element signature="e#2258#2541#0" />
+            <element signature="e#2302#2523#0" />
+            <element signature="e#2341#2499#0" />
+            <element signature="e#2594#2698#0" />
+            <element signature="e#2735#2829#0" />
+            <element signature="e#2758#2821#0" />
+            <element signature="e#2856#2912#0" />
+            <element signature="e#2931#3965#0" />
+            <element signature="e#3040#3240#0" />
+            <element signature="e#3392#3519#0" />
+            <element signature="e#3686#3770#0" />
+            <element signature="e#3829#3948#0" />
+            <element signature="e#3990#4153#0" />
+            <element signature="e#4035#4126#0" />
+            <element signature="e#4171#4499#0" />
+            <element signature="e#4240#4306#0" />
+            <element signature="e#4348#4419#0" />
+            <element signature="e#4425#4493#0" />
+            <element signature="e#4939#5717#0" />
+            <element signature="e#4966#5111#0" />
+            <element signature="e#4967#5110#0" />
+            <element signature="e#5158#5375#0" />
+            <element signature="e#5409#5552#0" />
+            <element signature="e#5574#5709#0" />
+            <element signature="e#5739#6033#0" />
+            <element signature="e#5783#5852#0" />
+            <element signature="e#5872#5936#0" />
+            <element signature="e#5957#6026#0" />
+            <element signature="e#6063#6143#0" />
+            <element signature="e#6172#6252#0" />
+            <element signature="e#6263#9210#0" />
+            <element signature="e#6270#6296#0" />
+            <element signature="e#6307#6739#0" />
+            <element signature="e#6746#6779#0" />
+            <element signature="e#6833#7322#0" />
+            <element signature="e#6947#7242#0" />
+            <element signature="e#7272#7314#0" />
+            <element signature="e#7329#7366#0" />
+            <element signature="e#7392#8317#0" />
+            <element signature="e#7478#8309#0" />
+            <element signature="e#7505#7543#0" />
+            <element signature="e#7654#8241#0" />
+            <element signature="e#8324#8357#0" />
+            <element signature="e#8382#8557#0" />
+            <element signature="e#8564#8597#0" />
+            <element signature="e#8622#8630#0" />
+            <element signature="e#8637#8670#0" />
+            <element signature="e#8697#8763#0" />
+            <element signature="e#8770#8809#0" />
+            <element signature="e#8845#8853#0" />
+            <element signature="e#8860#8892#0" />
+            <element signature="e#8924#8932#0" />
+            <element signature="e#8939#8967#0" />
+            <element signature="e#9003#9191#0" />
+            <element signature="e#9033#9116#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="175" column="62" lean-forward="true" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/roomlist/roomlist.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
+        <state relative-caret-position="125">
+          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
         </state>
       </provider>
     </entry>
