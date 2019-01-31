@@ -15,8 +15,8 @@
 
 <scroll-view class="rooms" scroll-y="true">
     <view class="room-list">
-        <view class="room-list-item" wx:for-items="{{roomList}}" wx:key="item.room_id" data-name="{{item.room_id}}"
-              data-id="{{item.room_name}}" bindtap="onClickItem">
+        <view class="room-list-item" wx:for-items="{{roomList}}" wx:key="item.room_id" data-name="{{item.room_name}}"
+              data-id="{{item.room_id }}" bindtap="onClickItem">
             <view>
                 直播间名称:{{stringUtil.substr(item.room_name === "no name" || item.room_name.length == 0 ?
                 item.room_id + "（房间 ID）" : item.room_name,18)}}
