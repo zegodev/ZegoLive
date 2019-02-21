@@ -84,25 +84,24 @@
                 (reachStreamLimit == true ? "禁止连麦" : (isPublishing == true ? "结束连麦" : "申请连麦")))}}
             </text>
         </view>
-        <view class='img-box'>
-            <image src='../../../resource/switchCamera.png' bindtap="switchCamera"></image>
+        <view class='img-box' bindtap="switchCamera">
+            <image src='../../../resource/switchCamera.png'></image>
             <text>切换相机</text>
         </view>
-        <view class='img-box'>
-            <image src='../../../resource/{{pushConfig.isBeauty? "beauty" : "noBeauty"}}.png'
-                   bindtap="setBeauty"></image>
+        <view class='img-box' bindtap="setBeauty">
+            <image src='../../../resource/{{pushConfig.isBeauty? "beauty" : "noBeauty"}}.png'></image>
             <text>美颜</text>
         </view>
-        <view class='img-box'>
-            <image src='../../../resource/{{pushConfig.isMute ? "mute" : "noMute"}}.png' bindtap="enableMute"></image>
+        <view class='img-box' bindtap="enableMute">
+            <image src='../../../resource/{{pushConfig.isMute ? "mute" : "noMute"}}.png'></image>
             <text>麦克风</text>
         </view>
         <view class='img-box' bindtap="showMessage">
-            <image src='../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png' bindtap="showLog"></image>
+            <image src='../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png'></image>
             <text>说点啥</text>
         </view>
-        <view class='img-box'>
-            <image src='../../../resource/{{pushConfig.showLog? "log" : "noLog"}}.png' bindtap="showLog"></image>
+        <view class='img-box' bindtap="showLog">
+            <image src='../../../resource/{{pushConfig.showLog? "log" : "noLog"}}.png'></image>
             <text>日志</text>
         </view>
     </view>

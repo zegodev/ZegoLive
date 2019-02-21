@@ -90,15 +90,15 @@ let _methods = {
     updateMixStream() {
         let streamList = [{
             streamId: this.data.pushStreamId,
-            top: 3,
-            left: 3,
-            bottom: 5,
-            right: 5,
+            top: 0,
+            left: 0,
+          bottom: 320,
+          right: 240,
         }];
 
         this.data.component.updateMixStream({
             outputStreamId: this.data.mixStreamId,
-            outputBitrate: 300,
+            outputBitrate: 300*1000,
             outputFps: 15,
             outputWidth: 240,
             outputHeight: 320,
