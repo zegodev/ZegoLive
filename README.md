@@ -30,4 +30,4 @@ ZegoLive 是一个即构sdk功能示例demo，开发人员可以参考该demo，
 2. 都提供了排列模版，开发者可以基于这些模版开发小程序，或修改样式或自定义模版快速实现自己小程序排版
 
 # 更多
-请访问 [即构开发者中心](https://www.zego.im/html/document/#Application_Scenes/Video_Live/Feature_Process:MiniProgram)
+请访问 [即构开发者中心](https://doc.zego.im/CN/305.html)
