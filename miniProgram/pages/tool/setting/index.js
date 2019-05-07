@@ -1,6 +1,6 @@
 // pages/setting/index.js
 let globalData = getApp().globalData;
-let {liveAppID, rtcAppID, tokenURL, roomListURL, wsServerURL,cgi_token} = globalData;
+let {liveAppID, rtcAppID, tokenURL, roomListURL, wsServerURL, cgi_token, testEnvironment} = globalData;
 
 let _methods = {
     inputChange({detail, target}) {
@@ -27,6 +27,11 @@ let _methods = {
                     _wsServerURL: value
                 });
                 break;
+            case 'testEnvironment':
+                this.setData({
+                    _testEnvironment: value ? 0 : 1
+                });
+                break;
             case 'roomListURL':
                 this.setData({
                     _roomListURL: value
@@ -43,18 +48,20 @@ let _methods = {
             this.data._tokenURL !== tokenURL ||
             this.data._roomListURL !== roomListURL ||
             this.data._wsServerURL !== wsServerURL ||
-            this.data._cgi_token != cgi_token
+            this.data._cgi_token != cgi_token ||
+            this.data._testEnvironment != testEnvironment
         ) {
             wx.showModal({
                 content: '确定要修改么？',
                 success: (res) => {
                     if (res.confirm) {
-                        globalData.liveAppID = this.data._liveAppID*1;
-                        globalData.rtcAppID = this.data._rtcAppID*1;
+                        globalData.liveAppID = this.data._liveAppID * 1;
+                        globalData.rtcAppID = this.data._rtcAppID * 1;
                         globalData.tokenURL = this.data._tokenURL;
                         globalData.roomListURL = this.data._roomListURL;
                         globalData.wsServerURL = this.data._wsServerURL;
                         globalData.cgi_token = this.data._cgi_token;
+                        globalData.testEnvironment = this.data._testEnvironment;
                         wx.navigateBack();
                     }
                 }
@@ -71,6 +78,7 @@ let _methods = {
         globalData.roomListURL = "https://liveroom1739272706-api.zego.im/demo/roomlist?appid=1739272706";
         globalData.wsServerURL = "wss://wssliveroom-demo.zego.im/ws";
         globalData.logServerURL = "https://wsslogger-demo.zego.im/httplog";
+        globalData.testEnvironment = 0;
 
         wx.navigateBack();
     },
@@ -79,16 +87,17 @@ let _methods = {
         wx.scanCode({
             success: ({result, scanType}) => {
                 if (scanType === "QR_CODE") {
-                    let {appid, server, roomlist, cgi_token} = JSON.parse(result);
-                  if (appid && !server){
-                        server = 'wss://wssliveroom'+appid+'-api.zego.im/ws';
+                    let {appid, server, roomlist, cgi_token, testEnvironment} = JSON.parse(result);
+                    if (appid && !server) {
+                        server = 'wss://wssliveroom' + appid + '-api.zego.im/ws';
                     }
                     this.setData({
                         _liveAppID: appid ? appid : this.data._liveAppID,
                         _rtcAppID: appid ? appid : this.data._rtcAppID,
                         _wsServerURL: server ? server : this.data._wsServerURL,
                         _roomListURL: roomlist ? roomlist : this.data._roomListURL,
-                        _cgi_token:cgi_token
+                        _cgi_token: cgi_token,
+                        _testEnvironment: testEnvironment,
                     });
                     this.data.useQR = 1;
                 } else {
@@ -113,8 +122,9 @@ Page({
         _tokenURL: tokenURL,
         _roomListURL: roomListURL,
         _wsServerURL: wsServerURL,
-        _cgi_token:cgi_token,
-        useQR:0
+        _cgi_token: cgi_token,
+        _testEnvironment: testEnvironment,
+        useQR: 0
     },
 
     /**
@@ -137,7 +147,7 @@ Page({
     onShow: function () {
 
         //扫二维码的时候不更新
-        if(this.data.useQR == 1){
+        if (this.data.useQR == 1) {
             this.data.useQR = 0;
             return;
         }
@@ -147,12 +157,14 @@ Page({
         tokenURL = getApp().globalData.tokenURL;
         roomListURL = getApp().globalData.roomListURL;
         wsServerURL = getApp().globalData.wsServerURL;
+        testEnvironment = getApp().globalData.testEnvironment;
         this.setData({
             _liveAppID: liveAppID,
             _rtcAppID: rtcAppID,
             _tokenURL: tokenURL,
             _roomListURL: roomListURL,
-            _wsServerURL: wsServerURL
+            _wsServerURL: wsServerURL,
+            _testEnvironment: testEnvironment
         })
     },
 

@@ -53,7 +53,7 @@
 
         <block wx:if="{{!isMessageHide}}">
             <view class='message-input'>
-                <input placeholder="我要说点什么" placeholder-style='color: #b3b3b3; font-size: 14px;'
+                <input placeholder="我要说点什么" adjust-position="{{false}}" placeholder-style='color: #b3b3b3; font-size: 14px;'
                        bindinput="bindMessageInput"
                        confirm-type='send' bindconfirm="onComment"/>
             </view>

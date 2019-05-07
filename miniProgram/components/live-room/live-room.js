@@ -1,4 +1,4 @@
-const zegoSdk = require('../../js/jZego-wx-1.1.1.js');
+const zegoSdk = require('../../js/jZego-wx-1.1.2.js');
 let zego;
 let playingList = [];
 

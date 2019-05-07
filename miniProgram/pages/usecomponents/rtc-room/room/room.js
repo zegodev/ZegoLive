@@ -1,5 +1,5 @@
 // pages/components/rtc-room/room/room.js
-let {liveAppID: appID, tokenURL,wsServerURL} = getApp().globalData;
+let {liveAppID: appID, tokenURL,wsServerURL,testEnvironment} = getApp().globalData;
 let {getLoginToken} = require("../../../../utils/server.js");
 let {sharePage} = require("../../../../utils/util.js");
 
@@ -191,6 +191,7 @@ Page({
                 server: wsServerURL,//,"wss://wssliveroom-demo.zego.im/ws", // 必填，服务器地址，由即构提供
                 logUrl: "https://wsslogger-demo.zego.im/httplog", // 选填，log 服务器地址，由即构提供
                 audienceCreateRoom: false, // 观众不允许创建房间
+                testEnvironment:!!testEnvironment
             });
             this.data.component.start(this.data.token);
         });
@@ -204,6 +205,7 @@ Page({
         appID = getApp().globalData.liveAppID;
         tokenURL = getApp().globalData.tokenURL;
         wsServerURL =  getApp().globalData.wsServerURL;
+        testEnvironment =  getApp().globalData.testEnvironment;
     },
 
     /**

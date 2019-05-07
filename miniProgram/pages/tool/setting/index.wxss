@@ -1,6 +1,6 @@
 /* pages/setting/index.wxss */
 .settings{
-    height: 52vh;
+    height: 65vh;
     color:gray;
 }
 .items{
@@ -37,8 +37,8 @@
 }
 
 .buttonGroup-top button, .buttonGroup-bottom button {
-    width: 30vw;
-    height: 30vw;
+    width: 25vw;
+    height: 25vw;
     text-align: center;
     vertical-align: middle;
     background-color: rgba(13, 112, 255, 0.8);
@@ -80,4 +80,8 @@
     border-radius: 0 0 29vw 0;
     border-left: 2px solid #fff;
     border-top: 2px solid #fff;
+}
+switch {
+    margin:2vw 0vw 0vw 2vw;
+
 }

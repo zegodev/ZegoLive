@@ -12,6 +12,96 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="rtc-room.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/rtc-room/rtc-room.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="137" column="22" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/usecomponents/rtc-room/room/room.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="207" column="63" lean-forward="true" selection-start-line="207" selection-start-column="8" selection-end-line="207" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/usecomponents/live-room/room/room.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="305" lean-forward="true" selection-start-line="305" selection-end-line="305" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/main/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="157" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/liveroom/room/room.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="881" column="54" lean-forward="true" selection-start-line="881" selection-start-column="54" selection-end-line="881" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jZe</find>
+      <find>wsliveroom-test.zego.im</find>
+      <find>Config</find>
+      <find>zg</find>
+      <find>getApp().globalData</find>
+      <find>conf</find>
+      <find>config(</find>
+      <find>startPlayingMixStream</find>
+      <find>testenv</find>
+      <find>_testenv</find>
+      <find>biz_channel</find>
+      <find>wsServerURL</find>
+      <find>config</find>
+      <find>onshow</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>testEnvironment</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/components/rtc-room/rtc-room.js" />
+        <option value="$PROJECT_DIR$/components/live-room/live-room.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/pages/tool/setting/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/tool/setting/index.wxss" />
+        <option value="$PROJECT_DIR$/pages/tool/setting/index.js" />
+        <option value="$PROJECT_DIR$/js/jZego-wx-1.1.2.js" />
+        <option value="$PROJECT_DIR$/js/jZego-wx-1.1.2-V2.js" />
+        <option value="$PROJECT_DIR$/pages/usecomponents/rtc-room/room/room.js" />
+        <option value="$PROJECT_DIR$/pages/usecomponents/live-room/room/room.js" />
+        <option value="$PROJECT_DIR$/pages/liveroom/room/room.js" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -22,10 +112,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="60" />
-    <option name="y" value="25" />
-    <option name="width" value="1380" />
-    <option name="height" value="816" />
+    <option name="x" value="221" />
+    <option name="y" value="166" />
+    <option name="width" value="1523" />
+    <option name="height" value="966" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -39,6 +129,96 @@
             <path>
               <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
               <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="live-room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="liveroom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="liveroom" type="462c0819:PsiDirectoryNode" />
+              <item name="room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
+              <item name="live-room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
+              <item name="live-room" type="462c0819:PsiDirectoryNode" />
+              <item name="room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
+              <item name="live-room" type="462c0819:PsiDirectoryNode" />
+              <item name="roomlist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
+              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
+              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
+              <item name="room" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -57,6 +237,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -81,29 +266,32 @@
       <option name="presentableId" value="Default" />
       <updated>1550739334491</updated>
       <workItem from="1550739336033" duration="9000" />
+      <workItem from="1551337566146" duration="703000" />
+      <workItem from="1557211340172" duration="7981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9000" />
+    <option name="totallyTimeSpent" value="8693000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="25" width="1380" height="816" extended-state="0" />
+    <frame x="221" y="166" width="1523" height="966" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22569907" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -114,5 +302,124 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/live-room/live-room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="48" selection-start-column="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/rtc-room/rtc-room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tool/setting/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tool/setting/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/live-room/live-room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="179" column="26" selection-start-line="179" selection-start-column="20" selection-end-line="179" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tool/setting/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jZego-wx-1.1.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret column="6637" lean-forward="true" selection-start-column="6637" selection-end-column="6637" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jZego-wx-1.1.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="1069" column="37" selection-start-line="1069" selection-start-column="31" selection-end-line="1069" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jZego-wx-1.1.2-V2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="1070" column="295" selection-start-line="1070" selection-start-column="280" selection-end-line="1070" selection-end-column="295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/rtc-room/rtc-room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="137" column="22" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/usecomponents/rtc-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="207" column="63" lean-forward="true" selection-start-line="207" selection-start-column="8" selection-end-line="207" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/usecomponents/live-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="305" lean-forward="true" selection-start-line="305" selection-end-line="305" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/main/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="157" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/liveroom/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="881" column="54" lean-forward="true" selection-start-line="881" selection-start-column="54" selection-end-line="881" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
