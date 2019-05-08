@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74ee8296-0220-4fd1-a2be-6680abbcc174" name="Default" comment="客户环境模拟">
-      <change afterPath="$PROJECT_DIR$/miniProgram/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/.idea/miniProgram.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniProgram/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniProgram/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="room.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="189" column="36" lean-forward="true" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="36" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="room.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -83,7 +77,6 @@
         <option value="$PROJECT_DIR$/miniProgram/pages/tool/customlive/index.wxss" />
         <option value="$PROJECT_DIR$/miniProgram/pages/tool/setting/index.js" />
         <option value="$PROJECT_DIR$/miniProgram/components/rtc-room/wraptemplate/wrap.wxss" />
-        <option value="$PROJECT_DIR$/miniProgram/app.js" />
         <option value="$PROJECT_DIR$/miniProgram/pages/main/main.wxml" />
         <option value="$PROJECT_DIR$/miniProgram/components/live-room/1v3template/1v3.wxml" />
         <option value="$PROJECT_DIR$/miniProgram/components/live-room/1v1template/1v1.wxml" />
@@ -105,6 +98,8 @@
         <option value="$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.wxml" />
         <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js" />
         <option value="$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js" />
+        <option value="$PROJECT_DIR$/miniProgram/app.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -120,8 +115,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="106" />
     <option name="y" value="26" />
-    <option name="width" value="1332" />
-    <option name="height" value="784" />
+    <option name="width" value="1498" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -140,53 +135,6 @@
               <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
               <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
-              <item name="live-room" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
-              <item name="live-room" type="462c0819:PsiDirectoryNode" />
-              <item name="room" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
-              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZegoLive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZegoLive" type="462c0819:PsiDirectoryNode" />
-              <item name="miniProgram" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="usecomponents" type="462c0819:PsiDirectoryNode" />
-              <item name="rtc-room" type="462c0819:PsiDirectoryNode" />
-              <item name="room" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,14 +155,14 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/miniProgram/resource" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/miniProgram/components/Resources" />
       <recent name="$PROJECT_DIR$/miniProgram/js" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/miniProgram" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/miniProgram/resource" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,7 +205,10 @@
       <workItem from="1548928823180" duration="2282000" />
       <workItem from="1548987683563" duration="1137000" />
       <workItem from="1550571522096" duration="720000" />
-      <workItem from="1550739358492" duration="838000" />
+      <workItem from="1550739358492" duration="1006000" />
+      <workItem from="1550742340811" duration="5000" />
+      <workItem from="1557282242732" duration="32000" />
+      <workItem from="1557283033646" duration="334000" />
     </task>
     <task id="LOCAL-00001" summary="同步代码到正式小程序">
       <created>1547454210211</created>
@@ -277,21 +228,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43302000" />
+    <option name="totallyTimeSpent" value="43841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="106" y="26" width="1332" height="784" extended-state="0" />
+    <frame x="106" y="26" width="1498" height="1060" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.259344" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23019634" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003959" side_tool="true" weight="0.41319942" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.57787484" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" weight="0.5152838" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" visible="true" weight="0.5150571" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -300,6 +250,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +285,34 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="189" column="36" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="189" column="36" lean-forward="true" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -565,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/liveroom/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-523">
@@ -609,15 +581,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/live-room/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="189" column="36" lean-forward="true" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="36" />
+        <state relative-caret-position="2835">
+          <caret line="189" column="36" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miniProgram/pages/usecomponents/rtc-room/room/room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        <state relative-caret-position="485">
+          <caret line="126" column="6" lean-forward="true" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniProgram/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
