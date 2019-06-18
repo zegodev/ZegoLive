@@ -13,6 +13,8 @@
 	"appid": "wx2b8909dae7727f25",
 	"projectname": "github-xcx",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

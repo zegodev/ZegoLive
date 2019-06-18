@@ -88,6 +88,10 @@
             <image src='../../../resource/switchCamera.png'></image>
             <text>切换相机</text>
         </view>
+        <view wx:if="{{loginType == 'anchor'}}" class="img-box" bindtap="snapshot">
+            <image src='../../../resource/snapshot.png'></image>
+            <text>截图发送</text>
+        </view>
         <view class='img-box' bindtap="setBeauty">
             <image src='../../../resource/{{pushConfig.isBeauty? "beauty" : "noBeauty"}}.png'></image>
             <text>美颜</text>

@@ -54,6 +54,7 @@ Page({
         inputMessage: "",
         isMessageHide: true,
         scrollToView: "",
+        imgTempPath: "",
     },
 
     /**
@@ -783,6 +784,122 @@ Page({
         this.data.pusherVideoContext && this.data.pusherVideoContext.switchCamera();
     },
 
+    // 截图发送
+    snapshot() {
+        var that = this
+        this.data.pusherVideoContext && this.data.pusherVideoContext.snapshot({
+            success: function(ret) {
+                console.log('ret', ret.tempImagePath);
+                wx.showLoading({
+                    title: '正在上传...',
+                })
+                const imgPath = 'sdk-doc/mini-snapshot-' + new Date().getTime() + '.jpg'
+                // 上传图片
+                wx.uploadFile({
+                    //  服务器上传图片接口地址
+                    url: 'https://*****', 
+                    filePath: ret.tempImagePath,
+                    name: 'file',
+                    header: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    formData: {
+                      'path':  imgPath,
+                      'space': 'DemoSpace'
+                    },
+                    success (res){
+                      console.log('res', res)
+                      const data = JSON.parse(res.data)
+                      if (data.code == 200) {
+                        wx.hideLoading()
+                        wx.showToast({
+                            title: '发送成功',
+                            duration: 1000,
+                            mask: true
+                        })
+                        // 服务器存储图片地址
+                        const msg = 'http://****' + imgPath
+                        // 发送图片URL
+                        zg.sendRoomMsg(2, 2, msg,
+                            function (seq, msgId, msg_category, msg_type, msg_content) {
+                                console.log('>>>[liveroom-room] onComment success');
+                            }, function (err, seq, msg_category, msg_type, msg_content) {
+                                console.log('>>>[liveroom-room] onComment, error: ');
+                                console.log(err);
+                            });
+                      } else {
+                          wx.showToast({
+                              title: '发送失败',
+                              duration: 1000,
+                              mask: true
+                          })
+                      }
+                    },
+                    fail (err) {
+                        console.log(err)
+                        wx.hideLoading()
+                        wx.showToast({
+                            title: '发送失败',
+                            duration: 1000,
+                            mask: true
+                        })
+                    }
+                })
+                setTimeout(() => {
+                    wx.showModal({
+                        title: '提示',
+                        content: '是否保存到手机相册',
+                        success(resInfo) {
+                            if (resInfo.confirm) {
+                                console.log('saveImageToPhotosAlbum confirm')
+                                that._saveImageToPhotosAlbum(ret.tempImagePath)
+                            } else if (resInfo.cancel) {
+                                console.log('saveImageToPhotosAlbum cancel')
+                            }
+                        }
+                    })
+                }, 3000)    
+            },
+            fail: function() {
+                console.log('fail')
+            }
+        });
+    },
+    _saveImageToPhotosAlbum(imgPath) {
+        // 保存图片到本地相册
+        wx.getSetting({
+            success(res) {
+                console.log('setting', res)
+                if (!res.authSetting['scope.writePhotosAlbum']) {
+                    wx.authorize({
+                        scope:'scope.writePhotosAlbum',
+                        success() {
+                            console.log('授权成功')
+                            wx.saveImageToPhotosAlbum({
+                                filePath: imgPath,
+                                success(result) {
+                                    console.log('writePhotosAlbum', result)
+                                },
+                                fail(error) {
+                                    console.log('writePhotosAlbum', error)
+                                }
+                            })
+                        }
+                    })
+                } else if (res.authSetting['scope.writePhotosAlbum']) {
+                    wx.saveImageToPhotosAlbum({
+                        filePath: imgPath,
+                        success(result) {
+                            console.log('writePhotosAlbum', result)
+                        },
+                        fail(error) {
+                            console.log('writePhotosAlbum', error)
+                        }
+                    })
+                }
+            }
+        })
+    },
     setBeauty() {
         this.data.pushConfig.isBeauty = (this.data.pushConfig.isBeauty === 0 ? 6 : 0);
         this.setData({

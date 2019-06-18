@@ -20,7 +20,9 @@
   text-align: center;
 }
 
-
+.rooms {
+  max-height: 75vh;
+}
 .room-list{
     margin:2vh 5vh;
 

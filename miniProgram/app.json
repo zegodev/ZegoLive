@@ -23,5 +23,6 @@
   "networkTimeout": {
     "request": 60000
   },
-  "debug": false
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
 }

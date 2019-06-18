@@ -71,7 +71,7 @@ live-player,live-pusher {
     display: flex;
     position: fixed;
     bottom: 0vh;
-    text-align: center;
+    text-align: left;
     border-top: 1 rpx solid rgba(200, 205, 210, 0.5);
 }
 
@@ -83,7 +83,7 @@ live-player,live-pusher {
     width: 16vw;
     vertical-align: top;
     bottom: 1.5vh;
-
+    text-align: center;
 }
 
 .img-box image {
