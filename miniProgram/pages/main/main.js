@@ -16,6 +16,12 @@ Page({
             },
             {
                 icon: "../../resource/interactionLive.png",
+                subtitle: '示例demo',
+                title: "视频直播",
+                navigateTo: "../live/index/index"
+            },
+            {
+                icon: "../../resource/interactionLive.png",
                 subtitle: '<live-room>',
                 title: "视频直播",
                 navigateTo: "../usecomponents/live-room/roomlist/roomlist"

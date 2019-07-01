@@ -1,0 +1,121 @@
+<!--pages/live/room.wxml-->
+<wxs src="../../../utils/stringUtil.wxs" module="stringUtil"/>
+
+<zego-nav>
+    <view>{{stringUtil.substr(roomName === "no name" || roomName.length == 0 ? roomID + "（房间 ID）" : roomName,18)}}
+    </view>
+</zego-nav>
+
+<view class="containerBase">
+
+    <view wx:if="{{pushUrl}}" class="{{playStreamList.length==0?'big-video':'small-video'}}">
+        <live-pusher
+                id="video-livePusher"
+                mode="{{pushConfig.mode}}"
+                url="{{pushUrl}}"
+                min-bitrate="{{pushConfig.minBitrate}}"
+                max-bitrate="{{pushConfig.maxBitrate}}"
+                aspect="{{pushConfig.aspect}}"
+                beauty="{{pushConfig.isBeauty}}"
+                muted="{{pushConfig.isMute}}"
+                background-mute="true"
+                debug="{{pushConfig.showLog}}"
+                bindstatechange="onPushStateChange"
+                bindnetstatus="onPushNetStateChange"
+                waiting-image="https://storage.zego.im/downloads/pause_publish.png">
+            <cover-view class='character'>
+                {{isPublishing ? "我(" + publishStreamID + ")": ""}}
+            </cover-view>
+            <cover-view class='poster' wx:if="{{!isPublishing}}">
+                <cover-image src="../../../resource/loading.png" mode="aspectFit"></cover-image>
+            </cover-view>
+        </live-pusher>
+    </view>
+
+    <view wx:if="{{playStreamList.length}}"
+          class="{{(!pushUrl&&playStreamList.length==1)?'big-video':'small-video'}}"
+          wx:for="{{playStreamList}}"
+          wx:key="{{item.streamID}}">
+        <live-player
+                autoplay
+                wx:if="{{item.playUrl}}"
+                id="{{item.streamID}}"
+                mode="{{playConfig.mode}}"
+                object-fit="contain"
+                min-cache="0.1"
+                max-cache="0.3"
+                src="{{item.playUrl}}"
+                debug="{{pushConfig.showLog}}"
+                bindstatechange="onPlayStateChange"
+                bindnetstatus="onPlayNetStateChange"
+                binderror="error">
+
+            <cover-view class='poster' wx:if="{{item.playingState === 'initial'}}">
+                <cover-image style="width: 100%; height: 100%;" src="../../../resource/loading.png"
+                             mode="aspectFit"></cover-image>
+            </cover-view>
+            <cover-view class='character' wx:if="{{item.playingState === 'succeeded'}}">
+                {{item.streamID}}
+            </cover-view>
+            <cover-view class='poster' wx:elif="{{item.playingState === 'failed'}}">
+                <cover-image src="../../../resource/loading_fail.png" mode="aspectFit"></cover-image>
+            </cover-view>
+        </live-player>
+    </view>
+
+
+</view>
+
+<scroll-view
+        class='messageView'
+        scroll-into-view='{{scrollToView}}'
+        scroll-y='true'>
+    <view class='message-detail' wx:for="{{messageList}}" wx:key="{{index}}" id="{{item.id}}">
+        <view><span>{{item.time}} {{item.name}}: </span>{{item.content}}</view>
+    </view>
+</scroll-view>
+
+
+<view class="operate">
+    <view wx:if="{{isMessageHide}}">
+        <view class='img-box'>
+            <image src='../../../resource/{{loginType == "anchor" ? (playStreamList.length > 0 ? "noJoin" : "noJoin") : (beginToPublish ? "noJoin" : (reachStreamLimit == true ? "noJoin" : (isPublishing == true ? "endJoin" : "join")))}}.png'
+                   bindtap="requestJoinLive"></image>
+            <text>{{loginType == "anchor" ? (playStreamList.length > 0 ? "正在连麦" : "等待连麦") : (beginToPublish ? "准备连麦" :
+                (reachStreamLimit == true ? "禁止连麦" : (isPublishing == true ? "结束连麦" : "申请连麦")))}}
+            </text>
+        </view>
+        <view class='img-box' bindtap="switchCamera">
+            <image src='../../../resource/switchCamera.png'></image>
+            <text>切换相机</text>
+        </view>
+        <view wx:if="{{loginType == 'anchor'}}" class="img-box" bindtap="snapshot">
+            <image src='../../../resource/snapshot.png'></image>
+            <text>截图发送</text>
+        </view>
+        <view class='img-box' bindtap="setBeauty">
+            <image src='../../../resource/{{pushConfig.isBeauty? "beauty" : "noBeauty"}}.png'></image>
+            <text>美颜</text>
+        </view>
+        <view class='img-box' bindtap="enableMute">
+            <image src='../../../resource/{{pushConfig.isMute ? "mute" : "noMute"}}.png'></image>
+            <text>麦克风</text>
+        </view>
+        <view class='img-box' bindtap="showMessage">
+            <image src='../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png'></image>
+            <text>说点啥</text>
+        </view>
+        <view class='img-box' bindtap="showLog">
+            <image src='../../../resource/{{pushConfig.showLog? "log" : "noLog"}}.png'></image>
+            <text>日志</text>
+        </view>
+    </view>
+    <view wx:if="{{!isMessageHide}}">
+        <view class='message-input'>
+            <input   placeholder="我要说点什么" placeholder-style='color: #b3b3b3; font-size: 14px;'
+                     bindinput="bindMessageInput"
+                     confirm-type='send' bindconfirm="onComment"/>
+        </view>
+    </view>
+
+</view>
