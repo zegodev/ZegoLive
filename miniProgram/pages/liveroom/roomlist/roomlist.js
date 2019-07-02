@@ -1,5 +1,7 @@
 let requestRoomListUrl = getApp().globalData.roomListURL;
 let { sharePage }= require('../../../utils/util.js');
+const app = getApp();
+let {appSign} = app.globalData;
 
 Page({
 
@@ -7,6 +9,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        testMode: true,   
         roomName: '',
         roomID: '',
         roomList: [],
@@ -104,43 +107,83 @@ Page({
             loginType: 'anchor'
         });
 
-        wx.request({
-            url: requestRoomListUrl,
-            method: "GET",
-            success(res) {
-                console.log(">>>[liveroom-roomList] fetchRoomList before create room, result is: ");
-                if (res.statusCode === 200) {
-                    var roomList = res.data.data.room_list;
-                    self.setData({
-                        roomList: roomList
-                    })
-
-                    for (var index in roomList) {
-                        if (roomList[index].room_id === self.data.roomID) {
-                            wx.showToast({
-                                title: '创建失败，相同 ID 房间已存在，请重新创建',
-                                icon: 'none',
-                                duration: 3000
-                            });
-                            return;
+        if (this.data.testMode) {
+            wx.request({
+                url: requestRoomListUrl,
+                method: "GET",
+                success(res) {
+                    console.log(">>>[liveroom-roomList] fetchRoomList before create room, result is: ");
+                    if (res.statusCode === 200) {
+                        var roomList = res.data.data.room_list;
+                        self.setData({
+                            roomList: roomList
+                        })
+    
+                        for (var index in roomList) {
+                            if (roomList[index].room_id === self.data.roomID) {
+                                wx.showToast({
+                                    title: '创建失败，相同 ID 房间已存在，请重新创建',
+                                    icon: 'none',
+                                    duration: 3000
+                                });
+                                return;
+                            }
                         }
+    
+                        var url = '../room/room?roomID=' + self.data.roomID + '&roomName=' + self.data.roomID + '&loginType=' + self.data.loginType;
+                        wx.navigateTo({
+                            url: url,
+                        });
+                    } else {
+                        wx.showToast({
+                            title: '创建失败，请稍后重试',
+                            icon: 'none',
+                            duration: 2000
+                        });
                     }
-
-                    var url = '../room/room?roomID=' + self.data.roomID + '&roomName=' + self.data.roomID + '&loginType=' + self.data.loginType;
-                    wx.navigateTo({
-                        url: url,
-                    });
-                } else {
-                    wx.showToast({
-                        title: '创建失败，请稍后重试',
-                        icon: 'none',
-                        duration: 2000
-                    });
                 }
-            }
-        })
+            })
+        } else {
+            var url = '../room/room?roomID=' + self.data.roomID + '&roomName=' + self.data.roomID + '&loginType=' + self.data.loginType;
+            wx.navigateTo({
+                url: url,
+            });
+        }
+        
     },
 
+    // 加入房间
+    onJoinRoom() {
+        var self = this;
+        console.log('>>>[liveroom-roomList] onCreateRoom, roomID is: ' + self.data.roomID);
+
+        if (self.data.roomID.length === 0) {
+            wx.showToast({
+                title: '房间 ID 不可为空',
+                icon: 'none',
+                duration: 2000
+            });
+            return;
+        }
+
+        if (self.data.roomID.match(/^[ ]+$/)) {
+            wx.showToast({
+                title: '房间 ID 不可为空格',
+                icon: 'none',
+                duration: 2000
+            });
+            return;
+        }
+
+        self.setData({
+            loginType: 'audience'
+        });
+
+        var url = '../room/room?roomID=' + self.data.roomID + '&roomName=' + self.data.roomID + '&loginType=' + self.data.loginType;
+        wx.navigateTo({
+            url: url,
+        });
+    },
 
     /**
      * 生命周期函数--监听页面加载
@@ -149,6 +192,12 @@ Page({
         //wx.authorize({ scope: "scope.camera" })
         //wx.openSetting();
         console.log('>>>[liveroom-roomList] onLoad');
+        console.log('appSign', appSign)
+        if (appSign) {
+            this.setData({
+                testMode: false
+            })
+        }
     },
 
     /**

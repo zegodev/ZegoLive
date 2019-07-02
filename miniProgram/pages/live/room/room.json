@@ -1,7 +1,0 @@
-{
-  "enablePullDownRefresh": true,
-  "backgroundColor": "#e0edf9",
-  "usingComponents": {
-     "zego-nav":"/components/zego-nav/zego-nav"
-  }
-}

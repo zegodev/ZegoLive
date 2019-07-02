@@ -1,15 +1,14 @@
 //app.js
 const liveAppID = 1739272706,//1252712950,
-          appID = 1739272706,
+        // appSign 不可随意暴露
         appSign = "",
-   wsServerURL2 = "wss://wsliveroom" + appID + "-api.zego.im:8282/ws",   
+   wsServerURL2 = "wss://wsliveroom" + liveAppID + "-api.zego.im:8282/ws",   
        rtcAppID = 1082937486;//demo里面暂时没用到这个appid
 App({
 
     globalData: {
         liveAppID,
         rtcAppID,
-        appID, 
         appSign,
         testEnvironment:0,//如果是测试环境需要改成1，正式为0
         tokenURL: "https://wssliveroom-demo.zego.im/token",

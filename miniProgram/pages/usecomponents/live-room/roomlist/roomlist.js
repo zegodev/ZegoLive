@@ -1,5 +1,7 @@
 let requestRoomListUrl = getApp().globalData.roomListURL;
 let {sharePage} = require('../../../../utils/util.js');
+const app = getApp();
+let {appSign} = app.globalData;
 Page({
 
     /**
@@ -12,6 +14,7 @@ Page({
         userName: '',
         tapTime: '',
         loginType: '', // 主播：anchor；观众：audience
+        testMode: true,
     },
 
     // 获取房间列表
@@ -147,6 +150,12 @@ Page({
         //wx.authorize({ scope: "scope.camera" })
         //wx.openSetting();
         console.log('>>>[liveroom-roomList] onLoad');
+        console.log('appSign', appSign)
+        if (appSign) {
+            this.setData({
+                testMode: false
+            })
+        }
     },
 
     /**

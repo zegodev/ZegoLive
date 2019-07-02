@@ -9,9 +9,7 @@
     "pages/usecomponents/rtc-room/room/room",
     "pages/tool/customlive/index",
     "pages/tool/live/index",
-    "pages/tool/setting/index",
-    "pages/live/room/room",
-    "pages/live/index/index"
+    "pages/tool/setting/index"
   ],
   "window": {
     "navigationStyle": "custom",

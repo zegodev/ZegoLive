@@ -1,42 +1,57 @@
 <wxs src="../../../utils/stringUtil.wxs" module="stringUtil"/>
 
 <zego-nav></zego-nav>
-<view>
-    <view class='text-has-room' wx-if="{{roomList.length}}">
-        <view>点击房间，进入互动直播间</view>
-    </view>
+<view wx:if="{{testMode}}">
+    <view>
+        <view class='text-has-room' wx-if="{{roomList.length}}">
+            <view>点击房间，进入互动直播间</view>
+        </view>
 
-    <view class='text-no-room' wx-if="{{!roomList.length}}">
-        <view>房间列表为空，请创建房间</view>
-    </view>
-</view>
-
-
-<scroll-view class="rooms" scroll-y="true" >
-    <view class="room-list">
-        <view class="room-list-item" wx:for-items="{{roomList}}" wx:key="item.room_id" data-name="{{item.room_name}}"
-              data-id="{{item.room_id}}" bindtap="onClickItem">
-            <view>
-                直播间名称:{{stringUtil.substr(item.room_name === "no name" || item.room_name.length == 0 ?
-                item.room_id + "（房间 ID）" : item.room_name,18)}}
-            </view>
-            <view>
-                直播间ID:{{ stringUtil.substr(item.room_id,18) }}
-            </view>
+        <view class='text-no-room' wx-if="{{!roomList.length}}">
+            <view>房间列表为空，请创建房间</view>
         </view>
     </view>
 
-</scroll-view>
 
-<view>
+    <scroll-view class="rooms" scroll-y="true" >
+        <view class="room-list">
+            <view class="room-list-item" wx:for-items="{{roomList}}" wx:key="item.room_id" data-name="{{item.room_name}}"
+                data-id="{{item.room_id}}" bindtap="onClickItem">
+                <view>
+                    直播间名称:{{stringUtil.substr(item.room_name === "no name" || item.room_name.length == 0 ?
+                    item.room_id + "（房间 ID）" : item.room_name,18)}}
+                </view>
+                <view>
+                    直播间ID:{{ stringUtil.substr(item.room_id,18) }}
+                </view>
+            </view>
+        </view>
 
-    <view class='bottom-input'>
-        <input value="{{inputValue}}" bindinput="bindKeyInput" placeholder="请输入房间 ID"
-               placeholder-style='color: #b3b3b3; font-size: 14px;'/>
+    </scroll-view>
+    <view>
+
+        <view class='bottom-input'>
+            <input value="{{inputValue}}" bindinput="bindKeyInput" placeholder="请输入房间 ID"
+                placeholder-style='color: #b3b3b3; font-size: 14px;'/>
+        </view>
+
+        <view class='bottom-btn'>
+            <button class='create-button' bindtap="onCreateRoom" hover-class="none">创建房间</button>
+        </view>
+
     </view>
-
-    <view class='bottom-btn'>
-        <button class='create-button' bindtap="onCreateRoom" hover-class="none">创建房间</button>
-    </view>
-
 </view>
+<view wx:else class="index-container">
+    <text>房间号</text>
+    <view class='input-container'>
+        <input value="{{roomID}}" bindinput="bindKeyInput" placeholder="请输入房间 ID" placeholder-style='color: #b3b3b3; font-size: 14px;' class="room-input" />
+        <text class="tip"></text>
+    </view>
+    <view class="button-container">
+        <button bindtap="onCreateRoom" hover-class="none">创建房间</button>
+        <button bindtap="onJoinRoom" hover-class="none">加入房间</button>
+    </view>
+</view>
+
+
+
