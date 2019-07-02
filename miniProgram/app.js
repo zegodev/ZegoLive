@@ -2,7 +2,7 @@
 const liveAppID = 1739272706,//1252712950,
         // appSign 不可随意暴露
         appSign = "",
-   wsServerURL2 = "wss://wsliveroom" + liveAppID + "-api.zego.im:8282/ws",   
+   wsServerURL2 = "wss://wsliveroom" + liveAppID + "-api.zego.im:8282/ws",   // 开发者请填写即构邮件发送给你的
        rtcAppID = 1082937486;//demo里面暂时没用到这个appid
 App({
 
