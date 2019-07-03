@@ -1,7 +1,6 @@
-let requestRoomListUrl = getApp().globalData.roomListURL;
 let { sharePage }= require('../../../utils/util.js');
 const app = getApp();
-let {appSign} = app.globalData;
+let {appSign, roomListURL: requestRoomListUrl, existOwnRoomList} = app.globalData;
 
 Page({
 
@@ -9,7 +8,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        testMode: true,   
+        testMode: true,
         roomName: '',
         roomID: '',
         roomList: [],
@@ -155,7 +154,7 @@ Page({
     // 加入房间
     onJoinRoom() {
         var self = this;
-        console.log('>>>[liveroom-roomList] onCreateRoom, roomID is: ' + self.data.roomID);
+        console.log('>>>[liveroom-roomList] onJoinRoom, roomID is: ' + self.data.roomID);
 
         if (self.data.roomID.length === 0) {
             wx.showToast({
@@ -192,8 +191,7 @@ Page({
         //wx.authorize({ scope: "scope.camera" })
         //wx.openSetting();
         console.log('>>>[liveroom-roomList] onLoad');
-        console.log('appSign', appSign)
-        if (appSign) {
+        if (appSign && !existOwnRoomList) {
             this.setData({
                 testMode: false
             })
@@ -213,10 +211,12 @@ Page({
     onShow() {
         console.log('>>>[liveroom-roomList] onShow');
 
-        //刷新全局变量
-        requestRoomListUrl = getApp().globalData.roomListURL;
+        if (this.data.testMode) {
+            //刷新全局变量
+            requestRoomListUrl = getApp().globalData.roomListURL;
 
-        this.fetchRoomList(this);
+            this.fetchRoomList(this);
+        }
     },
 
     /**

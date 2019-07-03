@@ -75,7 +75,7 @@ let _methods = {
                 wx.navigateBack({
                     complete: function () {
                         wx.showToast({
-                            title: '成主播已退出!',
+                            title: '该主播已退出!',
                             icon: 'none',
                             duration: 2000
                         });
