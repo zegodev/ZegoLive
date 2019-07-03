@@ -102,7 +102,7 @@ Page({
             logLevel: 0,                   // 日志级别，debug: 0, info: 1, warn: 2, error: 3, report: 99, disable: 100（数字越大，日志越少）
             server: wsServerURL,        // 必填，服务器地址，由即构提供
             logUrl: logServerURL,   // 必填，log 服务器地址，由即构提供
-            audienceCreateRoom: false,     // 观众不允许创建房间
+            audienceCreateRoom: true,     // false观众不允许创建房间
             testEnvironment:!!testEnvironment
         });
         this.bindCallBack();  //监听zego-sdk回调

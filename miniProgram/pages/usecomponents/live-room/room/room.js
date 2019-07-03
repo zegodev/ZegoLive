@@ -84,6 +84,19 @@ let _methods = {
                 break;
             }
 
+            case 'onRoomNotExist': {
+                wx.showModal({
+                    title: '提示',
+                    content: '主播已退出!',
+                    showCancel: false,
+                    success(res) {
+                        if (res.confirm || !res.cancel) {
+                            wx.navigateBack();
+                        }
+                    }
+                });
+                break;
+            }
             default: {
                 console.log('onRoomEvent default: ', e);
                 break;

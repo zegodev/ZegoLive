@@ -195,7 +195,13 @@ let liveRoomHandler = {
                 this.data.isCaster && this.doPublish();
 
                 if (!this.data.isCaster && streamList.length == 0) {
-                    console.error('主播已退出')
+                    // console.error('主播已退出')
+                    //通知使用组件页面
+                    this.triggerEvent('RoomEvent', {
+                        tag: 'onRoomNotExist',
+                        code: 0,
+                        detail: {}
+                    });
                 } else {
                     zego.setPreferPlaySourceType(0);
                     this.doPlay(streamList);
@@ -204,7 +210,13 @@ let liveRoomHandler = {
 
             let loginFailCallback = (err) => {
                 if (!this.data.isCaster) {
-                    console.error('主播已退出')
+                    // console.error('主播已退出')
+                    //通知使用组件页面
+                    this.triggerEvent('RoomEvent', {
+                        tag: 'onRoomNotExist',
+                        code: 0,
+                        detail: {}
+                    });
                 } else {
                     console.error(err);
                 }
