@@ -1,11 +1,106 @@
 // pages/components/rtc-room/room/room.js
 let {liveAppID: appID, tokenURL,wsServerURL,testEnvironment} = getApp().globalData;
 let {getLoginToken} = require("../../../../utils/server.js");
-let {sharePage} = require("../../../../utils/util.js");
+let {format, sharePage} = require("../../../../utils/util.js");
 
 let _methods = {
     onRoomEvent(ev) {
         console.log('onRoomEvent', ev);
+        let self = this, {detail, tag} = ev.detail;
+        switch (tag) {
+            case 'onPublishStateUpdate': {
+
+            }
+            case 'onPublishQualityUpdate': {
+
+                break;
+            }
+            case 'onPlayStateUpdate': {
+
+            }
+            case 'onPlayQualityUpdate': {
+
+                break;
+            }
+            case 'onRecvJoinLiveRequest': {
+                wx.showModal({
+                    title: '请求',
+                    content: detail.from_username + '请求连麦',
+                    success: function (res) {
+                        self.data.component.respondJoinLive(detail.requestId, res.confirm,
+                            seq => {
+                                console.log('respondJoinLive suc', seq);
+                            },
+                            (err, seq) => {
+                                console.log('respondJoinLive err', err, seq);
+                            });
+                    }
+                });
+                break;
+            }
+            case 'onRecvEndJoinLiveCommand': {
+
+                break;
+            }
+            case 'onUserStateUpdate': {
+
+                break;
+            }
+            case 'onGetTotalUserList': {
+
+                break;
+            }
+            case 'onRecvRoomMsg': {
+
+                let name = detail.chat_data[0].id_name;
+                let time = detail.chat_data[0].send_time;
+
+                let message = {};
+                message.name = name;
+                message.time = format(time);
+                message.content = detail.chat_data[0].msg_content;
+                message.id = name + time;
+
+                this.data.messageList.push(message);
+
+                this.setData({
+                    messageList: this.data.messageList,
+                    scrollToView: message.id,
+                });
+                break;
+            }
+            case 'onLogout': {
+
+                wx.navigateBack({
+                    complete: function () {
+                        wx.showToast({
+                            title: '该主播已退出!',
+                            icon: 'none',
+                            duration: 2000
+                        });
+                    }
+                });
+                break;
+            }
+
+            case 'onRoomNotExist': {
+                wx.showModal({
+                    title: '提示',
+                    content: '主播已退出!',
+                    showCancel: false,
+                    success(res) {
+                        if (res.confirm || !res.cancel) {
+                            wx.navigateBack();
+                        }
+                    }
+                });
+                break;
+            }
+            default: {
+                console.log('onRoomEvent default: ', e);
+                break;
+            }
+        }
     },
     showMessage() {
         this.setData({
