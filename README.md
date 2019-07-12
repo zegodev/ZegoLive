@@ -16,7 +16,7 @@ ZegoLive 是一个即构sdk功能示例demo，开发人员可以参考该demo，
 # 快速运行demo
 让开发者前期能快速体验demo效果，将app.js文件中的appid、appSign、server替换为你从即构申请到的配置信息，通过前端获取token。
 
-appid,appsign,server为即构邮件发送的你的项目配置（若有不清楚的请咨询技术支持）
+appid,appSign,server地址 需要自行修改为自己的配置(请从控制台申请AppID时邮件内容里获取)
 
 请注意：
 
