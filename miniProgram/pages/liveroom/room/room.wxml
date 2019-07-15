@@ -21,7 +21,9 @@
                 debug="{{pushConfig.showLog}}"
                 bindstatechange="onPushStateChange"
                 bindnetstatus="onPushNetStateChange"
-                waiting-image="https://storage.zego.im/downloads/pause_publish.png">
+bindbgmstart="onBindbgmstart"
+bindbgmprogress="onBindbgmprogress"
+        bindbgmcomplete="onBindbgmcomplete"        waiting-image="https://storage.zego.im/downloads/pause_publish.png">
             <cover-view class='character'>
                 {{isPublishing ? "我(" + publishStreamID + ")": ""}}
             </cover-view>
