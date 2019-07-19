@@ -36,6 +36,9 @@ Page({
             frontCamera: true,    // 前后置摄像头，false 表示后置
             minBitrate: 200,      // 最小视频编码码率
             maxBitrate: 500,      // 最大视频编码码率
+            isMirror: false,      // 画面是否镜像
+            bgmStart: false,      // 是否
+            bgmPaused: false, 
         },
         playConfig: {
             mode: 'RTC',
@@ -96,7 +99,7 @@ Page({
         zg = new ZegoClient();
         zg.config({
             appid: this.data.appID,        // 必填，应用id，由即构提供
-            idName: this.data.userID,      // 必填，用户自定义id
+            idName: this.data.userID,      // 必填，用户自定义id，全局唯一
             nickName: this.data.userName,  // 必填，用户自定义昵称
             remoteLogLevel: 2,             // 日志上传级别，建议取值不小于 logLevel
             logLevel: 0,                   // 日志级别，debug: 0, info: 1, warn: 2, error: 3, report: 99, disable: 100（数字越大，日志越少）
@@ -648,6 +651,90 @@ Page({
         zg.updatePlayerNetStatus(this.data.publishStreamID, e, 1);
     },
 
+    playBgm() {
+        if (!this.data.pusherVideoContext.playBGM) {
+            wx.showModal({
+                title: '提示',
+                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                showCancel: false,
+            });
+            return
+        }
+        if (this.data.pushConfig.bgmStart) {
+            return
+        }
+        console.log('>>>[liveroom-room] BGMStart')
+        this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
+        this.setData({
+            pushConfig: this.data.pushConfig,
+        }, function() {
+            this.data.pusherVideoContext && this.data.pusherVideoContext.playBGM({
+                url: 'http://music.163.com/song/media/outer/url?id=317151.mp3',
+                success: function (res) {
+                    console.log('suc', res)
+                },
+                fail: function (err) {
+                    console.log('fail', err)
+                }
+            }) 
+        });    
+    },
+
+    handleBgm() {
+        if (!this.data.pusherVideoContext.pauseBGM) {
+            wx.showModal({
+                title: '提示',
+                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                showCancel: false,
+            });
+            return
+        }
+        if (!this.data.pushConfig.bgmStart) {
+            return
+        }
+        this.data.pushConfig.bgmPaused = !this.data.pushConfig.bgmPaused
+        this.setData({
+            pushConfig: this.data.pushConfig
+        }, function() {
+            if (this.data.pushConfig.bgmPaused) {
+                this.data.pusherVideoContext && this.data.pusherVideoContext.pauseBGM()            
+            } else{
+                this.data.pusherVideoContext && this.data.pusherVideoContext.resumeBGM()
+            }
+        })   
+    },
+
+    stopBgm() {
+        if (!this.data.pusherVideoContext.stopBGM) {
+            wx.showModal({
+                title: '提示',
+                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                showCancel: false,
+            });
+            return
+        }
+        if (!this.data.pushConfig.bgmStart) {
+            return
+        }
+        console.log('>>>[liveroom-room] BGMStop')
+        this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
+        this.setData({
+            pushConfig: this.data.pushConfig,
+        }, function() {
+            this.data.pusherVideoContext && this.data.pusherVideoContext.stopBGM(); 
+        });
+    },
+
+    onBgmStart(e) {
+        console.log('>>>[liveroom-room] onBgmStart, code: ' + e.detail.code + ', message:' + e.detail.message);
+
+    },
+
+    onBgmComplete(e) {
+        console.log('>>>[liveroom-room] onBgmComplete, code: ' + e.detail.code + ', message:' + e.detail.message);
+
+    },
+
     // 主播邀请连麦
     inviteJoinLive() {
         console.log('>>>[liveroom-room] inviteJoinLive');
@@ -787,83 +874,107 @@ Page({
     // 截图发送
     snapshot() {
         var that = this
-        this.data.pusherVideoContext && this.data.pusherVideoContext.snapshot({
-            success: function(ret) {
-                console.log('ret', ret.tempImagePath);
-                wx.showLoading({
-                    title: '正在上传...',
-                })
-                const imgPath = 'sdk-doc/mini-snapshot-' + new Date().getTime() + '.jpg'
-                // 上传图片
-                wx.uploadFile({
-                    //  服务器上传图片接口地址
-                    url: 'https://*****', 
-                    filePath: ret.tempImagePath,
-                    name: 'file',
-                    header: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    formData: {
-                      'path':  imgPath,
-                      'space': 'DemoSpace'
-                    },
-                    success (res){
-                      console.log('res', res)
-                      const data = JSON.parse(res.data)
-                      if (data.code == 200) {
-                        wx.hideLoading()
-                        wx.showToast({
-                            title: '发送成功',
-                            duration: 1000,
-                            mask: true
-                        })
-                        // 服务器存储图片地址
-                        const msg = 'http://****' + imgPath
-                        // 发送图片URL
-                        zg.sendRoomMsg(2, 2, msg,
-                            function (seq, msgId, msg_category, msg_type, msg_content) {
-                                console.log('>>>[liveroom-room] onComment success');
-                            }, function (err, seq, msg_category, msg_type, msg_content) {
-                                console.log('>>>[liveroom-room] onComment, error: ');
-                                console.log(err);
-                            });
-                      } else {
-                          wx.showToast({
-                              title: '发送失败',
-                              duration: 1000,
-                              mask: true
-                          })
-                      }
-                    },
-                    fail (err) {
-                        console.log(err)
-                        wx.hideLoading()
-                        wx.showToast({
-                            title: '发送失败',
-                            duration: 1000,
-                            mask: true
-                        })
+        console.log('>>>[liveroom-room] snapshot ', this.data.loginType)
+        const sucCallback = (ret) => {
+            console.log('>>>[liveroom-room] snapshot success')
+            console.log('ret', ret.tempImagePath);
+            wx.showLoading({
+                title: '正在上传...',
+            })
+            const imgPath = 'sdk-doc/mini-snapshot-' + new Date().getTime() + '.jpg'
+            // 上传图片
+            wx.uploadFile({
+                //  服务器上传图片接口地址
+                url: 'https://***', 
+                filePath: ret.tempImagePath,
+                name: 'file',
+                header: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                formData: {
+                  'path':  imgPath,
+                  'space': 'DemoSpace'
+                },
+                success (res){
+                  console.log('res', res)
+                  const data = JSON.parse(res.data)
+                  if (data.code == 200) {
+                    wx.hideLoading()
+                    wx.showToast({
+                        title: '发送成功',
+                        duration: 1000,
+                        mask: true
+                    })
+                    // 服务器存储图片地址
+                    const msg = 'http://***' + imgPath
+                    // 发送图片URL
+                    zg.sendRoomMsg(2, 2, msg,
+                        function (seq, msgId, msg_category, msg_type, msg_content) {
+                            console.log('>>>[liveroom-room] onComment success');
+                        }, function (err, seq, msg_category, msg_type, msg_content) {
+                            console.log('>>>[liveroom-room] onComment, error: ');
+                            console.log(err);
+                        });
+                  } else {
+                      wx.showToast({
+                          title: '发送失败',
+                          duration: 1000,
+                          mask: true
+                      })
+                  }
+                },
+                fail (err) {
+                    console.log(err)
+                    wx.hideLoading()
+                    wx.showToast({
+                        title: '发送失败',
+                        duration: 1000,
+                        mask: true
+                    })
+                }
+            })
+            setTimeout(() => {
+                wx.showModal({
+                    title: '提示',
+                    content: '是否保存到手机相册',
+                    success(resInfo) {
+                        if (resInfo.confirm) {
+                            console.log('saveImageToPhotosAlbum confirm')
+                            that._saveImageToPhotosAlbum(ret.tempImagePath)
+                        } else if (resInfo.cancel) {
+                            console.log('saveImageToPhotosAlbum cancel')
+                        }
                     }
                 })
-                setTimeout(() => {
-                    wx.showModal({
-                        title: '提示',
-                        content: '是否保存到手机相册',
-                        success(resInfo) {
-                            if (resInfo.confirm) {
-                                console.log('saveImageToPhotosAlbum confirm')
-                                that._saveImageToPhotosAlbum(ret.tempImagePath)
-                            } else if (resInfo.cancel) {
-                                console.log('saveImageToPhotosAlbum cancel')
-                            }
-                        }
+            }, 3000)   
+        }
+        const failCallback = (err) => {
+            console.log('>>>[liveroom-room] snapshot fail', err)
+        }
+        if (this.data.loginType === 'anchor') {
+            this.data.pusherVideoContext && this.data.pusherVideoContext.snapshot({
+                success: sucCallback,
+                fail: failCallback,
+            });
+        } else if (this.data.loginType === 'audience') {
+            console.log('playStreamList', this.data.playStreamList)
+            if (this.data.playStreamList[0].playContext.snapshot) {
+                this.data.playStreamList.forEach(streamInfo => {
+                    streamInfo.playContext && streamInfo.playContext.snapshot({
+                        success: sucCallback,
+                        fail: failCallback
                     })
-                }, 3000)    
-            },
-            fail: function() {
-                console.log('fail')
+                })
+            } else {
+                wx.showModal({
+                    title: '提示',
+                    content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                    showCancel: false,
+                });
             }
-        });
+            
+        }
+        
     },
     _saveImageToPhotosAlbum(imgPath) {
         // 保存图片到本地相册
@@ -900,6 +1011,14 @@ Page({
             }
         })
     },
+
+    // 设置镜像
+    setMirror() {
+        this.setData({
+            "pushConfig.isMirror": !this.data.pushConfig.isMirror
+        })
+    },
+
     setBeauty() {
         this.data.pushConfig.isBeauty = (this.data.pushConfig.isBeauty === 0 ? 6 : 0);
         this.setData({

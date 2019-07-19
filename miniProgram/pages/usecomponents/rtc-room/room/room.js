@@ -43,7 +43,8 @@ let _methods = {
                 break;
             }
             case 'onUserStateUpdate': {
-
+                const {roomId, userList} = detail;
+                this.data.userList = userList;
                 break;
             }
             case 'onGetTotalUserList': {
@@ -110,6 +111,15 @@ let _methods = {
 
     bindMessageInput(e) {
         this.data.inputMessage = e.detail.value;
+    },
+
+    sendCommand() {
+        console.log('>>>[liveroom-room] begin to sendCommand', this.data.inputMessage);
+        this.data.component.sendCustomCommand(this.data.userList, '哈哈哈', function(res) {
+            console.log('res', res)
+        }, function(err) {
+            console.log('err' ,err)
+        })
     },
 
     onComment() {
@@ -249,7 +259,8 @@ Page({
         inputMessage: '',
         scrollToView: '',
         mixStreamStart: false,
-        playMixStreamStart: false
+        playMixStreamStart: false,
+        userList: [],
     },
 
     /**

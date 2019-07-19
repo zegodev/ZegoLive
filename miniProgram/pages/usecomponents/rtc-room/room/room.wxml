@@ -38,6 +38,12 @@
                 <text>说点啥</text>
             </view>
 
+            <view class='img-box' bindtap="sendCommand">
+                <image src='../../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png'
+                       bindtap="showLog"></image>
+                <text>发自定义命令</text>
+            </view>
+
             <view class='img-box' bindtap="mixStream">
                 <image wx:if="{{role !== 'audience'}}" src='../../../../resource/{{mixStreamStart?"mixStream":"stopMixStream"}}.png' ></image>
                 <image wx:else src='../../../../resource/disableMixStream.png' ></image>

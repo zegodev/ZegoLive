@@ -18,9 +18,12 @@
                 beauty="{{pushConfig.isBeauty}}"
                 muted="{{pushConfig.isMute}}"
                 background-mute="true"
+                mirror="{{pushConfig.isMirror}}"
                 debug="{{pushConfig.showLog}}"
                 bindstatechange="onPushStateChange"
                 bindnetstatus="onPushNetStateChange"
+                bindbgmstart="onBgmStart"
+                bindbgmcomplete="onBgmComplete"
                 waiting-image="https://storage.zego.im/downloads/pause_publish.png">
             <cover-view class='character'>
                 {{isPublishing ? "我(" + publishStreamID + ")": ""}}
@@ -88,9 +91,25 @@
             <image src='../../../resource/switchCamera.png'></image>
             <text>切换相机</text>
         </view>
-        <view wx:if="{{loginType == 'anchor'}}" class="img-box" bindtap="snapshot">
+        <view wx:if="{{loginType == 'anchor'}}" class='img-box' bindtap="playBgm">
+            <image src='../../../resource/play_hl.png'></image>
+            <text>播放背景音</text>
+        </view>
+        <view wx:if="{{loginType == 'anchor'}}" class='img-box' bindtap="handleBgm">
+            <image src='../../../resource/{{pushConfig.bgmPaused ? "play":"pause"}}.png'></image>
+            <text>{{pushConfig.bgmPaused?"恢复":"暂停"}}背景音</text>
+        </view>
+        <view wx:if="{{loginType == 'anchor'}}" class='img-box' bindtap="stopBgm">
+            <image src='../../../resource/stop.png'></image>
+            <text>停止背景音</text>
+        </view>
+        <view class="img-box" bindtap="snapshot">
             <image src='../../../resource/snapshot.png'></image>
             <text>截图发送</text>
+        </view>
+        <view class="img-box" bindtap="setMirror">
+            <image src='../../../resource/snapshot.png'></image>
+            <text>{{pushConfig.isMirror?"关闭":"打开"}}镜像</text>
         </view>
         <view class='img-box' bindtap="setBeauty">
             <image src='../../../resource/{{pushConfig.isBeauty? "beauty" : "noBeauty"}}.png'></image>
