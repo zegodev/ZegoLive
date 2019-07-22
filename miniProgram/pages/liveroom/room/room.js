@@ -954,7 +954,7 @@ Page({
         });
     },
 
-    playBgm() {
+    playOrStopBgm() {
       if (!this.data.pusherVideoContext.playBGM) {
           wx.showModal({
               title: '提示',
@@ -963,24 +963,24 @@ Page({
           });
           return
       }
-      if (this.data.pushConfig.bgmStart) {
-          return
-      }
-      console.log('>>>[liveroom-room] BGMStart')
       this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
       this.setData({
           pushConfig: this.data.pushConfig,
       }, function() {
-          this.data.pusherVideoContext && this.data.pusherVideoContext.playBGM({
-              url: 'http://music.163.com/song/media/outer/url?id=317151.mp3',
-              success: function (res) {
-                  console.log('suc', res)
-              },
-              fail: function (err) {
-                  console.log('fail', err)
-              }
-          }) 
-      });    
+          if (this.data.pushConfig.bgmStart) {
+            this.data.pusherVideoContext && this.data.pusherVideoContext.playBGM({
+                url: 'http://music.163.com/song/media/outer/url?id=317151.mp3',
+                success: function (res) {
+                    console.log('suc', res)
+                },
+                fail: function (err) {
+                    console.log('fail', err)
+                }
+            }) 
+          } else {
+            this.data.pusherVideoContext && this.data.pusherVideoContext.stopBGM();
+          }
+      }); 
     },
     
     handleBgm() {
@@ -1005,27 +1005,6 @@ Page({
               this.data.pusherVideoContext && this.data.pusherVideoContext.resumeBGM()
           }
       })   
-    },
-    
-    stopBgm() {
-      if (!this.data.pusherVideoContext.stopBGM) {
-          wx.showModal({
-              title: '提示',
-              content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
-              showCancel: false,
-          });
-          return
-      }
-      if (!this.data.pushConfig.bgmStart) {
-          return
-      }
-      console.log('>>>[liveroom-room] BGMStop')
-      this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
-      this.setData({
-          pushConfig: this.data.pushConfig,
-      }, function() {
-          this.data.pusherVideoContext && this.data.pusherVideoContext.stopBGM(); 
-      });
     },
 
     setBgmVolume() {

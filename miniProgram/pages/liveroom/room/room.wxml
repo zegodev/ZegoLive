@@ -92,17 +92,13 @@
             <image src='../../../resource/switchCamera.png'></image>
             <text>切换相机</text>
         </view>
-        <view wx:if="{{loginType == 'anchor'}}" class='img-box' bindtap="playBgm">
-            <image src='../../../resource/play_hl.png'></image>
-            <text>播放背景音</text>
+        <view wx:if="{{loginType == 'anchor'}}" class='img-box' bindtap="playOrStopBgm">
+            <image src='../../../resource/{{pushConfig.bgmStart ? "stop":"play"}}.png'></image>
+            <text>{{pushConfig.bgmStart?"停止":"播放"}}背景音</text>
         </view>
         <view wx:if="{{loginType == 'anchor'}}" class='img-box' bindtap="handleBgm">
             <image src='../../../resource/{{pushConfig.bgmPaused ? "play":"pause"}}.png'></image>
             <text>{{pushConfig.bgmPaused?"恢复":"暂停"}}背景音</text>
-        </view>
-        <view wx:if="{{loginType == 'anchor'}}" class='img-box' bindtap="stopBgm">
-            <image src='../../../resource/stop.png'></image>
-            <text>停止背景音</text>
         </view>
         <view class="img-box" bindtap="snapshot">
             <image src='../../../resource/snapshot.png'></image>
