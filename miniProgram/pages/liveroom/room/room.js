@@ -651,90 +651,6 @@ Page({
         zg.updatePlayerNetStatus(this.data.publishStreamID, e, 1);
     },
 
-    playBgm() {
-        if (!this.data.pusherVideoContext.playBGM) {
-            wx.showModal({
-                title: '提示',
-                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
-                showCancel: false,
-            });
-            return
-        }
-        if (this.data.pushConfig.bgmStart) {
-            return
-        }
-        console.log('>>>[liveroom-room] BGMStart')
-        this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
-        this.setData({
-            pushConfig: this.data.pushConfig,
-        }, function() {
-            this.data.pusherVideoContext && this.data.pusherVideoContext.playBGM({
-                url: 'http://music.163.com/song/media/outer/url?id=317151.mp3',
-                success: function (res) {
-                    console.log('suc', res)
-                },
-                fail: function (err) {
-                    console.log('fail', err)
-                }
-            }) 
-        });    
-    },
-
-    handleBgm() {
-        if (!this.data.pusherVideoContext.pauseBGM) {
-            wx.showModal({
-                title: '提示',
-                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
-                showCancel: false,
-            });
-            return
-        }
-        if (!this.data.pushConfig.bgmStart) {
-            return
-        }
-        this.data.pushConfig.bgmPaused = !this.data.pushConfig.bgmPaused
-        this.setData({
-            pushConfig: this.data.pushConfig
-        }, function() {
-            if (this.data.pushConfig.bgmPaused) {
-                this.data.pusherVideoContext && this.data.pusherVideoContext.pauseBGM()            
-            } else{
-                this.data.pusherVideoContext && this.data.pusherVideoContext.resumeBGM()
-            }
-        })   
-    },
-
-    stopBgm() {
-        if (!this.data.pusherVideoContext.stopBGM) {
-            wx.showModal({
-                title: '提示',
-                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
-                showCancel: false,
-            });
-            return
-        }
-        if (!this.data.pushConfig.bgmStart) {
-            return
-        }
-        console.log('>>>[liveroom-room] BGMStop')
-        this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
-        this.setData({
-            pushConfig: this.data.pushConfig,
-        }, function() {
-            this.data.pusherVideoContext && this.data.pusherVideoContext.stopBGM(); 
-        });
-    },
-
-    onBgmStart(e) {
-        console.log('>>>[liveroom-room] onBgmStart, code: ' + e.detail.code + ', message:' + e.detail.message);
-
-    },
-
-    onBgmComplete(e) {
-        console.log('>>>[liveroom-room] onBgmComplete, code: ' + e.detail.code + ', message:' + e.detail.message);
-
-    },
-
     // 主播邀请连麦
     inviteJoinLive() {
         console.log('>>>[liveroom-room] inviteJoinLive');
@@ -1179,5 +1095,88 @@ Page({
         console.error('live-player error:', e.detail.errMsg)
     },
 
+    playBgm() {
+        if (!this.data.pusherVideoContext.playBGM) {
+            wx.showModal({
+                title: '提示',
+                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                showCancel: false,
+            });
+            return
+        }
+        if (this.data.pushConfig.bgmStart) {
+            return
+        }
+        console.log('>>>[liveroom-room] BGMStart')
+        this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
+        this.setData({
+            pushConfig: this.data.pushConfig,
+        }, function() {
+            this.data.pusherVideoContext && this.data.pusherVideoContext.playBGM({
+                url: 'http://music.163.com/song/media/outer/url?id=317151.mp3',
+                success: function (res) {
+                    console.log('suc', res)
+                },
+                fail: function (err) {
+                    console.log('fail', err)
+                }
+            }) 
+        });    
+    },
+
+    handleBgm() {
+        if (!this.data.pusherVideoContext.pauseBGM) {
+            wx.showModal({
+                title: '提示',
+                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                showCancel: false,
+            });
+            return
+        }
+        if (!this.data.pushConfig.bgmStart) {
+            return
+        }
+        this.data.pushConfig.bgmPaused = !this.data.pushConfig.bgmPaused
+        this.setData({
+            pushConfig: this.data.pushConfig
+        }, function() {
+            if (this.data.pushConfig.bgmPaused) {
+                this.data.pusherVideoContext && this.data.pusherVideoContext.pauseBGM()            
+            } else{
+                this.data.pusherVideoContext && this.data.pusherVideoContext.resumeBGM()
+            }
+        })   
+    },
+
+    stopBgm() {
+        if (!this.data.pusherVideoContext.stopBGM) {
+            wx.showModal({
+                title: '提示',
+                content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                showCancel: false,
+            });
+            return
+        }
+        if (!this.data.pushConfig.bgmStart) {
+            return
+        }
+        console.log('>>>[liveroom-room] BGMStop')
+        this.data.pushConfig.bgmStart = !this.data.pushConfig.bgmStart;
+        this.setData({
+            pushConfig: this.data.pushConfig,
+        }, function() {
+            this.data.pusherVideoContext && this.data.pusherVideoContext.stopBGM(); 
+        });
+    },
+
+    onBgmStart(e) {
+        console.log('>>>[liveroom-room] onBgmStart, code: ' + e.detail.code + ', message:' + e.detail.message);
+
+    },
+
+    onBgmComplete(e) {
+        console.log('>>>[liveroom-room] onBgmComplete, code: ' + e.detail.code + ', message:' + e.detail.message);
+
+    },
 
 })
