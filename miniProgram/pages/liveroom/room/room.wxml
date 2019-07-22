@@ -23,6 +23,7 @@
                 bindstatechange="onPushStateChange"
                 bindnetstatus="onPushNetStateChange"
                 bindbgmstart="onBgmStart"
+                bindbgmprogress="onBgmProgress"
                 bindbgmcomplete="onBgmComplete"
                 waiting-image="https://storage.zego.im/downloads/pause_publish.png">
             <cover-view class='character'>
