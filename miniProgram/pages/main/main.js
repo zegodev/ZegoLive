@@ -1,4 +1,5 @@
 let {sharePage} = require('../../utils/util.js');
+let { ZegoClient } = require("/../../js/jZego-wx-1.1.2.js");
 
 Page({
 
@@ -99,55 +100,101 @@ Page({
 
     authCheck() {
         let self = this;
-        wx.getSetting({
-            success: ({authSetting}) => {
+        // wx.getSetting({
+        //     success: ({authSetting}) => {
 
-                //推流必须要有这两权限
-                if (!authSetting['scope.camera'] || !authSetting['scope.record']) {
-                    wx.authorize({
-                        scope: 'scope.camera',
-                        success() {
-                            self.setData({
-                                canShow: 1
-                            });
-                        },
-                        fail() {
-                            self.setData({
-                                canShow: 0
-                            });
-                        }
-                    });
+        //         //推流必须要有这两权限
+        //         if (!authSetting['scope.camera'] || !authSetting['scope.record']) {
+        //             wx.authorize({
+        //                 scope: 'scope.camera',
+        //                 success() {
+        //                     self.setData({
+        //                         canShow: 1
+        //                     });
+        //                 },
+        //                 fail() {
+        //                     self.setData({
+        //                         canShow: 0
+        //                     });
+        //                 }
+        //             });
 
-                    wx.authorize({
-                        scope: 'scope.record',
-                        success() {
-                            self.setData({
-                                canShow: 1
-                            });
-                        },
-                        fail() {
-                            self.setData({
-                                canShow: 0
-                            });
-                        }
-                    });
+        //             wx.authorize({
+        //                 scope: 'scope.record',
+        //                 success() {
+        //                     self.setData({
+        //                         canShow: 1
+        //                     });
+        //                 },
+        //                 fail() {
+        //                     self.setData({
+        //                         canShow: 0
+        //                     });
+        //                 }
+        //             });
 
 
-                } else if (!wx.createLivePlayerContext) {
-                    wx.showModal({
-                        title: '提示',
-                        content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
-                        showCancel: false,
-                    });
-                    this.setData({
-                        canShow: 0
-                    });
-                } else {
-                    this.setData({
-                        canShow: 1
-                    });
-                }
+        //         } else if (!wx.createLivePlayerContext) {
+        //             wx.showModal({
+        //                 title: '提示',
+        //                 content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+        //                 showCancel: false,
+        //             });
+        //             this.setData({
+        //                 canShow: 0
+        //             });
+        //         } else {
+        //             this.setData({
+        //                 canShow: 1
+        //             });
+        //         }
 
+        //     }
+        // });
+        ZegoClient.isSupportLive(result => {
+            if (result.code === 10001) {
+                console.log('result ', result.code)
+                wx.showModal({
+                    title: '提示',
+                    content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后再试。',
+                    showCancel: false,
+                });
+                this.setData({
+                    canShow: 0
+                });
+            } else if (result.code === 10002) {
+                console.log('result ', result.code)
+                wx.authorize({
+                    scope: 'scope.camera',
+                    success() {
+                        self.setData({
+                            canShow: 1
+                        });
+                    },
+                    fail() {
+                        self.setData({
+                            canShow: 0
+                        });
+                    }
+                });
+
+                wx.authorize({
+                    scope: 'scope.record',
+                    success() {
+                        self.setData({
+                            canShow: 1
+                        });
+                    },
+                    fail() {
+                        self.setData({
+                            canShow: 0
+                        });
+                    }
+                });
+            } else {
+                this.setData({
+                    canShow: 1
+                });
             }
         });
     },

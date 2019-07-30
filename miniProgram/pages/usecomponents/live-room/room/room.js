@@ -204,6 +204,7 @@ let _methods = {
             outputFps: 15,
             outputWidth: 240,
             outputHeight: 320,
+            outputBgColor: 0xc8c8c899,
             streamList: streamList
         }, (mixStreamId, mixStreamInfo) => {
             console.log('mixStreamId: ' + mixStreamId);
