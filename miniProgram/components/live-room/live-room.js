@@ -30,7 +30,10 @@ let customFunction = {
                 detail: {streamId, streamQuality}
             });
         };
-
+        zego.onDisconnect = (error) => {
+            console.log('onDisconnect')
+            this.data.isConnect = false;
+        };
 
         zego.onPlayStateUpdate = (type, streamId, error) => {
             console.log('onPlayStateUpdate', type, streamId, error);
@@ -167,6 +170,7 @@ let _data_propoerty = {
         _debug: true,
         isLogin: false,
         isPublish: false,
+        isConnect: false,
         //连麦成员信息
         streamList: []
     },
@@ -190,6 +194,7 @@ let liveRoomHandler = {
             let loginSucCallback = (streamList) => {
 
                 this.data.isLogin = true;
+                this.data.isConnect = true;
 
                 this.data.isCaster && zego.setPreferPublishSourceType(1);
                 this.data.isCaster && this.doPublish();
@@ -232,6 +237,10 @@ let liveRoomHandler = {
 
         }
     },
+    resume(token) {
+        this.stop();
+        this.start(token);
+    },
     stop() {
         playingList.forEach(item => {
             zego.stopPlayingStream(item.stream_id);
@@ -250,6 +259,9 @@ let liveRoomHandler = {
             mainPusherInfo: {},
             linkPusherInfo: {}
         });
+    },
+    isConnect() {
+        return this.data.isConnect;
     },
     respondJoinLive(requestId, isgree) {
 
@@ -482,7 +494,6 @@ let mediaCallBackHandlers = {
 
         //通知sdk
         zego.updatePlayerState(ev.currentTarget.id, ev, 0);
-
 
         //改变拉流状态，变更覆盖图片
         let subStateChange = false, playingState;

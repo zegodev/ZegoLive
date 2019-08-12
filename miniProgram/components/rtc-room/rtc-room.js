@@ -31,7 +31,10 @@ let customFunction = {
             });
         };
 
-
+        zego.onDisconnect = (error) => {
+            console.log('onDisconnect')
+            this.data.isConnect = false;
+        };
         zego.onPlayStateUpdate = (type, streamId, error) => {
             console.log('onPlayStateUpdate', type, streamId, error);
             this.triggerEvent('RoomEvent', {
@@ -128,6 +131,7 @@ let _data_propoerty = {
         _debug: true,
         isLogin: false,
         isPublish: false,
+        isConnect: false,
         //连麦成员信息
         streamList: []
     },
@@ -149,8 +153,8 @@ let rtcRoomHandler = {
         if (this.checkParam()) {
 
             let loginSucCallback = (streamList) => {
-
                 this.data.isLogin = true;
+                this.data.isConnect = true;
                 zego.setPreferPublishSourceType(1);
                 this.doPublish();
 
@@ -189,7 +193,13 @@ let rtcRoomHandler = {
             mainPusherInfo: {}
         });
     },
-
+    resume(token) {
+        this.stop();
+        this.start(token);
+    },
+    isConnect() {
+        return this.data.isConnect;
+    },
     sendCustomCommand(dstMembers, customContent, success, error) {
         zego.sendCustomCommand(dstMembers, customContent, success, error);
     },

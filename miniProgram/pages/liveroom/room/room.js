@@ -1086,12 +1086,7 @@ Page({
       if (zg && !this.data.isConnect) {
           zg.setUserStateUpdate(true);
           this.loginRoom(this.data.token);
-      } else {
-        for (let i = 0; i < this.data.playStreamList.length; i++) {
-          // 回前台重新拉流
-          this.data.playStreamList[i]['playContext'] && this.data.playStreamList[i]['playContext'].resume();
-        }
-      }
+      } 
 
       //刷新全局变量
       appID = getApp().globalData.liveAppID;
@@ -1107,18 +1102,6 @@ Page({
     onHide() {
       console.log('>>>[liveroom-room] onHide');
 
-      // 退后台停止拉流
-      for (let i = 0; i < this.data.playStreamList.length; i++) {
-        console.log('>>>[liveroom-room] onHide stopPlayStream: ', this.data.playStreamList[i]['streamID']);
-        this.data.playStreamList[i]['playContext'] && this.data.playStreamList[i]['playContext'].pause({
-          success: function() {
-            console.log('>>>[liveroom-room] pause success ');
-          },
-          fail: function() {
-            console.log('>>>[liveroom-room] pause fail ');
-          }
-        });
-      }
     },
 
     /**

@@ -315,8 +315,8 @@ Page({
         tokenURL = getApp().globalData.tokenURL;
         wsServerURL = getApp().globalData.wsServerURL;
         testEnvironment =  getApp().globalData.testEnvironment;
-        if (this.data.component) {
-            this.data.component.start(this.data.token);
+        if (this.data.component && !this.data.component.isConnect()) {
+            this.data.component.resume(this.data.token);
         }
     },
 
