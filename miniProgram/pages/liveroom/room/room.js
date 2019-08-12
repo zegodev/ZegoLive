@@ -47,6 +47,7 @@ Page({
         preferPublishSourceType: 1, // 0：推流到 cdn；1：推流到 bgp
         preferPlaySourceType: 1,    // 0：auto；1：从 bgp 拉流
         upperStreamLimit: 4,        // 房间内限制为最多 4 条流，当流数大于 4 条时，禁止新进入的用户连麦
+        isConnect: false,
         tapTime: "",
         pushUrl: "",
         containerAdapt: "",
@@ -115,6 +116,7 @@ Page({
 
         // 进入房间，自动登录
         getLoginToken(this.data.userID, appID).then(token => {
+            this.setData({token});
             zg.setUserStateUpdate(true);
             this.loginRoom(token, self);
         });
@@ -159,6 +161,9 @@ Page({
       // 服务端主动推过来的 连接断开事件
       zg.onDisconnect = function (err) {
         console.log(">>>[liveroom-room] zg onDisconnect");
+        self.setData({
+          isConnect: false
+        })
       };
 
       // 服务端主动推过来的 用户被踢掉在线状态事件
@@ -478,6 +483,9 @@ Page({
         console.log('>>>[liveroom-room] login success, streamList is: ');
         console.log(streamList);
 
+        self.setData({
+          isConnect: true
+        });
         // 房间内已经有流，拉流
         self.startPlayingStreamList(streamList);
 
@@ -1075,30 +1083,11 @@ Page({
      */
     onShow() {    
       console.log('>>>[liveroom-room] onShow');
-
-
-      // 回前台重新拉流
-      for (let i = 0; i < this.data.playStreamList.length; i++) {
-        zg.startPlayingStream(this.data.playStreamList[i]['streamID']);
-        this.data.playStreamList[i]['playContext'] && this.data.playStreamList[i]['playContext'].play();
-      }
-
-
-      // 如果正在推流，回到前台，通知其他成员，使其触发拉流
-      if (this.data.isPublishing) {
-        console.log('>>>[liveroom-room] sendRoomMsg, begin to send');
-
-        let roomData = "onShow." + this.data.publishStreamID;
-        zg.sendRoomMsg(2, 1, roomData,
-          function (seq, msgId, msg_category, msg_type, msg_content) {
-            console.log('>>>[liveroom-room] sendRoomMsg, send succeeded');
-          },
-          function (err, seq, msg_category, msg_type, msg_content) {
-            console.log('>>>[liveroom-room] sendRoomMsg, send failed, err: ', err);
-          }
-        );
-      }
-
+    
+      if (zg && !this.data.isConnect) {
+          zg.setUserStateUpdate(true);
+          this.loginRoom(this.data.token);
+      } 
 
       //刷新全局变量
       appID = getApp().globalData.liveAppID;
@@ -1114,13 +1103,6 @@ Page({
     onHide() {
       console.log('>>>[liveroom-room] onHide');
 
-      // 退后台停止拉流
-      for (let i = 0; i < this.data.playStreamList.length; i++) {
-        console.log('>>>[liveroom-room] onHide stopPlayStream: ', this.data.playStreamList[i]['streamID']);
-        zg.stopPlayingStream(this.data.playStreamList[i]['streamID']);
-        this.data.playStreamList[i].playUrl = "";
-        this.data.playStreamList[i]['playContext'] && this.data.playStreamList[i]['playContext'].stop();
-      }
     },
 
     /**

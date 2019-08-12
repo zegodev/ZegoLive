@@ -312,13 +312,16 @@ Page({
         tokenURL = getApp().globalData.tokenURL;
         wsServerURL =  getApp().globalData.wsServerURL;
         testEnvironment =  getApp().globalData.testEnvironment;
+        if (this.data.component && !this.data.component.isConnect()) {
+            this.data.component.resume(this.data.token);
+        }
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
-
+        
     },
 
     /**
