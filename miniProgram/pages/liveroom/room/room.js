@@ -47,7 +47,7 @@ Page({
         preferPublishSourceType: 1, // 0：推流到 cdn；1：推流到 bgp
         preferPlaySourceType: 1,    // 0：auto；1：从 bgp 拉流
         upperStreamLimit: 4,        // 房间内限制为最多 4 条流，当流数大于 4 条时，禁止新进入的用户连麦
-        isConnect: false,
+        connectType: -1,  // -1为初始状态，1为连接，0断开连接
         tapTime: "",
         pushUrl: "",
         containerAdapt: "",
@@ -60,6 +60,7 @@ Page({
         isMessageHide: true,
         scrollToView: "",
         imgTempPath: "",
+        tryPlayCount: 0,
     },
 
     /**
@@ -162,7 +163,7 @@ Page({
       zg.onDisconnect = function (err) {
         console.log(">>>[liveroom-room] zg onDisconnect");
         self.setData({
-          isConnect: false
+          connectType: 0
         })
       };
 
@@ -265,6 +266,10 @@ Page({
 
       };
 
+      // 服务端主动推过来的 流的质量更新
+      zg.onPublishQualityUpdate = function (streamID, streamQuality) {
+        console.log(">>>[liveroom-room] zg onPublishQualityUpdate", streamQuality);
+      };
       // 服务端主动推过来的 流的质量更新
       zg.onPlayQualityUpdate = function (streamID, streamQuality) {
         console.log(">>>[liveroom-room] zg onPlayQualityUpdate", streamQuality);
@@ -484,7 +489,7 @@ Page({
         console.log(streamList);
 
         self.setData({
-          isConnect: true
+          connectType: 1 
         });
         // 房间内已经有流，拉流
         self.startPlayingStreamList(streamList);
@@ -616,13 +621,32 @@ Page({
     //live-player 绑定拉流事件
     onPlayStateChange(e) {
       console.log('>>>[liveroom-room] onPlayStateChange, code: ' + e.detail.code + ', message:' + e.detail.message);
-      // 透传拉流事件给 SDK，type 0 拉流
-      zg.updatePlayerState(e.currentTarget.id, e, 0);
+      
 
       if (e.detail.code === 2002 || e.detail.code === 2004) {
+        // 透传拉流事件给 SDK，type 0 拉流
+      zg.updatePlayerState(e.currentTarget.id, e, 0);
         this.updatePlayingStateOnly(e, 'succeeded');
       } else if (e.detail.code === -2301) {
-        this.updatePlayingStateOnly(e, 'failed');
+        //  this.updatePlayingStateOnly(e, 'failed');
+        // if(this.data.playStreamList[0]&&this.data.playStreamList[0]['playContext']){
+        //   this.data.playStreamList[0]['playContext'].stop();
+        //   this.data.playStreamList[0]['playContext'].play();
+        // }
+        // this.data.tryPlayCount++;
+        // if (this.data.tryPlayCount < 3) {
+          
+        // }
+        this.data.playStreamList.forEach(item => {
+          if (item['playContext']) {
+            item['playContext'].stop();
+            item['playContext'].play();
+          }
+        })
+        
+      } else {
+        // 透传拉流事件给 SDK，type 0 拉流
+        zg.updatePlayerState(e.currentTarget.id, e, 0);
       }
     },
 
@@ -829,7 +853,7 @@ Page({
                         mask: true
                     })
                     // 服务器存储图片地址
-                    const msg = 'http://***' + imgPath
+                    const msg = 'https://***' + imgPath
                     // 发送图片URL
                     zg.sendRoomMsg(2, 2, msg,
                         function (seq, msgId, msg_category, msg_type, msg_content) {
@@ -1084,7 +1108,7 @@ Page({
     onShow() {    
       console.log('>>>[liveroom-room] onShow');
     
-      if (zg && !this.data.isConnect) {
+      if (zg && this.data.connectType === 0) {
           zg.setUserStateUpdate(true);
           this.loginRoom(this.data.token);
       } 
@@ -1102,7 +1126,6 @@ Page({
      */
     onHide() {
       console.log('>>>[liveroom-room] onHide');
-
     },
 
     /**

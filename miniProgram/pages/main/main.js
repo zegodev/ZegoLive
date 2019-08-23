@@ -114,14 +114,24 @@ Page({
                 });
             } else if (result.code === 10002) {
                 console.log('result ', result.code)
+                let hasCamera = false;
+                let hasRecord = false;
                 wx.authorize({
                     scope: 'scope.camera',
                     success() {
-                        self.setData({
-                            canShow: 1
-                        });
+                        hasCamera = true;
+                        if (hasRecord) {
+                            self.setData({
+                                canShow: 1
+                            });
+                        } else {
+                            self.setData({
+                                canShow: 0
+                            });
+                        }
                     },
                     fail() {
+                        hasCamera = false;
                         self.setData({
                             canShow: 0
                         });
@@ -131,11 +141,19 @@ Page({
                 wx.authorize({
                     scope: 'scope.record',
                     success() {
-                        self.setData({
-                            canShow: 1
-                        });
+                        hasRecord = true;
+                        if (hasCamera) {
+                            self.setData({
+                                canShow: 1
+                            });
+                        } else {
+                            self.setData({
+                                canShow: 0
+                            });
+                        }
                     },
                     fail() {
+                        hasRecord = false;
                         self.setData({
                             canShow: 0
                         });
@@ -154,7 +172,7 @@ Page({
      */
     onShow() {
         console.log("onShow");
-
+        this.authCheck();
     },
 
     /**
