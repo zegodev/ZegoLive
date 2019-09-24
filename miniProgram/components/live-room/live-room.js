@@ -15,6 +15,9 @@ let customFunction = {
         zego.onStreamUpdated = (type, streamList) => {
             this.onStreamUpdated(type, streamList);
         };
+        zego.onStreamExtraInfoUpdated = (streamList) => {
+            console.log('onStreamExtraInfoUpdated', streamList)
+        }
 
         zego.onPublishStateUpdate = (type, streamId, error) => {
             console.log('onPublishStateUpdate', type, streamId, error);

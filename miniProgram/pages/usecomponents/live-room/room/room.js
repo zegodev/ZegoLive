@@ -230,6 +230,9 @@ let _methods = {
     },
     stopPlayingMixStream() {
         this.data.component.stopPlayingMixStream(this.data.mixStreamId);
+    },
+    updateStreamExtra() {
+        this.data.component.updateStreamExtraInfo('hahaha');
     }
 
 };

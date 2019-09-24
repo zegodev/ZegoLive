@@ -194,7 +194,7 @@ Page({
 
       // 服务端主动推过来的 流信息中的 ExtraInfo更新事件（暂时不用实现）
       zg.onStreamExtraInfoUpdated = function (streamList) {
-        console.log(">>>[liveroom-room] zg onStreamExtraInfoUpdated");
+        console.log(">>>[liveroom-room] zg onStreamExtraInfoUpdated IU");
       };
 
       // 服务端主动推过来的 流的播放状态, 视频播放状态通知
