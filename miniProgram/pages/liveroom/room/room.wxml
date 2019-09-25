@@ -120,6 +120,10 @@
             <image src='../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png'></image>
             <text>说点啥</text>
         </view>
+        <view class='img-box' bindtap="updateStreamExtra">
+            <image src='../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png'></image>
+            <text>更新流信息</text>
+        </view>
         <view class='img-box' bindtap="showLog">
             <image src='../../../resource/{{pushConfig.showLog? "log" : "noLog"}}.png'></image>
             <text>日志</text>

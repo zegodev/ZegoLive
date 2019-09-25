@@ -194,7 +194,7 @@ Page({
 
       // 服务端主动推过来的 流信息中的 ExtraInfo更新事件（暂时不用实现）
       zg.onStreamExtraInfoUpdated = function (streamList) {
-        console.log(">>>[liveroom-room] zg onStreamExtraInfoUpdated IU");
+        console.log(">>>[liveroom-room] zg onStreamExtraInfoUpdated IU ", streamList);
       };
 
       // 服务端主动推过来的 流的播放状态, 视频播放状态通知
@@ -409,8 +409,10 @@ Page({
       // 相同 streamid 的源已存在，更新 Url
       for (let i = 0; i < self.data.playStreamList.length; i++) {
         if (self.data.playStreamList[i]['streamID'] === streamid) {
+          console.log('isStreamRepeated')
           isStreamRepeated = true;
           self.data.playStreamList[i]['playUrl'] = url;
+
           self.data.playStreamList[i]['playingState'] = 'initial';
           break;
         }
@@ -987,6 +989,10 @@ Page({
         });
     },
 
+    updateStreamExtra() {
+      zg.updateStreamExtraInfo(this.data.publishStreamID, 'extroInfo: send by ' + this.data.anchorName)
+    },
+    
     playOrStopBgm() {
       if (!this.data.pusherVideoContext.playBGM) {
           wx.showModal({

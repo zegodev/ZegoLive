@@ -50,11 +50,6 @@
             <image wx:else src='../../../../resource/disablePlayMixStream.png' ></image>
             <text>{{playMixStreamStart?'停止播放混流':'播放混流'}}</text>
         </view>
-        <view class='img-box' bindtap="updateStreamExtra">
-            <image src='../../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png'
-                   bindtap=""></image>
-            <text>更新流信息</text>
-        </view>
     </block>
 
     <block wx:if="{{!isMessageHide}}">
