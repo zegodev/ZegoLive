@@ -412,8 +412,9 @@ Page({
           console.log('isStreamRepeated')
           isStreamRepeated = true;
           self.data.playStreamList[i]['playUrl'] = url;
-
           self.data.playStreamList[i]['playingState'] = 'initial';
+          self.data.playStreamList[i]['playContext'].stop();
+          self.data.playStreamList[i]['playContext'].play();
           break;
         }
       }
@@ -742,7 +743,11 @@ Page({
                 // 自己停止推流，不会收到流删减消息，所以此处需要主动调整视图大小
             });
 
-
+            for (let i = 0; i < this.data.playStreamList.length; i++) {
+                this.data.playStreamList[i]['playContext'] && this.data.playStreamList[i]['playContext'].stop();
+                this.data.playStreamList[i]['playContext'] && this.data.playStreamList[i]['playContext'].play();
+            }
+            
             // setTimeout(() => {
             //     // 回前台重新拉流
             //     for (let i = 0; i < this.data.playStreamList.length; i++) {

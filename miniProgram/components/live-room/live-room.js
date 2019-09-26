@@ -416,6 +416,8 @@ let liveRoomHandler = {
                 linkPusherInfo: {},
                 liveReq: 0
             })
+            this.data.playerContext.stop();
+            this.data.playerContext.play();
         }
     },
     kickoutSubPusher(ev) {
