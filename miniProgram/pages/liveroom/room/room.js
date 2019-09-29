@@ -1,4 +1,4 @@
-let { ZegoClient } = require("../../../js/jZego-wx-1.2.0.js");
+let { ZegoClient } = require("../../../js/jZego-wx-1.3.0.js");
 // let { ZegoClient } = require("miniprogram-zego");
 let { format, sharePage } = require("../../../utils/util.js");
 let { getLoginToken } = require("../../../utils/server.js");
@@ -98,7 +98,9 @@ Page({
             appID,
             publishStreamID: 'xcxS' + timestamp,
         });
-
+        this.setData({
+          MixIdName: 'Mix' + this.data.userID
+        })
         zg = new ZegoClient();
         zg.config({
             appid: this.data.appID,        // 必填，应用id，由即构提供
@@ -300,6 +302,8 @@ Page({
               }
             }
           });
+        } else if (type === 0) {
+          self.mixStream();
         }
       };
 
@@ -497,11 +501,12 @@ Page({
         // 房间内已经有流，拉流
         self.startPlayingStreamList(streamList);
 
+        const extraInfo = {currentVideoCode: 'H264', MixStreamId: self.data.MixIdName};
         // 主播登录成功即推流
         if (self.data.loginType === 'anchor') {
           console.log('>>>[liveroom-room] anchor startPublishingStream, publishStreamID: ' + self.data.publishStreamID);
           zg.setPreferPublishSourceType(self.data.preferPublishSourceType);
-          zg.startPublishingStream(self.data.publishStreamID, '');
+          zg.startPublishingStream(self.data.publishStreamID, '', JSON.stringify(extraInfo));
         } else {
           if (streamList.length === 0) {
             let title = '主播已经退出！';
@@ -621,6 +626,33 @@ Page({
       });
     },
 
+    mixStream() {
+      var streamList = [{
+          streamId: this.data.publishStreamID,
+          top: 0,
+          left: 0,
+          bottom: 480,
+          right: 640,
+      }];
+      var mixParam = {
+          outputStreamId: this.data.MixIdName,
+          outputBitrate: 800 * 1000,
+          outputFps: 15,
+          outputHeight: 480,
+          outputWidth: 640,
+          outputAudioConfig: 3,
+          streamList: streamList,
+          extraParams: [{key: 'video_encode', value: 'vp8'}]
+      };
+      console.log('mixParam', mixParam);
+      zg.updateMixStream(mixParam, function (mixStreamId, mixStreamInfo) {
+          console.log('mixStreamId: ' + mixStreamId);
+          console.log('mixStreamInfo: ' + JSON.stringify(mixStreamInfo));
+      }, function (err, errorInfo) {
+          console.log('err: ' + JSON.stringify(err));
+          console.log('errorInfo: ' + JSON.stringify(errorInfo));
+      });
+    },
     //live-player 绑定拉流事件
     onPlayStateChange(e) {
       console.log('>>>[liveroom-room] onPlayStateChange, code: ' + e.detail.code + ', message:' + e.detail.message);

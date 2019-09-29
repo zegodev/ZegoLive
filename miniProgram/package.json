@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "miniprogram-zego": "^1.2.0"
+    "miniprogram-zego": "^1.3.0"
   },
   "devDependencies": {},
   "scripts": {
