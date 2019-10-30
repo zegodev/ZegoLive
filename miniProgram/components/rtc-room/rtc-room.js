@@ -11,6 +11,7 @@ let playingList = [];
 let customFunction = {
     listenCallBack() {
         zego.onStreamUrlUpdate = (streamId, url, type) => {
+            console.log(">>>onStreamUrlUpdate, streamId: " + streamId + ', type: ' + (type === 0 ? 'play' : 'publish') + ', url: ' + url);
             this.onStreamUrlUpdate(streamId, url, type);
         };
         zego.onStreamUpdated = (type, streamList) => {
