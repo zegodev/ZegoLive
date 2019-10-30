@@ -49,7 +49,7 @@
             autoplay
             id="player"
             muted="{{muted}}"
-            mode="rtc"
+            mode="RTC"
             min-cache="0.3"
             max-cache="0.5"
             object-fit="contain"
