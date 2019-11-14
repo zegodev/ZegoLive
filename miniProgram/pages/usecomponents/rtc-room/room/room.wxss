@@ -36,7 +36,7 @@
     display:flex;
     flex-direction:column;
     height:8vh;
-    width:33.3vw;
+    width:25vw;
     align-items:center;
     justify-content:center;
 
