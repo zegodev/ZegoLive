@@ -61,7 +61,7 @@ let _methods = {
 let mediaCallBackHandlers = {
     //拉流监听回调 s
     onMainPlayState: function (ev) {
-        console.log('statePlaychange', ev);
+        console.log('statePlaychange', ev.detail.code, ev.detail.message);
 
         if (ev.detail.code === 2003 || ev.detail.code === 2004) {
             this.setData({
@@ -85,7 +85,7 @@ let mediaCallBackHandlers = {
 
     //推流监听回调 s
     onMainPushState: function (ev) {
-        console.log('statePublishchange', ev);
+        console.log('statePublishchange', ev.detail.code, ev.detail.message);
     },
     onMainPushStatus: function (ev) {
         console.log('netStatusPublishChange', ev);
@@ -127,7 +127,8 @@ Page({
      */
     onReady: function () {
         if(this.data.type==1){
-            this.data.pusherContext = wx.createLivePlayerContext("pusher", this);
+            this.data.pusherContext = wx.createLivePusherContext();
+            console.log(this.data.pusherContext);
             this.data.pusherContext.start();
         }else if(this.data.type==2){
             this.data.playerContext = wx.createLivePlayerContext("player", this);
@@ -153,8 +154,8 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-        this.data.playerContext.stop();
-        this.data.pusherContext.stop();
+        this.data.playerContext && this.data.playerContext.stop();
+        this.data.pusherContext && this.data.pusherContext.stop();
         this.setData({
             type: 1,
             beauty: true,
