@@ -1,4 +1,4 @@
-let { ZegoClient } = require("../../../js/jZego-wx-1.2.0.js");
+let { ZegoClient } = require("../../../js/jZego-wx-1.4.0.js");
 // let { ZegoClient } = require("miniprogram-zego");
 let { format, sharePage } = require("../../../utils/util.js");
 let { getLoginToken } = require("../../../utils/server.js");

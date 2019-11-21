@@ -23,10 +23,10 @@
         <input bindinput="inputChange" disabled value="{{_wsServerURL}}" data-name="wsServerURL"/>
     </view>
 
-    <view class="items">
+    <!-- <view class="items">
         <label>开启测试:</label>
         <switch checked="{{!!_testEnvironment}}" bindchange="inputChange" data-name="testEnvironment"/>
-    </view>
+    </view> -->
 
     <!-- <view class="items">
         <label>roomListURL:</label>
