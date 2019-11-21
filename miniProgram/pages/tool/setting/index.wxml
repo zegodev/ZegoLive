@@ -13,10 +13,10 @@
     <!--<input bindinput="inputChange"  value="{{_rtcAppID}}" data-name="rtcAppID"/>-->
     <!--</view>-->
 
-    <view class="items">
+    <!-- <view class="items">
         <label>tokenURL:</label>
         <input bindinput="inputChange" disabled value="{{_tokenURL}}" data-name="tokenURL"/>
-    </view>
+    </view> -->
 
     <view class="items">
         <label>serverURL:</label>
@@ -28,10 +28,10 @@
         <switch checked="{{!!_testEnvironment}}" bindchange="inputChange" data-name="testEnvironment"/>
     </view>
 
-    <view class="items">
+    <!-- <view class="items">
         <label>roomListURL:</label>
         <input bindinput="inputChange" disabled value="{{_roomListURL}}" data-name="roomListURL"/>
-    </view>
+    </view> -->
 
 </view>
 
