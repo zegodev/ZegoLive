@@ -191,7 +191,7 @@ Page({
         //wx.authorize({ scope: "scope.camera" })
         //wx.openSetting();
         console.log('>>>[liveroom-roomList] onLoad');
-        if (app.globalData.liveAppID !== 1739272706 && !existOwnRoomList) {
+        if (!existOwnRoomList) {
             this.setData({
                 testMode: false
             })
