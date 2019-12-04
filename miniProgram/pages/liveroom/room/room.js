@@ -1057,7 +1057,6 @@ Page({
       console.log('>>>[liveroom-room] onBgmComplete, code: ' + e.detail.code + ', message:' + e.detail.message);
     
     },
-
     bindMessageInput: function (e) {
         this.data.inputMessage = e.detail.value;
     },

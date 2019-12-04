@@ -476,6 +476,11 @@ let _liveRoomHandler = {
         this.setData({
             streamList
         });
+        this.triggerEvent('RoomEvent', {
+            tag: 'onStreamUpdate',
+            code: 0,
+            detail: {streamList}
+        });
         streamList.forEach(stream => {
             if (!playingList.some(playItem => playItem.stream_id === stream.stream_id)) {
                 zego.startPlayingStream(stream.stream_id);
