@@ -76,7 +76,8 @@ Page({
             preferPlaySourceType: 0,
         });
 
-
+        // 监听网络状态
+        this.onNetworkStatus();
         // 保持屏幕常亮
         wx.setKeepScreenOn({
             keepScreenOn: true,
@@ -578,12 +579,12 @@ Page({
 
             playStreamList[j]['playContext'] && playStreamList[j]['playContext'].stop();
 
-            let content = '一位观众结束连麦，停止拉流';
-            wx.showToast({
-              title: content,
-              icon: 'none',
-              duration: 2000
-            });
+            // let content = '一位观众结束连麦，停止拉流';
+            // wx.showToast({
+            //   title: content,
+            //   icon: 'none',
+            //   duration: 2000
+            // });
 
             playStreamList.splice(j, 1);
             break;
@@ -1056,6 +1057,16 @@ Page({
     onBgmComplete(e) {
       console.log('>>>[liveroom-room] onBgmComplete, code: ' + e.detail.code + ', message:' + e.detail.message);
     
+    },
+    onNetworkStatus() {
+      wx.onNetworkStatusChange(res => {
+        console.error('net', res);
+        if (res.isConnected && this.data.connectType === 0 && zg) {
+          console.log('connectType', this.data.connectType);
+          zg.setUserStateUpdate(true);
+          this.loginRoom(this.data.token);
+        }
+      })
     },
     bindMessageInput: function (e) {
         this.data.inputMessage = e.detail.value;

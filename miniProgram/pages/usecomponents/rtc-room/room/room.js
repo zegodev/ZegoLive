@@ -97,6 +97,13 @@ let _methods = {
                 });
                 break;
             }
+            case 'onStreamUpdate': {
+                const streamList = detail.streamList;
+                this.setData({
+                    playingStreamList: streamList
+                });
+                break;
+            }
             default: {
                 console.log('onRoomEvent default: ', e);
                 break;
@@ -197,16 +204,27 @@ let _methods = {
             streamId: this.data.pushStreamId,
             top: 0,
             left: 0,
-          bottom: 320,
-          right: 240,
+            bottom: 320,
+            right: 320,
         }];
-
+        if (this.data.playingStreamList.length > 0) {
+            const playerStream = this.data.playingStreamList[0]
+            console.log('playerStream', playerStream)
+            streamList.push({
+                    streamId: playerStream.stream_id,
+                    top: 320,
+                    left: 0,
+                    bottom: 640,
+                    right: 320
+            });
+        }
         this.data.component.updateMixStream({
             outputStreamId: this.data.mixStreamId,
             outputBitrate: 300*1000,
             outputFps: 15,
-            outputWidth: 240,
-            outputHeight: 320,
+            outputWidth: 320,
+            outputHeight: 640,
+            outputBgColor: 0xc8c8c899,
             streamList: streamList
         }, (mixStreamId, mixStreamInfo) => {
             console.log('mixStreamId: ' + mixStreamId);
@@ -261,6 +279,7 @@ Page({
         mixStreamStart: false,
         playMixStreamStart: false,
         userList: [],
+        playingStreamList: []
     },
 
     /**
