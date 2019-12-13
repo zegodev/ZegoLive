@@ -501,6 +501,11 @@ let sdkCallBackHandler = {
             this.setData({
                 streamList: _streams
             });
+            this.triggerEvent('RoomEvent', {
+                tag: 'onStreamUpdate',
+                code: 0,
+                detail: {streamList: this.data.streamList}
+            });
         }
     }
 };

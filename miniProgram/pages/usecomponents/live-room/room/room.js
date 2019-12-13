@@ -2,7 +2,7 @@ let {format, sharePage} = require("../../../../utils/util.js");
 let {getLoginToken} = require("../../../../utils/server.js");
 //获取应用实例
 const app = getApp();
-let {liveAppID: appID, tokenURL,wsServerURL,testEnvironment} = app.globalData;
+let {liveAppID: appID, tokenURL,wsServerURL} = app.globalData;
 
 
 let _methods = {
@@ -319,7 +319,6 @@ Page({
                 server: wsServerURL,//,"wss://wssliveroom-demo.zego.im/ws", // 必填，服务器地址，由即构提供
                 logUrl: "https://wsslogger-demo.zego.im/httplog", // 选填，log 服务器地址，由即构提供
                 audienceCreateRoom: false, // 观众不允许创建房间
-                testEnvironment:!!testEnvironment
             });
             this.data.component.start(this.data.token);
         });
@@ -333,7 +332,6 @@ Page({
         appID = getApp().globalData.liveAppID;
         tokenURL = getApp().globalData.tokenURL;
         wsServerURL = getApp().globalData.wsServerURL;
-        testEnvironment =  getApp().globalData.testEnvironment;
         if (this.data.component && !this.data.component.isConnect()) {
             this.data.component.resume(this.data.token);
         }

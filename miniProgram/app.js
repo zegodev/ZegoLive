@@ -8,7 +8,6 @@ App({
     globalData: {
         liveAppID,
         appSign,
-        testEnvironment:0,//如果是测试环境需要改成1，正式为0
         tokenURL: "https://wssliveroom-demo.zego.im/token",
         roomListURL: "https://liveroom1739272706-api.zego.im/demo/roomlist?appid=1739272706",//房间列表接口
         wsServerURL,

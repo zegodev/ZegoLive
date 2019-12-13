@@ -5,7 +5,7 @@ let { getLoginToken } = require("../../../utils/server.js");
 let zg;
 //获取应用实例
 const app = getApp();
-let { liveAppID: appID, wsServerURL, logServerURL, tokenURL, testEnvironment } = app.globalData;
+let { liveAppID: appID, wsServerURL, logServerURL, tokenURL } = app.globalData;
 
 
 /**
@@ -110,7 +110,6 @@ Page({
             server: wsServerURL,        // 必填，服务器地址，由即构提供
             logUrl: logServerURL,   // 必填，log 服务器地址，由即构提供
             audienceCreateRoom: true,     // false观众不允许创建房间
-            testEnvironment:!!testEnvironment
         });
         this.bindCallBack();  //监听zego-sdk回调
 
@@ -1128,7 +1127,6 @@ Page({
       wsServerURL = getApp().globalData.wsServerURL;
       logServerURL = getApp().globalData.logServerURL;
       tokenURL = getApp().globalData.tokenURL;
-      testEnvironment = getApp().globalData.testEnvironment;
     },
 
     /**

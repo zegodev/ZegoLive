@@ -1,8 +1,8 @@
 /* containerBaseAdapt */
 
 live-player,live-pusher {
-    height: 100%;
-    width: 100%;
+    width: 47vw;
+    height: 64vw;
 }
 
 .containerBase {

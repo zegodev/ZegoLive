@@ -730,6 +730,11 @@ let sdkCallBackHandler = {
                 streamList: _streams
             });
 
+            this.triggerEvent('RoomEvent', {
+                tag: 'onStreamUpdate',
+                code: 0,
+                detail: {streamList: this.data.streamList}
+            });
             //关闭主播，此时房间没有主播，则所有房间人员都强制退出
             if (streamList.some(playItem => playItem.stream_id === this.data.mainPusherInfo.stream_id)) {
 
