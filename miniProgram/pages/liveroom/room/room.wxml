@@ -124,6 +124,10 @@
             <image src='../../../resource/{{pushConfig.showLog? "log" : "noLog"}}.png'></image>
             <text>日志</text>
         </view>
+        <view class='img-box' bindtap="record">
+            <image src='../../../resource/{{pushConfig.showLog? "log" : "noLog"}}.png'></image>
+            <text>录音</text>
+        </view>
     </view>
     <view wx:if="{{!isMessageHide}}">
         <view class='message-input'>

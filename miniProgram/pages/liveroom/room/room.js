@@ -7,7 +7,7 @@ let zg;
 const app = getApp();
 let { liveAppID: appID, wsServerURL, logServerURL, tokenURL } = app.globalData;
 
-
+let recorderManager;
 /**
  * 页面的初始数据
  */
@@ -278,7 +278,7 @@ Page({
       // 推流后，服务器主动推过来的，流状态更新
       // type: { start: 0, stop: 1 }，主动停止推流没有回调，其他情况均回调
       zg.onPublishStateUpdate = function (type, streamid, error) {
-        console.log('>>>[liveroom-room] zg onPublishStateUpdate, streamid: ' + streamid + ', type: ' + (type === 0 ? 'start' : 'stop') + ', error: ' + error);
+        console.error('>>>[liveroom-room] zg onPublishStateUpdate, streamid: ' + streamid + ', type: ' + (type === 0 ? 'start' : 'stop') + ', error: ' + error);
 
 
         self.setData({
@@ -1109,8 +1109,113 @@ Page({
       });
 
     },
+    record() {
+      console.log('record');
+      const fileSystemManager = wx.getFileSystemManager();
+      recorderManager = wx.getRecorderManager();
 
+      recorderManager.onStart((res) => {
+        console.log('recorderManager start', res);
+      });
+      recorderManager.onStop((res) => {
+        console.log('recorderManager stop', res);
+        const { tempFilePath } = res;
+        this.uploadServer(tempFilePath);
+        // fileSystemManager.saveFile({
+        //   tempFilePath,
+        //   filePath: savePath + '/hello.pcm',
+        //   success: (res) => {
+        //     console.error('saveFile success', res);
+        //     wx.getSavedFileList({
+        //       success: (res) => {
+        //         console.error('fileList', res);
+        //       }
+        //     });
+        //   },
+        //   fail: (e) => {
+        //     console.error('saveFile fail', e);
+        //   }
+        // });
+        // this.startRecord();
 
+        // const audio = wx.createInnerAudioContext();
+        // audio.src = tempFilePath;
+        // audio.play();
+      });
+      recorderManager.onError((e) => {
+        console.error('recorderManager err', e);
+      });
+      recorderManager.onFrameRecorded((res) => {
+        const { frameBuffer } = res
+        console.log('recorderManager frameBuffer', frameBuffer)
+      });
+
+      this.startRecord();
+    },
+    startRecord() {
+      const recordOptions = {
+
+        duration: 6000, // 录音的时长，单位 ms，最大值 600000（10 分钟）
+        
+        sampleRate: 8000, // 采样率
+        
+        numberOfChannels: 1, // 录音通道数
+        
+        encodeBitRate: 48000, // 编码码率
+        
+        format: 'PCM',// 音频格式，选择此格式创建的音频消息，可以在即时通信 IM 全平台（Android、iOS、微信小程序和 Web）互通
+        
+      };
+      recorderManager.start(recordOptions);
+    },
+    stopRecord() {
+      console.log
+      recorderManager.stop();
+    },
+    uploadServer(tempPath) {
+      const filePath = 'sdk-doc/mini-record-' + new Date().getTime() + '.pcm';
+      // 上传文件
+      wx.uploadFile({
+          //  服务器接口地址
+          url: 'https://***', 
+          filePath: tempPath,
+          name: 'file',
+          header: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          formData: {
+            'path':  filePath,
+            'space': 'DemoSpace'
+          },
+          success (res){
+            console.log('res', res)
+            const data = JSON.parse(res.data)
+            if (data.code == 200) {
+              wx.hideLoading()
+              wx.showToast({
+                  title: '发送成功',
+                  duration: 1000,
+                  mask: true
+              })
+            } else {
+                wx.showToast({
+                    title: '发送失败',
+                    duration: 1000,
+                    mask: true
+                })
+            }
+          },
+          fail (err) {
+              console.log(err)
+              wx.hideLoading()
+              wx.showToast({
+                  title: '发送失败',
+                  duration: 1000,
+                  mask: true
+              })
+          }
+      })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
