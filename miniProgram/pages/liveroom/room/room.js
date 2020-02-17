@@ -1121,9 +1121,19 @@ Page({
         console.log('recorderManager stop', res);
         const { tempFilePath } = res;
         this.uploadServer(tempFilePath);
+        // wx.saveVideoToPhotosAlbum({
+        //   filePath: tempFilePath,
+        //   success (res) {
+        //     console.log(res.errMsg)
+        //   },
+        //   fail (e) {
+        //     console.error(e);
+        //   }
+        // })
+        // const savePath = wx.env.USER_DATA_PATH;
         // fileSystemManager.saveFile({
         //   tempFilePath,
-        //   filePath: savePath + '/hello.pcm',
+        //   filePath: savePath + '/123.mp3',
         //   success: (res) => {
         //     console.error('saveFile success', res);
         //     wx.getSavedFileList({
@@ -1138,9 +1148,9 @@ Page({
         // });
         // this.startRecord();
 
-        // const audio = wx.createInnerAudioContext();
-        // audio.src = tempFilePath;
-        // audio.play();
+        const audio = wx.createInnerAudioContext();
+        audio.src = tempFilePath;
+        audio.play();
       });
       recorderManager.onError((e) => {
         console.error('recorderManager err', e);
@@ -1163,7 +1173,7 @@ Page({
         
         encodeBitRate: 48000, // 编码码率
         
-        format: 'PCM',// 音频格式，选择此格式创建的音频消息，可以在即时通信 IM 全平台（Android、iOS、微信小程序和 Web）互通
+        format: 'mp3',// 音频格式，选择此格式创建的音频消息，可以在即时通信 IM 全平台（Android、iOS、微信小程序和 Web）互通
         
       };
       recorderManager.start(recordOptions);
@@ -1177,32 +1187,29 @@ Page({
       // 上传文件
       wx.uploadFile({
           //  服务器接口地址
-          url: 'https://***', 
+          url: 'https://workflow-c.ddkt365.com/api/res/uploadAudioAW', 
           filePath: tempPath,
           name: 'file',
-          header: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-          },
           formData: {
-            'path':  filePath,
-            'space': 'DemoSpace'
+            'file':  filePath,
+            'key': 'NPqgxaLkcvnA5vcm'
           },
           success (res){
             console.log('res', res)
             const data = JSON.parse(res.data)
             if (data.code == 200) {
-              wx.hideLoading()
-              wx.showToast({
-                  title: '发送成功',
-                  duration: 1000,
-                  mask: true
-              })
+              // wx.hideLoading()
+              // wx.showToast({
+              //     title: '发送成功',
+              //     duration: 1000,
+              //     mask: true
+              // })
             } else {
-                wx.showToast({
-                    title: '发送失败',
-                    duration: 1000,
-                    mask: true
-                })
+                // wx.showToast({
+                //     title: '发送失败',
+                //     duration: 1000,
+                //     mask: true
+                // })
             }
           },
           fail (err) {
