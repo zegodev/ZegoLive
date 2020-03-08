@@ -39,6 +39,12 @@ Page({
                 subtitle: '设置APPID',
                 title: "自定义设置",
                 navigateTo: "../tool/setting/index"
+            },
+            {
+                icon: "../../resource/setting.png",
+                subtitle: 'demo',
+                title: "电商直播",
+                navigateTo: "173"
             }
         ]
     },
@@ -52,6 +58,24 @@ Page({
                 return;
             }
             var toUrl = this.data.entryInfos[e.currentTarget.id].navigateTo;
+            if (toUrl === '173') {
+                wx.navigateToMiniProgram({
+                    appId: 'wx371ac5dc128c4c5e',
+                    path: 'pages/roomList/index',
+                    extraData: {
+                      foo: 'bar'
+                    },
+                    envVersion: 'develop',
+                    success(res) {
+                      // 打开成功
+                      console.log(res)
+                    },
+                    fail(e) {
+                      console.error(e);
+                    }
+                  })
+                  return;
+            }
             console.log(toUrl);
             wx.navigateTo({
                 url: toUrl,

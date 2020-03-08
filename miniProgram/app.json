@@ -20,6 +20,9 @@
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": false
   },
+  "navigateToMiniProgramAppIdList": [
+    "wx371ac5dc128c4c5e"
+  ],
   "networkTimeout": {
     "request": 60000
   },
