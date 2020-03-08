@@ -1,0 +1,21 @@
+.v3-main-video {
+    width:100vw;
+    height: 56.25vw;
+}
+.v3-main-video-full{
+    width:100vw;
+    height: 89.58vw;
+}
+
+.v3-sub-video-list {
+    width:100vw;
+    height: 33.33vw;
+    vertical-align: top
+}
+
+.v3-sub-video {
+    width: 32.33vw;
+    height: 100%;
+    display: inline-block;
+    background-color: red;
+}

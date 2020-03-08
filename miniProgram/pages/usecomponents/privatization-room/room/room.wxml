@@ -1,0 +1,63 @@
+<wxs src="../../../../utils/stringUtil.wxs" module="stringUtil"/>
+
+<zego-nav>
+    <view>{{stringUtil.substr(roomName === "no name" || roomName.length == 0 ? roomID + "（房间 ID）" : roomName,18)}}
+    </view>
+</zego-nav>
+
+
+<live-room
+        id="liveRoom"
+        roomid="{{roomID}}"
+        role="{{role}}"
+        pureaudio="{{pureAudio}}"
+        debug="{{debug}}"
+        muted="{{muted}}"
+        beauty="{{beauty}}"
+        template="vertical1v3"
+        pushstreamid="{{pushStreamId}}"
+        bindRoomEvent="onRoomEvent">
+
+</live-room>
+
+
+<scroll-view
+        class='messageView'
+        scroll-into-view='{{scrollToView}}'
+        scroll-y='true'>
+    <view class='message-detail' wx:for="{{messageList}}" wx:key="{{index}}" id="{{item.id}}">
+        <view><span>{{item.time}} {{item.name}}: </span>{{item.content}}</view>
+    </view>
+</scroll-view>
+
+
+<view class="operate">
+    <block wx:if="{{isMessageHide}}">
+        <view class='img-box' bindtap="showMessage">
+            <image src='../../../../resource/{{pushConfig.showLog? "comment" : "comment"}}.png'
+                   bindtap="showLog"></image>
+            <text>说点啥</text>
+        </view>
+
+        <view class='img-box' bindtap="mixStream">
+            <image wx:if="{{role !== 'audience'}}" src='../../../../resource/{{mixStreamStart?"mixStream":"stopMixStream"}}.png' ></image>
+            <image wx:else src='../../../../resource/disableMixStream.png' ></image>
+            <text>{{mixStreamStart?'停止混流':'开始混流'}}</text>
+        </view>
+
+        <view class='img-box' bindtap="playMixStream">
+            <image wx:if="{{role !== 'audience'}}" src='../../../../resource/{{playMixStreamStart?"playMixStream":"stopPlayMixStream"}}.png'></image>
+            <image wx:else src='../../../../resource/disablePlayMixStream.png' ></image>
+            <text>{{playMixStreamStart?'停止播放混流':'播放混流'}}</text>
+        </view>
+    </block>
+
+    <block wx:if="{{!isMessageHide}}">
+        <view class='message-input'>
+            <input placeholder="我要说点什么" placeholder-style='color: #b3b3b3; font-size: 14px;'
+                   bindinput="bindMessageInput"
+                   confirm-type='send' bindconfirm="onComment"/>
+        </view>
+    </block>
+
+</view>

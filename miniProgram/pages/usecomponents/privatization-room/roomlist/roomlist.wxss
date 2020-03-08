@@ -1,0 +1,104 @@
+.list-box {
+  background-color: #0d70ff;
+  color: #fff;
+  width: 90vw;
+  margin: 3vw;
+  padding: 2vw;
+}
+
+.text-no-room {
+  font-size: 17px;
+  color: #afafaf;
+  text-align: center;
+}
+
+.text-has-room {
+  font-size: 12px;
+  color: #afafaf;
+  text-align: center;
+}
+
+.room-list{
+  margin:2vh 5vh;
+
+}
+
+.room-list-item{
+    height:8vh;
+    background-color:rgba(13, 112, 255, 0.7);
+    font-size:15px;
+    color:#fff;
+    padding:25rpx 40rpx;
+    margin-top: 2vh;
+}
+
+.room-list-item view{
+   height: 50%;
+}
+
+.bottom-input {
+    padding:0 1vw;
+    position: fixed;
+    width: 50vw;
+    left: 5vh;
+    bottom: 3vh;
+    height: 9.4vw;
+    /*border-radius: 4px;*/
+    color: #3c3c3c;
+    border-bottom:1px solid rgba(13, 112, 255, 0.5);
+
+}
+
+
+.bottom-btn {
+  position: fixed;
+  width: 26vw;
+  right: 5vh;
+  bottom: 3vh;
+}
+
+
+
+.bottom-btn button {
+   background-color: rgba(13, 112, 255, 0.8);
+   line-height: 2.3em;
+    border-radius:0;
+
+}
+
+
+.create-button {
+  font-size: 16px;
+  color: white;
+}
+
+.index-container {
+  padding: 2vh 5vw;
+}
+
+.input-container {
+  margin: 20rpx 0;
+  padding:0 1vw;
+  display: flex;
+  height: 80rpx;
+  color: #3c3c3c;
+}
+
+.room-input {
+  height: 80rpx;
+  border-bottom:1px solid rgba(13, 112, 255, 0.5);
+}
+
+.tip {
+  font-size: 24rpx;
+}
+
+.button-container {
+  margin-top: 40rpx;
+  display: flex;
+}
+.button-container button {
+  color: #fff;
+  background-color: rgba(13, 112, 255, 0.7);
+  width: 300rpx;
+}

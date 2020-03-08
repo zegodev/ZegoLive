@@ -1,0 +1,180 @@
+<template name="vertical1v3">
+    <view class="v-full">
+        <!--左边大视频，主播-->
+        <view class="{{(streamList.length>0||linkPusherInfo.url)?'v-main-video':'v-main-video-full'}}">
+
+            <!--左边大视频，自己是主播-->
+            <live-pusher wx:if="{{isCaster&&mainPusherInfo.url}}"
+                         id="{{mainPusherInfo.stream_id}}"
+                         mode="{{mainPusherInfo.mode}}"
+                         url="{{mainPusherInfo.url}}"
+                         min-bitrate="{{minBitrate}}"
+                         max-bitrate="{{maxBitrate}}"
+                         beauty="{{beauty}}"
+                         enable-camera="{{!pureaudio}}"
+                         muted="{{muted}}"
+                         aspect="9:16"
+                         waiting-image="https://storage.zego.im/downloads/pause_publish.png"
+                         background-mute="{{true}}"
+                         debug="{{debug}}"
+                         bindstatechange="onMainPushState"
+                         bindnetstatus="onMainPushStatus"
+                         binderror="onMainPushError">
+                <cover-view class='character' style='padding: 0 5px;'>我（{{ userName}}）</cover-view>
+                <cover-view class="operate">
+                    <cover-view class='img-box'>
+                        <cover-image class='img-view' src='/components/Resources/camera.png'
+                                     bindtap="switchCamera"></cover-image>
+                        <!-- <cover-view class='text-view'>翻转</cover-view> -->
+                    </cover-view>
+                    <cover-view class='img-box'>
+                        <cover-image class='img-view'
+                                     src='/components/Resources/{{beauty > 0? "beauty" : "beauty-dis"}}.png'
+                                     bindtap="toggleBeauty"></cover-image>
+                        <!-- <cover-view class='text-view'>美颜</cover-view> -->
+                    </cover-view>
+
+                     <cover-view class='img-box'>
+                        <cover-image class='img-view' src='/components/Resources/{{pureaudio ? "camera-off" : "camera-on"}}.png' bindtap="toggleCamera"></cover-image>
+                         <!--<cover-view class='text-view'>摄像头</cover-view>-->
+                    </cover-view>
+
+                    <cover-view class='img-box'>
+                        <cover-image class='img-view' src='/components/Resources/{{muted ? "mic-dis" : "mic"}}.png' bindtap="toggleMuted"></cover-image>
+                        <!--<cover-view class='text-view'>声音</cover-view>-->
+                    </cover-view>
+
+
+                    <cover-view class='img-box' wx:if="{{debug}}">
+                        <cover-image class='img-view' src='/components/Resources/{{_debug? "log" : "log2"}}.png'
+                                     bindtap="toggleDebug"></cover-image>
+                        <!-- <cover-view class='text-view'>日志</cover-view> -->
+                    </cover-view>
+                </cover-view>
+            </live-pusher>
+
+            <!--左边大视频，观看主播-->
+            <live-player wx:if="{{!isCaster&&mainPusherInfo.url}}"
+                         autoplay
+                         id="{{mainPusherInfo.stream_id}}"
+                         muted="{{muted}}"
+                         mode="{{mainPusherInfo.mode}}"
+                         min-cache="{{mainPusherInfo.minCache}}"
+                         max-cache="{{mainPusherInfo.maxCache}}"
+                         object-fit="{{mainPusherInfo.objectFit}}"
+                         src="{{mainPusherInfo.url}}"
+
+                         debug="{{debug}}"
+                         bindstatechange="onMainPlayState"
+                         bindnetstatus="onMainPlayStatus"
+                         binderror="onMainPlayError">
+
+
+                <cover-view class='poster' wx:if="{{mainPusherInfo.playingState === 'initial'}}">
+                    <cover-image  src="/components/Resources/loading.png"></cover-image>
+                </cover-view>
+
+                <block wx:elif="{{mainPusherInfo.playingState === 'success'}}">
+                    <cover-view class='character' style='padding: 0 5px;'>{{item.userName}}</cover-view>
+                </block>
+
+                <cover-view class='poster' wx:elif="{{mainPusherInfo.playingState === 'failed'}}">
+                    <cover-image  src="/components/Resources/loading_fail.png"
+                                 mode="aspectFit"></cover-image>
+                </cover-view>
+
+
+                <cover-view class="operate">
+
+                    <cover-view class='img-box'>
+                        <cover-image class='img-view' data-dd="{{liveReq}}" src='/components/Resources/{{liveReq==0?"linkmic":(liveReq==1?"linkmic-press":"linkmic-press")}}.png'
+                                     bindtap="requestJionPusher"></cover-image>
+                        <!-- <cover-view class='text-view'>连麦</cover-view> -->
+                    </cover-view>
+
+                    <!--<cover-view class='img-box'>-->
+                        <!--<cover-image class='img-view' src='Resources/{{muted ? "sound-dis" : "sound"}}.png' bindtap="toggleMuted"></cover-image>-->
+                        <!--&lt;!&ndash;<cover-view class='text-view'>声音</cover-view>&ndash;&gt;-->
+                    <!--</cover-view>-->
+
+                    <cover-view class='img-box' wx:if="{{debug}}">
+                        <cover-image class='img-view' src='/components/Resources/{{_debug? "log" : "log2"}}.png'
+                                     bindtap="toggleDebug"></cover-image>
+                        <!-- <cover-view class='text-view'>日志</cover-view> -->
+                    </cover-view>
+                </cover-view>
+
+            </live-player>
+
+        </view>
+
+        <!--右边小视频，子主播-->
+        <view class='v-sub-video-list' wx:if="{{streamList.length>0||linkPusherInfo.url}}">
+
+            <!--右边小视频，发起和主播连麦-->
+            <view class='v-sub-video' wx:if="{{linkPusherInfo.url}}">
+                <live-pusher wx:if="{{!isCaster&&linkPusherInfo.url}}"
+                             id="{{linkPusherInfo.stream_id}}"
+                             mode="RTC"
+                             url="{{linkPusherInfo.url}}"
+                             min-bitrate="850"
+                             max-bitrate="1200"
+                             beauty="{{beauty}}"
+                             enable-camera="{{!pureaudio}}"
+                             muted="{{muted}}"
+                             aspect="9:16"
+                             waiting-image="https://storage.zego.im/downloads/pause_publish.png"
+                             background-mute="{{true}}"
+                             debug="{{debug}}"
+                             bindstatechange="onMainPushState"
+                             bindnetstatus="onMainPushStatus"
+                             binderror="onMainPushError">
+
+                    <cover-view class="close-ico" bindtap="stopSubPublish"
+                                data-userid="{{item.userID}}">x
+                    </cover-view>
+                    <cover-view class='character' style='padding: 0 5px;'>我（{{ userName }}）</cover-view>
+                </live-pusher>
+
+            </view>
+
+            <!--右边小视频，观看其他子主播-->
+            <view class='v-sub-video' wx:for="{{streamList}}" wx:key="{{index}}">
+
+                <live-player wx:if="{{item.url}}"
+                             autoplay id="{{item.stream_id}}"
+                             mode="RTC"
+                             min-cache="{{item.minCache}}"
+                             max-cache="{{item.maxCache}}"
+                             object-fit="{{item.objectFit}}"
+                             src="{{item.url}}"
+                             data-playingState="{{item.playingState }}"
+                             debug="{{debug}}"
+                             bindstatechange="onMainPlayState"
+                             bindnetstatus="onMainPlayStatus"
+                             binderror="onMainPlayError">
+
+                    <cover-view class='poster' wx:if="{{item.playingState === 'initial'}}">
+                        <cover-image  src="/components/Resources/loading.png"></cover-image>
+                    </cover-view>
+
+                    <block wx:elif="{{item.playingState === 'success'}}">
+                        <cover-view wx:if="{{isCaster&&!item.isMixStream}}" class="close-ico"
+                                    bindtap="kickoutSubPusher"
+                                    data-userid="{{item.userID}}">x
+                        </cover-view>
+                        <cover-view class='character' style='padding: 0 5px;'>{{item.userName}}</cover-view>
+                    </block>
+
+                    <cover-view class='poster' wx:elif="{{item.playingState === 'failed'}}">
+                        <cover-image  src="/components/Resources/loading_fail.png"
+                                     mode="aspectFit"></cover-image>
+                    </cover-view>
+
+                </live-player>
+            </view>
+
+        </view>
+    </view>
+
+</template>

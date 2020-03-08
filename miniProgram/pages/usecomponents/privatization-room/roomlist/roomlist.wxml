@@ -1,0 +1,27 @@
+<wxs src="../../../../utils/stringUtil.wxs" module="stringUtil"/>
+
+<zego-nav></zego-nav>
+
+<view class="index-container">
+<text>房间号</text>
+    <view class='input-container'>
+        <input value="{{roomID}}" bindinput="bindKeyInput" placeholder="请输入房间 ID" placeholder-style='color: #b3b3b3; font-size: 14px;' class="room-input" />
+        <text class="tip"></text>
+    </view>
+    <view class="button-container">
+        <button bindtap="onCreateRoom" hover-class="none">创建房间</button>
+        <button bindtap="onJoinRoom" hover-class="none">加入房间</button>
+    </view>
+</view>
+<!-- <view>
+
+    <view class='bottom-input'>
+        <input value="{{inputValue}}" bindinput="bindKeyInput" placeholder="请输入房间 ID"
+               placeholder-style='color: #b3b3b3; font-size: 14px;'/>
+    </view>
+
+    <view class='bottom-btn'>
+        <button class='create-button' bindtap="onCreateRoom" hover-class="none">创建房间</button>
+    </view>
+
+</view> -->

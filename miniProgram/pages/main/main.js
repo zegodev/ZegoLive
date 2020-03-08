@@ -41,6 +41,12 @@ Page({
                 navigateTo: "../tool/setting/index"
             },
             {
+                icon: "../../resource/interactionLive.png",
+                subtitle: '私有化',
+                title: "视频直播",
+                navigateTo: "../usecomponents/privatization-room/roomlist/roomlist"
+            },
+            {
                 icon: "../../resource/setting.png",
                 subtitle: 'demo',
                 title: "电商直播",

@@ -1,0 +1,20 @@
+<!--components/live-room/live-room.wxml-->
+
+
+<block wx:if="{{template == 'vertical1v3'}}">
+    <import src='./vertical1v3template/vertical1v3.wxml'/>
+    <template is="{{template}}"
+              data="{{debug, liveReq, isCaster, mainPusherInfo, beauty, muted, pureaudio, userName, streamList, linkPusherInfo}}"/>
+</block>
+
+<block wx:if="{{template == '1v3'}}">
+    <import src='./1v3template/1v3.wxml'/>
+    <template is="{{template}}"
+              data="{{debug, liveReq, isCaster, mainPusherInfo, beauty, muted, pureaudio, userName, streamList, linkPusherInfo}}"/>
+</block>
+
+<block wx:if="{{template == '1v1'||template == '2v2'}}">
+    <import src='./1v1template/1v1.wxml'/>
+    <template is="{{template}}"
+              data="{{debug, liveReq, isCaster, mainPusherInfo, beauty, muted, pureaudio, userName, streamList, linkPusherInfo}}"/>
+</block> 

@@ -5,6 +5,8 @@
     "pages/liveroom/room/room",
     "pages/usecomponents/live-room/roomlist/roomlist",
     "pages/usecomponents/live-room/room/room",
+    "pages/usecomponents/privatization-room/roomlist/roomlist",
+    "pages/usecomponents/privatization-room/room/room",
     "pages/usecomponents/rtc-room/roomName/roomName",
     "pages/usecomponents/rtc-room/room/room",
     "pages/tool/customlive/index",
