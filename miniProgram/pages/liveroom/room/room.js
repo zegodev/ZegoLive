@@ -46,7 +46,7 @@ Page({
         },
         preferPublishSourceType: 1, // 0：推流到 cdn；1：推流到 bgp
         preferPlaySourceType: 1,    // 0：auto；1：从 bgp 拉流
-        upperStreamLimit: 4,        // 房间内限制为最多 4 条流，当流数大于 4 条时，禁止新进入的用户连麦
+        upperStreamLimit: 8,        // 房间内限制为最多 4 条流，当流数大于 4 条时，禁止新进入的用户连麦
         connectType: -1,  // -1为初始状态，1为连接，0断开连接
         tapTime: "",
         pushUrl: "",
