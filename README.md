@@ -24,8 +24,6 @@ appSign 为即构分配给项目对应的项目的密钥，切忌不可泄漏！
 
 正式开发需要由业务后台实现token的逻辑，小程序端通过业务服务器获取token，详见[即构开发者中心](https://doc.zego.im/CN/387.html#4_2)
 
-![image](http://zego-sdkdemospace.oss-cn-shanghai.aliyuncs.com/sdk-doc/mini-2.png)
-
 # 里面包含哪些？
 1. 基于即构sdk实现的livedemo
 2. 基于即构sdk和小程序的live-pusher，live-player封装组件live-room,rtc-room
